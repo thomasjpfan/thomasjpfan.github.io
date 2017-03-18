@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
+{% block content %}
+<section class="content">
+    <div class="tag-wrapper content-wrapper">
+        <h1>Articles With Topic: <span class="tag">{{ tag }}</span></h1>
+        <dl class="dl-tags">
+        {% for article in articles %}
+            <dt>{{ article.locale_date }}</dt>
+            <dd><a href='/{{ article.url }}'>{{ article.title }}</a></dd>
+        {% endfor %}
+        </dl>
+    </div>
+</section>
+{% endblock content %}
+

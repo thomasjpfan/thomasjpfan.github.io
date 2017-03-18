@@ -1,0 +1,39 @@
+<header>
+    <div class="header-wrapper">
+        <div class="header-inner-wrapper">
+            <div class="header-brand">
+                <a href="/">tf<span>.</span></a>
+            </div>
+            <nav>
+                <div class="nav-search">
+                    <form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                        <input type="text" class="nav-search--input search-query" placeholder="Search" name="q" id="tipue_search_input">
+                    </form>
+                </div>
+                <div class="nav-links">
+                    <div class="nav-link">
+                        <a href="https://twitter.com/thomasjpfan" target="_blank"><i class="fa fa-twitter"></i> twitter</a>
+                    </div>
+                {% if DISPLAY_PAGES_ON_MENU %} {% for page in pages %}
+                {% if page.title == 'Projects' %}
+                    <div class="nav-link">
+                        <a href="/{{ page.url }}">
+                            <i class="fa fa-flask"></i> projects
+                        </a>
+                    </div>
+                {% endif %}
+                {% if page.title == 'About' %}
+                    <div class="nav-link">
+                        <a href="/{{ page.url }}">
+                            <i class="fa fa-user"></i> about
+                        </a>
+                    </div>
+                {% endif %} {% endfor %} {% endif %}
+                    <div class="nav-link">
+                        <a href="/topics"><i class="fa fa-tags"></i> topics</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

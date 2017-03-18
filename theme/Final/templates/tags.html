@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% set tag_on = "true" %}
+{% block title %}{{ SITENAME }} - Topics{% endblock %}
+{% block content %}
+<section class="content">
+    <div class="tags-wrapper content-wrapper">
+        <h1>Topics</h1>
+        <div class="topics-links">
+        {% for tag in tags|sort %}
+            <a class="topics-link tag" href="/{{ tag.0.url }}">{{ tag.0 }}</a>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

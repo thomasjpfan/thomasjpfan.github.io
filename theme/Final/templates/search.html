@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Search · {{ super() }}
+{% endblock title %}
+{% block script %}
+<script src="{{ SITEURL }}/theme/js/tipuesearch.min.js"></script>
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({
+         'mode' : 'json',
+         'show': 10,
+         'newWindow': false,
+         'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+     });
+});
+</script>
+{% endblock script %}
+
+{% block content %}
+<section class="content" id="content">
+    <div class="search content-wrapper">
+        <h1>Search results</h1>
+        <div id="tipue_search_content"><div id="tipue_search_loading"></div></div>
+    </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,6 @@
+output/
+*.pid
+*.sublime-workspace
+cache/
+content/notebooks/.ipynb_checkpoints/
+plugins/liquid_tags/test_data/

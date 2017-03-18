@@ -1,0 +1,54 @@
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-inner-wrapper">
+    <div class="footer-profile">
+      <div class="footer-brand">
+        <a href="/"><span>thomasjpfan.com</span></a>
+      </div>
+      <div class="footer-about">
+          <p>{{ OG_DESCRIPTION }}</p>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <span>Contact</span>
+      <div class="footer-contact-message">
+        <p>Have any feedback or questions? Just send me a tweet or an email!</p>
+      </div>
+      <div class="footer-social-items">
+        <ul>
+          <li class="footer-social-item"><a href="https://twitter.com/thomasjpfan" title="Tweet me"target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+          </a></li>
+          <li class="footer-social-item"><script language="JavaScript">
+              var username = "thomasjpfan";
+              var hostname = "gmail.com";
+              var linktext = username + "@" + hostname ;
+              document.write("<a href=\"" + "mailto:" + username + "@" + hostname + "\" title=\"Email me\"target=\"_blank\"><span class=\"fa-stack fa-lg\"><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-envelope fa-stack-1x fa-inverse\"></i></span></a>");
+              </script>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-site-detail">
+      <span>Site</span>
+      <ul class="footer-links">
+        <li class="footer-link">
+            <a href="/"><i class="fa fa-th-list"></i> front page</a>
+        </li>
+        <li class="footer-link">
+            <a href="/{{ARCHIVES_URL}}"><i class="fa fa-archive"></i> archives</a>
+        </li class="footer-link">
+        {% for title, link in MENUITEMS %} {% if title == 'Rss' %}
+        <li class="footer-link">
+          <a href="{{ link }}"><i class="fa fa-rss"></i>
+           {{ title|lower }}</a>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
