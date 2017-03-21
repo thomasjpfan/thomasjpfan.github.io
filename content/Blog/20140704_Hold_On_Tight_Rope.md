@@ -74,6 +74,6 @@ In other words, we only need to provide 16.3% of the weight of the climber to ho
 
 When ships dock, sailors use rope wrapped around a post to keep the ship from floating away. The rope is wrapped around the post several times like so:
 
-![Posts]({filename}/images/20140704_Hold_On_Tight_Rope/posts.png)
+![Posts]({filename}/images/20140704_Hold_On_Tight_Rope/posts.jpg)
 
 In this picture, the rope wrapped around the post about five times. Assuming coefficient of friction is $0.20$, the knot tied to the dock only needs 0.2% of tugging force from to ship to keep it docked.
