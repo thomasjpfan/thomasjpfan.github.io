@@ -448,9 +448,9 @@ thead > tr {
 
 .output_text > pre {
     overflow: auto;
-    font-size: calculateRem(20px);
+    font-size: calculateRem(16px);
     padding: 0.4em;
-    font-family: monospace;
+    font-family: $code-font;
     box-shadow: rgba(0,0,0,0.1) 0 0 6px 2px;
 }
 
