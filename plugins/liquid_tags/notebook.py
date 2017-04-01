@@ -167,7 +167,7 @@ div.collapseheader {
 }
 </style>
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
     if (window.MathJax) {
@@ -187,23 +187,6 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-    $("div.collapseheader").click(function () {
-    $header = $(this).children("span").first();
-    $codearea = $(this).children(".input_area");
-    console.log($(this).children());
-    $codearea.slideToggle(500, function () {
-        $header.text(function () {
-            return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
-        });
-    });
-});
-});
-</script>
-
 """
 
 CSS_WRAPPER = """
