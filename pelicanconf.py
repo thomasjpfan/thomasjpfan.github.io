@@ -24,19 +24,28 @@ THEME = "theme/Final"
 NOTEBOOK_DIR = 'notebooks'
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'tipue_search','feed_summary',
+PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
            'liquid_tags.youtube', 'liquid_tags.notebook',
-           'minification', 'better_codeblock_line_numbering', 'assets', 'render_katex']
-        #    ,'image_process']
-        #    , 'optimize_images']
+           'minification', 'better_codeblock_line_numbering', 'assets',
+           'render_katex', 'image_process', 'optimize_images']
 FEED_USE_SUMMARY = True
 # MD_EXTENSIONS = [
 #     'codehilite(css_class=highlight, linenums=False)',
 #     'extra'
 # ]
 
+IMAGE_PROCESS = {
+    'major': ["scale_out 510 100 False"],
+    'minor': ["scale_out 190 100 False"]
+}
+
 # IMAGE_PROCESS = {
-#     'major': ["scale_out 510 100 False"],
+#     'major': {
+#         'type': 'responsive-image',
+#         'srcset': [('1x', ["scale_out 510 100 False"]),
+#                    ('2x', ["scale_out 1020 200 False"])],
+#         'default': '1x'
+#     },
 #     'minor': ["scale_out 190 100 False"]
 # }
 
