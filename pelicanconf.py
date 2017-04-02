@@ -24,7 +24,7 @@ THEME = "theme/Final"
 NOTEBOOK_DIR = 'notebooks'
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
+PLUGINS = ['sitemap', 'tipue_search','feed_summary',
            'liquid_tags.youtube', 'liquid_tags.notebook',
            'minification', 'better_codeblock_line_numbering', 'assets', 'render_katex']
         #    ,'image_process']
@@ -50,7 +50,7 @@ MARKDOWN = {
 }
 
 ASSET_BUNDLES = (
-    ('scss',
+    ('scss-main',
         ['scss/tfstyle.scss'],
      {'filters': 'compass,cssmin', 'output': 'css/style.min.css'}),
 )
@@ -152,5 +152,6 @@ def intersect(a, b):
     else:
         c = unique(filter(lambda x: x in b, a))
     return c
+
 
 JINJA_FILTERS = {'intersect': intersect}

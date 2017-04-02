@@ -794,6 +794,13 @@ blockquote p{background-color: #eee;padding: 9.5px;border-radius:.5em; font-fami
     bottom: -0.65em;
 }
 
+// katex
+.katex-display {
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-top: calculateRem(8px);
+}
+
 
 // Overall layout (header main footer)
 header, footer, main {
@@ -1229,9 +1236,3 @@ article img {
     font-size: calculateRem(18px);
 }
 
-// katex
-.katex-display {
-    overflow-y: hidden;
-    overflow-x: auto;
-    padding-top: calculateRem(8px);
-}

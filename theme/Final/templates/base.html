@@ -32,18 +32,22 @@
 
 	<link rel="shortcut icon" href="{{ SITEURL }}/favicon_v4.ico">
 
-  {% assets "scss" %}
+  {% assets "scss-main" %}
   <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
   {% endassets %}
 
+  	<noscript id="katex_deferred">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+	</noscript>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx"
- crossorigin="anonymous"></script>
+ crossorigin="anonymous" defer></script>
 
 	<!-- JS Libraries to Load -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script type="text/javascript" src="{{ SITEURL }}/theme/js/tfscript.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous" defer ></script>
+
+	<script type="text/javascript" src="{{ SITEURL }}/theme/js/bigfoot.min.js" defer></script>
 
 	<!-- Feed Information / Copied from Simple Theme -->
 	{% if FEED_ALL_ATOM %}
@@ -90,20 +94,45 @@
 </script>
 {% endblock script %}
 <script>
-	$(document).ready(function (e) {
+	var loadKatexDeferred = function() {
+		var addStylesNode = document.getElementById("katex_deferred");
+		var replacement = document.createElement("div");
+		replacement.innerHTML = addStylesNode.textContent;
+		document.body.appendChild(replacement);
+		addStylesNode.parentElement.removeChild(addStylesNode);
+	};
+
+	var renderMath = function() {
+		renderMathInElement(document.body,
+		{ delimiters:
+		[
+			{ left: "$$", right: "$$", display: true },
+			{ left: "\\[", right: "\\]", display: true },
+			{ left: "$", right: "$", display: false },
+			{ left: "\\(", right: "\\)", display: false }
+		]});
+	}
+
+	var renderJqueryDeps = function($) {
+		$(document).ready(function (e) {
 			e("div.collapseheader > span").click(function () {
 			$header = e(this), $codearea = e(this).siblings(".input_area");
-				$codearea.slideToggle(500, function () {
-					$header.text(function () {
-						return $codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code"}) })})});
-	renderMathInElement(document.body,
-	{
-			delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\[", right: "\\]", display: true }, {
-				left: "$", right:
-					"$", display: false
-			}, { left: "\\(", right: "\\)", display: false }]
-	});
-	$.bigfoot();
+			$codearea.slideToggle(500, function () {
+			$header.text(function () {
+				return $codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code"}) })})});
+		$.bigfoot()
+	}
+
+	var loadAll = function() {
+		loadKatexDeferred();
+		renderMath();
+		renderJqueryDeps(jQuery);
+	}
+
+	var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+
+	if (raf) raf(function() { window.setTimeout(loadAll, 0); });
+	else window.addEventListener('load', loadAll);
 </script>
 </body>
 </html>
