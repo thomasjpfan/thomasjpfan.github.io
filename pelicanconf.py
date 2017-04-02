@@ -26,7 +26,7 @@ NOTEBOOK_DIR = 'notebooks'
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
            'liquid_tags.youtube', 'liquid_tags.notebook',
-           'minification', 'better_codeblock_line_numbering', 'assets', 'render_math']
+           'minification', 'better_codeblock_line_numbering', 'assets', 'render_katex']
         #    ,'image_process']
         #    , 'optimize_images']
 FEED_USE_SUMMARY = True
@@ -55,8 +55,8 @@ ASSET_BUNDLES = (
      {'filters': 'compass,cssmin', 'output': 'css/style.min.css'}),
 )
 
-MATH_JAX = {'responsive': True, 'linebreak_automatic': True,
-            'message_style': None, 'show_menu': False}
+# MATH_JAX = {'responsive': True, 'linebreak_automatic': True,
+#             'message_style': None, 'show_menu': False}
 
 SITEMAP = {
     'format': 'xml',

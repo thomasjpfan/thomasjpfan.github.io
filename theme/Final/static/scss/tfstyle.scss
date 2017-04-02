@@ -1228,3 +1228,10 @@ article img {
     margin-right: 1%;
     font-size: calculateRem(18px);
 }
+
+// katex
+.katex-display {
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-top: calculateRem(8px);
+}
