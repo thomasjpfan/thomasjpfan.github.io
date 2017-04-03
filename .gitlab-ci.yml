@@ -1,7 +1,9 @@
 install deps:
-  - source activate pel
-  - pip install -r requirements.txt
+  script:
+    - source activate pel
+    - pip install -r requirements.txt
 
 rsync publish:
-  - source activate pel
-  - make rsync_upload
+  script:
+    - source activate pel
+    - make rsync_upload
