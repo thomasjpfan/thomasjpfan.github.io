@@ -82,7 +82,7 @@ ftp_upload: publish
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
-github:
+github: rsync_upload
 	rm -rf content/notebooks/.ipynb_checkpoints
 	ghp-import content/notebooks
 	git push notebooks gh-pages:master
