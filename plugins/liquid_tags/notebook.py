@@ -314,17 +314,17 @@ def notebook(preprocessor, tag, markup):
     (body, resources) = exporter.from_notebook_node(nb_json)
 
     # if we haven't already saved the header, save it here.
-    if not notebook.header_saved:
-        print ("\n ** Writing styles to _nb_header.html: "
-               "this should be included in the theme. **\n")
+    # if not notebook.header_saved:
+    #     print ("\n ** Writing styles to _nb_header.html: "
+    #            "this should be included in the theme. **\n")
 
-        header = '\n'.join(CSS_WRAPPER.format(css_line)
-                           for css_line in resources['inlining']['css'])
-        header += JS_INCLUDE
+    #     header = '\n'.join(CSS_WRAPPER.format(css_line)
+    #                        for css_line in resources['inlining']['css'])
+    #     header += JS_INCLUDE
 
-        with open('_nb_header.html', 'w') as f:
-            f.write(header)
-        notebook.header_saved = True
+    #     with open('_nb_header.html', 'w') as f:
+    #         f.write(header)
+    #     notebook.header_saved = True
 
     # this will stash special characters so that they won't be transformed
     # by subsequent processes.
