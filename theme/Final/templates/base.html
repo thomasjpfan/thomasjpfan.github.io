@@ -128,10 +128,10 @@
 		renderJqueryDeps(jQuery);
 	}
 
-	var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-
-	if (raf) raf(function() { window.setTimeout(loadAll, 0); });
-	else window.addEventListener('load', loadAll);
+	// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+	// if (raf) raf(function() { window.setTimeout(loadAll, 0); });
+	// else
+  window.addEventListener('load', loadAll);
 </script>
 </body>
 </html>
