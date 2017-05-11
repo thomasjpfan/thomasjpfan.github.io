@@ -117,7 +117,7 @@
 			e("div.collapseheader > span").click(function () {
   			$header = e(this);
         $codearea = e(this).siblings(".input_area");
-  			$codearea.slideToggle(100, function () {
+  			$codearea.slideToggle(200, function () {
     			$header.text(function () {
     				return $codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
           });

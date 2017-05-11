@@ -444,6 +444,9 @@ thead > tr {
         font-weight: 700;
         padding: calculateRem(8px) calculateRem(6px);
     }
+    & > .input_area > .highlight {
+        margin-top: 0;
+    }
 }
 
 .output_text > pre {
