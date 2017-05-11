@@ -99,7 +99,7 @@
 		replacement.innerHTML = addStylesNode.textContent;
 		document.body.appendChild(replacement);
 		addStylesNode.parentElement.removeChild(addStylesNode);
-	}
+	};
 
 	var renderMath = function() {
 		renderMathInElement(document.body,
@@ -110,23 +110,28 @@
 			{ left: "$", right: "$", display: false },
 			{ left: "\\(", right: "\\)", display: false }
 		]});
-	}
+	};
 
 	var renderJqueryDeps = function($) {
 		$(document).ready(function (e) {
 			e("div.collapseheader > span").click(function () {
-			$header = e(this), $codearea = e(this).siblings(".input_area");
-			$codearea.slideToggle(500, function () {
-			$header.text(function () {
-				return $codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code"}) })})});
-		$.bigfoot()
-	}
+  			$header = e(this);
+        $codearea = e(this).siblings(".input_area");
+  			$codearea.slideToggle(100, function () {
+    			$header.text(function () {
+    				return $codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
+          });
+        });
+      });
+    });
+		$.bigfoot();
+	};
 
 	var loadAll = function() {
 		loadKatexDeferred();
 		renderMath();
 		renderJqueryDeps(jQuery);
-	}
+	};
 
 	// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
 	// if (raf) raf(function() { window.setTimeout(loadAll, 0); });
