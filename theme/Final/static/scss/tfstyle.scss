@@ -1122,7 +1122,7 @@ main {
 .article, .page, .search, .tag-wrapper, .tags-wrapper, .archives {
     margin-top: calculateRem(30px);
     margin-bottom: calculateRem(30px);
-    p, h2 {
+    p, h2, h3 {
         margin-top: calculateRem(16px);
     }
     h1 {
@@ -1130,7 +1130,7 @@ main {
     }
     h2 {
         border-bottom: 1px #d0d0d0 dotted;
-        margin-top: calculateRem(24px);
+        margin-top: calculateRem(40px);
     }
     ul {
         list-style-type: disc;
@@ -1145,9 +1145,6 @@ main {
     }
     .input {
         margin-top: calculateRem(14px);
-    }
-    h3 {
-        font-weight: 500;
     }
     .highlight {
         margin-top: calculateRem(10px);
