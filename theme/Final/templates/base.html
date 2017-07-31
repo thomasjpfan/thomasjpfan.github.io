@@ -115,13 +115,25 @@
 	var renderJqueryDeps = function($) {
 		$(document).ready(function (e) {
 			e("div.collapseheader > span").click(function () {
-  			$header = e(this);
-        $codearea = e(this).siblings(".input_area");
-  			$codearea.slideToggle(200, function () {
-    			$header.text(function () {
-    				return $codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
+  			var header = e(this);
+        var codearea = e(this).siblings(".input_area");
+  			codearea.slideToggle(200, function () {
+    			header.text(function () {
+    				return codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
           });
         });
+      });
+      e("div.show-all-code > span").click(function () {
+        var header = e(this);
+        var codeareas = e(".input_area");
+        var showcode = (header[0].textContent === "Show All Code In This Post");
+        if (showcode) {
+          codeareas.show();
+          header[0].textContent = "Hide all Code In This Post";
+        } else {
+          codeareas.hide();
+          header[0].textContent = "Show All Code In This Post";
+        }
       });
     });
 		$.bigfoot();
