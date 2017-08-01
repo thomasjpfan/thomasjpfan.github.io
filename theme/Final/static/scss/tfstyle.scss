@@ -1007,7 +1007,7 @@ main {
 }
 
 // index layout
-.articles-image {
+.articles-image, .project-image {
     max-width: 100%;
     max-height: 360px;
     width: auto;
@@ -1015,7 +1015,7 @@ main {
 
 }
 
-.articles-wrapper {
+.articles-wrapper, .project-wrapper {
     border: 1.5px solid #e8e8e8;
     @include border-radius(8px);
     background: $card-background;
@@ -1120,6 +1120,28 @@ main {
             width: 65%;
         }
     }
+}
+
+// project layout
+.project-list {
+  @include flexbox;
+  @include flex-flow(column nowrap);
+  @include justify-content(flex-start);
+  margin-top: calculateRem(8px);
+
+}
+
+.project-wrapper {
+  @include flex(initial);
+  @include flex-flow(row wrap);
+  .project-image  {
+    margin-top: 0;
+    float: right;
+    width: 168px;
+    height: 168px;
+    margin-left: calculateRem(16px);
+  }
+  @extend %clearfix;
 }
 
 // default layout for other pages
@@ -1240,3 +1262,29 @@ article img {
     font-size: calculateRem(18px);
 }
 
+// projects
+.projects {
+  h2 {
+    border-bottom: none;
+    margin-top: 0;
+  }
+}
+
+.project-wrapper {
+    h3 {
+      color: #520b92;
+      margin-bottom: calculateRem(8px);
+      margin-top: 0;
+    }
+    p {
+      margin-top: calculateRem(10px);
+      color: black;
+    }
+    span {
+      color: #096;
+    }
+    &:hover {
+      border: 1.5px solid #520b92;
+    }
+
+  }
