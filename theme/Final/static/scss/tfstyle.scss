@@ -1140,6 +1140,7 @@ main {
     width: 168px;
     height: 168px;
     margin-left: calculateRem(16px);
+    margin-bottom:1rem;
   }
   @extend %clearfix;
 }
@@ -1279,6 +1280,7 @@ article img {
     p {
       margin-top: calculateRem(10px);
       color: black;
+      font-size: 1rem;
     }
     span {
       color: #096;
