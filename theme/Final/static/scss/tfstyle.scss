@@ -270,24 +270,6 @@ pre {
 }
 
 
-table:not(.lines) {
-    margin: 0 auto;
-    width:100%;
-    max-width:80%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-table:not(.lines) >thead>tr>th, table:not(.lines) >tbody>tr>th, table:not(.lines) >tfoot>tr>th, table:not(.lines) >thead>tr>td, table:not(.lines) >tbody>tr>td, table:not(.lines) >tfoot>tr>td {
-    vertical-align: top;
-}
-table:not(.lines) tr:nth-child(even) {
-    background-color:#f5f5f5;
-}
-thead > tr {
-    background-color:$primary-color;
-    color: white;
-}
-
 .tag {
     display: inline-block;
     color: black;
@@ -1290,3 +1272,54 @@ article img {
     }
 
   }
+
+// tables
+tr,
+th,
+td {
+ text-align: right;
+ vertical-align: middle;
+ padding: 0.42em 0.47em;
+ line-height: normal;
+ white-space: normal;
+ max-width: none;
+ border: none;
+}
+th {
+  font-weight: bold;
+}
+table {
+ margin-right: auto;
+ border: none;
+ border-collapse: collapse;
+ border-spacing: 0;
+ color: #353535;
+ table-layout: fixed;
+}
+thead {
+ background: #e1e1e1;
+ color: #353535;
+ border-bottom: 1px solid #555555;
+ vertical-align: bottom;
+}
+tbody tr:nth-child(odd) {
+ background: #fafafa;
+}
+tbody tr {
+ background: #f2f2f2;
+}
+tbody tr:hover:nth-child(odd) {
+ background: #f7f7f7;
+}
+tbody tr:hover {
+ background: #e5e5e5;
+}
+* + table {
+ margin-top: calculateRem(16px);
+}
+.output_subarea {
+  overflow-x: auto;
+}
+.dataframe + p {
+  display: none;
+}
