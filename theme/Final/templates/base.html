@@ -126,13 +126,13 @@
       e("div.show-all-code > span").click(function () {
         var header = e(this);
         var codeareas = e("div.collapseheader > span").siblings(".input_area");
-        var showcode = (header[0].textContent === "Show Code In This Post");
+        var showcode = (header[0].textContent === "Show Collapsible Code In This Post");
         if (showcode) {
           codeareas.show();
-          header[0].textContent = "Hide Code In This Post";
+          header[0].textContent = "Hide Collapsible Code In This Post";
         } else {
           codeareas.hide();
-          header[0].textContent = "Show Code In This Post";
+          header[0].textContent = "Show Collapsible Code In This Post";
         }
       });
     });
