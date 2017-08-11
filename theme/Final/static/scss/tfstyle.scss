@@ -1302,17 +1302,14 @@ thead {
  border-bottom: 1px solid #555555;
  vertical-align: bottom;
 }
-tbody tr:nth-child(odd) {
- background: #fafafa;
+tbody tr:nth-child(even) {
+ background: #ededed;
 }
 tbody tr {
- background: #f2f2f2;
-}
-tbody tr:hover:nth-child(odd) {
- background: #f7f7f7;
+ background: #fbfbfb;
 }
 tbody tr:hover {
- background: #e5e5e5;
+  background: rgba(82, 11, 146, 0.08);
 }
 * + table {
  margin-top: calculateRem(16px);
