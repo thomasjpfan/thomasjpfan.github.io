@@ -45,6 +45,7 @@
 {{ cell.source.replace("# <!-- collapse=False -->\n", "") | highlight_code(metadata=cell.metadata) }}
 </div>
 </div>
+{% elif "# <!-- collapse=None -->" in cell.source %}
 {% else %}
 <div class="inner_cell">
     <div class="input_area">

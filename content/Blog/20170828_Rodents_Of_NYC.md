@@ -1,0 +1,12 @@
+Title: Rodents Of NYC
+Date: 2017-08-28 09:29
+Tags: eda, python
+Image: 20170828_Rodents_Of_NYC/front.jpg
+Summary: On July 2017, NYC has announced invested $32 million dollars in an attempt to reduce rodent populations. The plan will fully take into affect at the end of 2017. We will analyze how NYC's current process to control rodent population is successful by using 311 rodent related complaints as a proxy.
+
+On July 2017, NYC has [announced](http://www1.nyc.gov/office-of-the-mayor/news/472-17/de-blasio-administration-32-million-neighborhood-rat-reduction-plan#/0) invested $32 million dollars in an attempt to reduce rodent populations. The plan will fully take into affect at the end of 2017. We will analyze how NYC's current process to control rodent population is successful by using 311 rodent related complaints as a proxy.
+
+<!-- If you want to see the code snippets in my analysis, press this button!
+<div class="show-all-code"><span style="font-weight: bold;">Show Code In This Post</span></div> -->
+
+{% notebook 20170828_Rodents_Of_NYC/notebook.ipynb %}

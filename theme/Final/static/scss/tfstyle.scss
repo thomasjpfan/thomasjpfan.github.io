@@ -1145,6 +1145,10 @@ main {
         list-style-type: disc;
         margin-left: 1.50em;
     }
+    ol {
+      list-style-type: decimal;
+      margin-left: 1.50em;
+    }
     li {
         margin-top: calculateRem(12px);
     }
