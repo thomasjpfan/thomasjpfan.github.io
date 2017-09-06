@@ -1,3 +1,8 @@
+#Force www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^thomasjpfan.com [NC]
+RewriteRule ^(.*)$ http://www.thomasjpfan.com/$1 [L,R=301,NC]
+
 # BEGIN EXPIRES
 <IfModule mod_mime.c>
     AddType text/css .css
