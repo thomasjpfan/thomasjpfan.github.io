@@ -1,13 +1,8 @@
-install deps:
-  script:
+rsync publish:
+  before_script:
     - source activate pel
     - pip install -r requirements.txt
-  tags:
-    - shell
-
-rsync publish:
   script:
-    - source activate pel
-    - make rsync_upload
+    - PELICAN=`which pelican` make rsync_upload
   tags:
     - shell
