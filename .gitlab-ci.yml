@@ -1,7 +1,7 @@
 rsync publish:
   before_script:
     - source activate pel
-    - pip install -rq requirements.txt
+    - pip install -r -q requirements.txt
   script:
     - which pelican
     - PELICAN=`which pelican` make publish
