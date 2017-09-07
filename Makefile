@@ -70,6 +70,9 @@ ssh_upload: publish
 rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ im:$(SSH_TARGET_DIR) --cvs-exclude
 
+rsync_only:
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ im:$(SSH_TARGET_DIR) --cvs-exclude
+
 dev_upload: dev
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(DEV_TARGET_DIR) --cvs-exclude
 
@@ -87,4 +90,4 @@ github: rsync_upload
 	ghp-import content/notebooks
 	git push notebooks gh-pages:master
 
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
+.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github rsync_only
