@@ -5,9 +5,9 @@ install deps:
   tags:
     - shell
 
-rsync publish:
-  script:
-    - source activate pel
-    - PELICAN=`which pelican` make rsync_upload
-  tags:
-    - shell
+# rsync publish:
+#   script:
+#     - source activate pel
+#     - PELICAN=`which pelican` make rsync_upload
+#   tags:
+#     - shell
