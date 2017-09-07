@@ -288,6 +288,7 @@ pre {
     border: 2px solid black;
     font-weight: 500;
     margin-left: 6px;
+    margin-top: 6px;
     position: absolute;
     letter-spacing: calculateRem(0.1px);
     font-family: $header-font;
@@ -1052,12 +1053,18 @@ main {
     @include flexbox;
     @include flex-flow(column nowrap);
 
+    .articles-summary-header {
+      margin-top: 8px;
+    }
+
     @include media($content-break) {
         @include flex-flow(row nowrap);
         .articles-image-wrapper {
             width: 50%;
         }
-
+        .articles-summary-header {
+          margin-top: 0;
+        }
         .articles-summary-wrapper {
             width: 47%;
             margin-left: 2%;
