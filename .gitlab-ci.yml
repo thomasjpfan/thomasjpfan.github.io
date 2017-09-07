@@ -5,7 +5,5 @@ rsync publish:
   script:
     - which pelican
     - PELICAN=`which pelican` make publish
-    - make rsync_only
-    # - PELICAN=`which pelican` make rsync_upload
   tags:
     - shell
