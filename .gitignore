@@ -5,6 +5,8 @@ output/
 cache/
 content/notebooks/.ipynb_checkpoints/
 plugins/liquid_tags/test_data/
+content/R_cache/*
+!content/R_cache/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
