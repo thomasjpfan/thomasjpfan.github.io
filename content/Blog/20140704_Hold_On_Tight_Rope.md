@@ -8,11 +8,11 @@ There are quite a few places where one can go indoor rock climbing in NYC. To ke
 
 Roughly, the rope that wraps around the pipe looks something like this:
 
-![Rope friction]({filename}/images/20140704_Hold_On_Tight_Rope/RopeFriction.png)
+![Rope friction](/images/20140704_Hold_On_Tight_Rope/RopeFriction.png)
 
 The force that is used to hold the climber up is called a belaying force. To calculate the relationship between the force of the climber and the belaying force, we go back to undergraduate physics and draw a free body diagram of a small piece of the rope:
 
-![Free body of rope]({filename}/images/20140704_Hold_On_Tight_Rope/ropefreebody.png)
+![Free body of rope](/images/20140704_Hold_On_Tight_Rope/ropefreebody.png)
 
 where $T$ is tension at one end, $T+dT$ is the tension at the other end, $N$ is the normal force, and $f$ is the friction force that is resisting slipping. In equilibrium, we sum the forces in the vertical:
 
@@ -74,6 +74,6 @@ In other words, we only need to provide 16.3% of the weight of the climber to ho
 
 When ships dock, sailors use rope wrapped around a post to keep the ship from floating away. The rope is wrapped around the post several times like so:
 
-![Posts]({filename}/images/20140704_Hold_On_Tight_Rope/posts.jpg)
+![Posts](/images/20140704_Hold_On_Tight_Rope/posts.jpg)
 
 In this picture, the rope wrapped around the post about five times. Assuming coefficient of friction is $0.20$, the knot tied to the dock only needs 0.2% of tugging force from to ship to keep it docked.

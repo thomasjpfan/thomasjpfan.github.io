@@ -14,7 +14,7 @@ where $r$ is the radius, $n$ is the dimension, and $\Gamma$ is the <a href="http
 
 To make this example more concrete, lets say we want to find the fraction of the volume of a sphere of radius, $R$, that lies between $r=0.95R$ and $r=R$. In other words, we want to find the fractional volume of the blue region:[^CS]
 
-![Circles]({filename}/images/20140815_High_Dimensional_Spheres/Circles.png)
+![Circles](/images/20140815_High_Dimensional_Spheres/Circles.png)
 
 Using basic algebra the fractional volume is:
 
@@ -24,7 +24,7 @@ $$
 
 where $f$ is fractional volume. As the dimension, N, increases the fractional volume tends to one, as shown in this table:
 
-![nvf]({filename}/images/20140815_High_Dimensional_Spheres/nvf.png)
+![nvf](/images/20140815_High_Dimensional_Spheres/nvf.png)
 
 In other words, in higher dimensions, almost all the volume of the sphere is in the shell that has a thickness equal to 5% of the radius. Mind-blowing?
 
