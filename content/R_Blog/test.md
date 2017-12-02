@@ -1,4 +1,4 @@
-Title: Maximum of free damped oscillators
+Title: Testing
 Date: 2014-05-02 09:29
 Tags: physics, math, python
 Image: 201405_Maximum_of_damped_free_vibrations/freedampedfull.png

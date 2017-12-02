@@ -27,7 +27,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
            'liquid_tags.youtube', 'liquid_tags.notebook',
            'minification', 'better_codeblock_line_numbering', 'assets',
-           'render_katex', 'image_process', 'optimize_images']
+           'render_katex']
 FEED_USE_SUMMARY = True
 # MD_EXTENSIONS = [
 #     'codehilite(css_class=highlight, linenums=False)',
