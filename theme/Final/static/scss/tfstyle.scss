@@ -417,7 +417,15 @@ pre {
     display: none;
 }
 .output_text {
-    margin-top: calculateRem(10px)
+    margin-top: calculateRem(10px);
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px;
+    color: #353535;
+}
+.output_stderr {
+    display: none;
 }
 .collapseheader, .show-all-code {
     background-color: #e9e9e9;
@@ -438,10 +446,8 @@ pre {
 
 .output_text > pre {
     overflow: auto;
-    font-size: calculateRem(16px);
-    padding: 0.4em;
+    font-size: calculateRem(14px);
     font-family: $code-font;
-    box-shadow: rgba(0,0,0,0.1) 0 0 6px 2px;
 }
 
 // listing tables
@@ -1147,6 +1153,7 @@ main {
     h2 {
         border-bottom: 1px #d0d0d0 dotted;
         margin-top: calculateRem(40px);
+        padding-bottom: calculateRem(6px);
     }
     ul {
         list-style-type: disc;
@@ -1196,6 +1203,7 @@ article img {
 
 .article-header {
     margin-top: calculateRem(12px);
+    padding-bottom: calculateRem(6px);
 }
 
 .article-header-link {
