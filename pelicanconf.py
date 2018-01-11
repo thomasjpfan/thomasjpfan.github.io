@@ -16,7 +16,7 @@ DATE_FORMATS = {
     'en': ' %b %d, %Y',
 }
 
-OG_DESCRIPTION = ("This is my personal blog, where I share my"
+OG_DESCRIPTION = ("This is my personal blog, where I share my "
                   "insights and what I have been learning.")
 SUMMARY_MAX_LENGTH = 30
 
