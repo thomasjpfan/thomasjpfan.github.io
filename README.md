@@ -10,6 +10,16 @@ The `builder` directory builds a docker image that builds this site. To build th
 make builder
 ```
 
+## Local Development
+
+Start up a shell:
+
+```bash
+ docker run --rm --name stuff -p 8000:8000 -v $PWD:/blog -ti thomasjpfan/pelican-blog-builder /bin/sh
+```
+
+And run `make devserver` and to stop `make stopserver`.
+
 ## Deploy Using Rsync
 
 1. Have the following defined in env or an `.envrc`:
