@@ -12,12 +12,8 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=ecbiz200.inmotionhosting.com
-SSH_PORT=2222
-SSH_USER=thoma165
-SSH_TARGET_DIR=/home/thoma165/www
-
 S3_BUCKET=my_s3_bucket
+
 
 help:
 	@echo 'Makefile for a pelican Web site                                        '
@@ -51,7 +47,7 @@ regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server 8080
+	cd $(OUTPUTDIR) && $(PY) -m pelican.server 8180
 
 devserver:
 	$(BASEDIR)/develop_server.sh restart
@@ -71,7 +67,7 @@ rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ im:$(SSH_TARGET_DIR) --cvs-exclude
 
 rsync_only:
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ im:$(SSH_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
 
 dev_upload: dev
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(DEV_TARGET_DIR) --cvs-exclude
@@ -90,4 +86,19 @@ github: rsync_upload
 	ghp-import content/notebooks
 	git push notebooks gh-pages:master
 
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github rsync_only
+local_dev:
+	docker run --rm -v $(BASEDIR):/blog -p 8180:8180 \
+	thomasjpfan/pelican-blog-builder make devserver
+
+builder:
+	cd builder && \
+	docker image build -t thomasjpfan/pelican-blog-builder .
+
+push_builder:
+	docker image push thomasjpfan/pelican-blog-builder
+
+build_site:
+	docker run -v $(PWD):/blog --name output thomasjpfan/pelican-blog-builder make publish
+
+.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github rsync_only \
+builder push_builder build_site

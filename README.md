@@ -1,18 +1,34 @@
-## Installation
+# thomasjpfan.com
 
-for osx
+Repo for personal [blog](https://thomasjpfan.com).
+
+## Build docker builder
+
+The `builder` directory builds a docker image that builds this site. To build the builder run:
+
 ```bash
-gem install compass
-brew install optipng
-conda config --add channels conda-forge
-conda install jpeg
+make builder
 ```
 
-for ubuntu
+## Deploy Using Rsync
+
+1. Have the following defined in env or an `.envrc`:
+
 ```bash
-apt-get install ruby-full
-apt-get install libjpeg-progs
-apt-get install optipng
-conda install jpeg
-gem install compass
+export SSH_HOST=[***]
+export SSH_PORT=[***]
+export SSH_USER=[***]
+export SSH_TARGET_DIR=[***]
+```
+
+1. Using the builder to build site:
+
+```bash
+make build_site
+```
+
+1. Deploy
+
+```bash
+make rsync_only
 ```

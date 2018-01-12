@@ -1,0 +1,28 @@
+version: 2
+jobs:
+  builds:
+    docker:
+      - image: docker:17.12.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 17.11.0-ce
+      - run:
+          name: Build blog
+          command: |
+            docker create -v /blog --name blog alpine:3.7 /bin/true
+            docker cp . blog:/blog
+            docker run --volumes-from blog -d --name builder \
+            thomasjpfan/pelican-blog-builder make publish
+      - run:
+          name: Copy output
+          command: docker cp blog:/blog/output .
+      - run:
+          name: Clean up
+          command: docker container rm blog builder
+          when: always
+      - deploy:
+          name: Rsync to server
+          command: |
+            apk --update add rsync
+            make rsync_only

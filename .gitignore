@@ -2,6 +2,7 @@ _nb_header.html
 output/
 *.pid
 *.sublime-workspace
+.envrc
 cache/
 content/notebooks/.ipynb_checkpoints/
 plugins/liquid_tags/test_data/
