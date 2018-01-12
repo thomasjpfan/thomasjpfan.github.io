@@ -25,4 +25,5 @@ jobs:
           name: Rsync to server
           command: |
             apk --update add rsync
-            rsync -e "ssh -p ${SSH_PORT}" -P -rvz --delete output/ "${SSH_USER}@${SSH_HOST}:${SSH_TARGET_DIR}" --cvs-exclude
+            rsync -e "ssh -p ${SSH_PORT} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+            -P -rvz --delete output/ "${SSH_USER}@${SSH_HOST}:${SSH_TARGET_DIR}" --cvs-exclude
