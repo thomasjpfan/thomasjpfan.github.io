@@ -12,7 +12,7 @@ jobs:
           command: |
             docker create -v /blog --name blog alpine:3.7 /bin/true
             docker cp . blog:/blog
-            docker run --volumes-from blog -d --name builder \
+            docker run --volumes-from blog --name builder \
             thomasjpfan/pelican-blog-builder make publish
       - run:
           name: Copy output
