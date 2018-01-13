@@ -34,10 +34,10 @@ FEED_USE_SUMMARY = True
 #     'extra'
 # ]
 
-IMAGE_PROCESS = {
-    'major': ["scale_out 510 100 False"],
-    'minor': ["scale_out 190 100 False"]
-}
+# IMAGE_PROCESS = {
+#     'major': ["scale_out 510 100 False"],
+#     'minor': ["scale_out 190 100 False"]
+# }
 
 # IMAGE_PROCESS = {
 #     'major': {

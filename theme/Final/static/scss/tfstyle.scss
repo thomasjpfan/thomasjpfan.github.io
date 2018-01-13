@@ -1306,7 +1306,8 @@ main {
         width: 96%;
     }
 }
-.footer-inner-wrapper{
+
+.footer-inner-wrapper {
     padding-bottom: calculateRem(16px);
 }
 
@@ -1531,7 +1532,7 @@ main {
 .articles {
     @include flexbox;
     @include flex-flow(row wrap);
-    @include justify-content(space-around);
+    @include justify-content(flex-start);
     @include align-items(stretch);
 }
 

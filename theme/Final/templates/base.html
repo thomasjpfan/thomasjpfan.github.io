@@ -1,154 +1,145 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
+
 <head>
 	{% block head %}
 	<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 	<meta charset="utf-8">
 	<meta name="author" content="{{ AUTHOR }}">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
-  <link rel="apple-touch-icon" href="{{ SITEURL }}/favicon_v4_ios.png" >
-	{% block drafts %}{% endblock drafts %}
+	<link rel="apple-touch-icon" href="{{ SITEURL }}/favicon_v4_ios.png"> {% block drafts %}{% endblock drafts %}
 
 	<!-- Object Graph -->
 	<meta property="og:image" content="{{ SITEURL }}/favicon_v4.png">
 	<meta property="og:type" content="article">
-  <meta property="og:locale" content="en_US">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@thomasjpfan">
-  <meta name="twitter:creator" content="@thomasjpfan">
-  <meta name="twitter:image" content="{{ SITEURL }}/favicon_v4.png">
-	{% block info %}
-  <meta name="twitter:title" content="{{ SITENAME }}">
-  <meta name="twitter:description" content="{{ OG_DESCRIPTION }}">
-  <meta property="og:title" content="{{ SITENAME }}">
-  <meta property="og:url" content="{{ SITEURL }}">
+	<meta property="og:locale" content="en_US">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@thomasjpfan">
+	<meta name="twitter:creator" content="@thomasjpfan">
+	<meta name="twitter:image" content="{{ SITEURL }}/favicon_v4.png"> {% block info %}
+	<meta name="twitter:title" content="{{ SITENAME }}">
+	<meta name="twitter:description" content="{{ OG_DESCRIPTION }}">
+	<meta property="og:title" content="{{ SITENAME }}">
+	<meta property="og:url" content="{{ SITEURL }}">
 	<meta property="og:description" content="{{ OG_DESCRIPTION }}">
-	<meta name="description" content="{{ OG_DESCRIPTION }}">
-	{% endblock info %}
+	<meta name="description" content="{{ OG_DESCRIPTION }}"> {% endblock info %}
 
 	<!-- CSS Styles -->
-<!-- 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Open+Sans:400,700|Roboto:500|Ubuntu" rel="stylesheet"> -->
+	<!-- 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Open+Sans:400,700|Roboto:500|Ubuntu" rel="stylesheet"> -->
 
-	<link rel="shortcut icon" href="{{ SITEURL }}/favicon_v4.ico">
+	<link rel="shortcut icon" href="{{ SITEURL }}/favicon_v4.ico"> {% assets "scss-main" %}
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}"> {% endassets %}
 
-  {% assets "scss-main" %}
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-  {% endassets %}
-
-  	<noscript id="katex_deferred">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+	<noscript id="katex_deferred">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
 	</noscript>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" defer></script>
 
 	<!-- JS Libraries to Load -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous" defer ></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="{{ SITEURL }}/theme/js/bigfoot.min.js" defer></script>
 
 	<!-- Feed Information / Copied from Simple Theme -->
 	{% if FEED_ALL_ATOM %}
-	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
-	{% endif %}
-	{% if FEED_ALL_RSS %}
-	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
-	{% endif %}
-	{% if FEED_ATOM %}
-	<link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
-	{% endif %}
-	{% if FEED_RSS %}
-	<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
-	{% endif %}
-	{% if CATEGORY_FEED_ATOM %}
-	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
-	{% endif %}
-	{% if CATEGORY_FEED_RSS %}
-	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
-	{% endif %}
-	{% if TAG_FEED_ATOM %}
-	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
-	{% endif %}
-	{% if TAG_FEED_RSS %}
-	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
-	{% endif %}
-	{% endblock head %}
-	{% include 'analytics.html' %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed"> {% endif %} {% if FEED_ALL_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed"> {% endif %} {% if FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed"> {% endif %} {% if FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed"> {% endif %} {% if CATEGORY_FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed"> {% endif %} {% if CATEGORY_FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed"> {% endif %} {% if TAG_FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed"> {% endif %} {% if TAG_FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed"> {% endif %} {% endblock head %} {% include 'analytics.html' %}
 </head>
 
 <body>
-    {% include 'header.html' %}
-    <main>
-      {% block content %}
-      {% endblock content %}
-    </main>
-    {% include 'footer.html' %}
-{% block script %}
-<script>
-    function validateForm(query)
-    {
-        return (query.length > 0);
-    }
-</script>
-{% endblock script %}
-<script>
-	var loadKatexDeferred = function() {
-		var addStylesNode = document.getElementById("katex_deferred");
-		var replacement = document.createElement("div");
-		replacement.innerHTML = addStylesNode.textContent;
-		document.body.appendChild(replacement);
-		addStylesNode.parentElement.removeChild(addStylesNode);
-	};
+	{% include 'header.html' %}
+	<main>
+		{% block content %} {% endblock content %}
+	</main>
+	{% include 'footer.html' %} {% block script %}
+	<script>
+		function validateForm(query) {
+			return (query.length > 0);
+		}
+	</script>
+	{% endblock script %}
+	<script>
+		var loadKatexDeferred = function () {
+			var addStylesNode = document.getElementById("katex_deferred");
+			var replacement = document.createElement("div");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.appendChild(replacement);
+			addStylesNode.parentElement.removeChild(addStylesNode);
+		};
 
-	var renderMath = function() {
-		renderMathInElement(document.body,
-		{ delimiters:
-		[
-			{ left: "$$", right: "$$", display: true },
-			{ left: "\\[", right: "\\]", display: true },
-			{ left: "$", right: "$", display: false },
-			{ left: "\\(", right: "\\)", display: false }
-		]});
-	};
+		var renderMath = function () {
+			renderMathInElement(document.body, {
+				delimiters: [{
+						left: "$$",
+						right: "$$",
+						display: true
+					},
+					{
+						left: "\\[",
+						right: "\\]",
+						display: true
+					},
+					{
+						left: "$",
+						right: "$",
+						display: false
+					},
+					{
+						left: "\\(",
+						right: "\\)",
+						display: false
+					}
+				]
+			});
+		};
 
-	var renderJqueryDeps = function($) {
-		$(document).ready(function (e) {
-			e("div.collapseheader > span").click(function () {
-  			var header = e(this);
-        var codearea = e(this).siblings(".input_area");
-  			codearea.slideToggle(200, function () {
-    			header.text(function () {
-    				return codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
-          });
-        });
-      });
-      e("div.show-all-code > span").click(function () {
-        var header = e(this);
-        var codeareas = e("div.collapseheader > span").siblings(".input_area");
-        var showcode = (header[0].textContent === "Show Collapsible Code In This Post");
-        if (showcode) {
-          codeareas.show();
-          header[0].textContent = "Hide Collapsible Code In This Post";
-        } else {
-          codeareas.hide();
-          header[0].textContent = "Show Collapsible Code In This Post";
-        }
-      });
-    });
-		$.bigfoot();
-	};
+		var renderJqueryDeps = function ($) {
+			$(document).ready(function (e) {
+				e("div.collapseheader > span").click(function () {
+					var header = e(this);
+					var codearea = e(this).siblings(".input_area");
+					codearea.slideToggle(200, function () {
+						header.text(function () {
+							return codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
+						});
+					});
+				});
+				e("div.show-all-code > span").click(function () {
+					var header = e(this);
+					var codeareas = e("div.collapseheader > span").siblings(".input_area");
+					var showcode = (header[0].textContent === "Show Collapsible Code In This Post");
+					if (showcode) {
+						codeareas.show();
+						header[0].textContent = "Hide Collapsible Code In This Post";
+					} else {
+						codeareas.hide();
+						header[0].textContent = "Show Collapsible Code In This Post";
+					}
+				});
+			});
+			$.bigfoot();
+		};
 
-	var loadAll = function() {
-		loadKatexDeferred();
-		renderMath();
-		renderJqueryDeps(jQuery);
-	};
+		var loadAll = function () {
+			loadKatexDeferred();
+			renderMath();
+			renderJqueryDeps(jQuery);
+		};
 
-	// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-	// if (raf) raf(function() { window.setTimeout(loadAll, 0); });
-	// else
-  window.addEventListener('load', loadAll);
-</script>
+		// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+		// if (raf) raf(function() { window.setTimeout(loadAll, 0); });
+		// else
+		window.addEventListener('load', loadAll);
+	</script>
 </body>
+
 </html>

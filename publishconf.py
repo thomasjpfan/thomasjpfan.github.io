@@ -25,7 +25,7 @@ MENUITEMS = (('Rss', SITEURL + "/" + FEED_ALL_ATOM),)
 PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
            'liquid_tags.youtube', 'liquid_tags.notebook',
            'minification', 'better_codeblock_line_numbering', 'assets',
-           'render_katex', 'image_process', 'optimize_images']
+           'render_katex', 'optimize_images']
 
 # DISQUS_SITENAME = "thomasjpfan"
 GOOGLE_ANALYTICS = "UA-46065142-1"
