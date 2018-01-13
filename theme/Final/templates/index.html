@@ -1,81 +1,78 @@
-{% extends "base.html" %}
-{% block content_title %}{% endblock content_title %}
-{% block content %}
+{% extends "base.html" %} {% block content_title %}{% endblock content_title %} {% block content %}
 <!-- If we have articles to display -->
 {% if articles %}
-	<section class="content index">
-		<div class="content-wrapper index-wrapper">
+<section class="content index">
+	<div class="content-wrapper index-wrapper">
 		<div class="articles">
-{% block index_header %}
-	{% for article in (articles_page.object_list if articles_page else articles) %}
-			{% if loop.index0 is equalto 0 %}
-			<div class="articles-feature articles-wrapper">
+			{% block index_header %} {% for article in (articles_page.object_list if articles_page else articles) %} {% if loop.index0
+			is equalto 0 %}
+			<div class="articles-feature articles-wrapper {% if not articles_page.has_previous() %}articles-main-wrapper{% endif %}">
+				<div class="articles-main-panel">
 					{% if not articles_page.has_previous() %}
-					<a href="/{{ article.url }}"><span class="most-recent">Most Recent</span></a>
-					{% endif %}
-					<div class="articles-image-wrapper">
+					<div class="most-recent-wrapper">
 						<a href="/{{ article.url }}">
-							{% if article.image %}
-							<img class="articles-image image-process-major" src="/images/{{article.image}}"/>
-							{% else %}
-							<img class="articles-image" src="/images/placeholder.png"/>
-							{% endif %}
+							<span class="most-recent">Most Recent</span>
 						</a>
 					</div>
-					<div class="articles-summary-wrapper">
-					<div class="articles-summary-header"><h2><a href="/{{ article.url }}">{{ article.title }}</a></h2>{% include "article_header.html" %}</div>
+					{% endif %}
+					<div class="articles-summary-header">
+						<h2>
+							<a href="/{{ article.url }}">{{ article.title }}</a>
+						</h2>{% include "article_header.html" %}</div>
+				</div>
+				<div class="articles-summary-wrapper">
 					<div class="articles-summary">
-					{{ article.summary }}
-					<a href="/{{ article.url }}">Read more...</a>
+						{{ article.summary }}
+						<a href="/{{ article.url }}">Read more...</a>
 					</div>
-					</div>
+				</div>
 			</div>
 			{% else %}
 			<div class="articles-not-feature articles-wrapper">
-					<div class="articles-summary-header"><h2><a href="/{{ article.url }}">{{ article.title }}</a></h2>{% include "article_header.html" %}</div>
-					<div class="articles-image-wrapper">
-						<a href="/{{ article.url }}">
-							{% if article.image %}
-							<img class="articles-image image-process-minor" src="/images/{{article.image}}"/>
-							{% else %}
-							<img class="articles-image" src="/images/placeholder.png"/>
-							{% endif %}
-						</a>
-					</div>
-					<div class="articles-summary">
+				<div class="articles-summary-header">
+					<h2>
+						<a href="/{{ article.url }}">{{ article.title }}</a>
+					</h2>{% include "article_header.html" %}</div>
+				<div class="articles-summary">
 					{{ article.summary | truncate(256, False, end='...')}}
-					<div><a href="/{{ article.url }}">Read more</a></div>
+					<div>
+						<a href="/{{ article.url }}">Read more...</a>
 					</div>
+				</div>
 			</div>
-			{% endif %}
-
-	{% endfor %}
+			{% endif %} {% endfor %}
 		</div>
-	{% if articles_page and articles_paginator.num_pages > 1%}
-	<div class="pagination">
-		<ul class="pagination-list">
-			{% if articles_page.has_next() %}
-			<li class="next"><a href="/page/{{ articles_page.next_page_number() }}">&laquo;  OLDER</a></li>
-			{% else %}
-			<li class="next disabled"><a>&laquo;  OLDER</a></li>
-			{% endif %}
-			<li id="page_middle"></li>
-			{% if articles_page.has_previous() %}
-			<!-- Enable the prev button? -->
-			{% set num = articles_page.previous_page_number() %}
-			{% if num > 1 %}
-			<li class="prev"><a href="/page/{{ num if num > 1 else '' }}">NEWER  &raquo;</a></li>
-			{% else %}
-			<li class="prev"><a href="/">NEWER  &raquo;</a></li>
-			{% endif %}
-			{% else %}
-			<li class="prev disabled"><a>NEWER  &raquo;</a></li>
-			{% endif %}
-		</ul>
-	</div>
-{% endif %}
-{% endblock index_header %}
+		{% if articles_page and articles_paginator.num_pages > 1%}
+		<div class="pagination">
+			<ul class="pagination-list">
+				{% if articles_page.has_next() %}
+				<li class="next">
+					<a href="/page/{{ articles_page.next_page_number() }}">&laquo; OLDER</a>
+				</li>
+				{% else %}
+				<li class="next disabled">
+					<a>&laquo; OLDER</a>
+				</li>
+				{% endif %}
+				<li id="page_middle"></li>
+				{% if articles_page.has_previous() %}
+				<!-- Enable the prev button? -->
+				{% set num = articles_page.previous_page_number() %} {% if num > 1 %}
+				<li class="prev">
+					<a href="/page/{{ num if num > 1 else '' }}">NEWER &raquo;</a>
+				</li>
+				{% else %}
+				<li class="prev">
+					<a href="/">NEWER &raquo;</a>
+				</li>
+				{% endif %} {% else %}
+				<li class="prev disabled">
+					<a>NEWER &raquo;</a>
+				</li>
+				{% endif %}
+			</ul>
+		</div>
+		{% endif %} {% endblock index_header %}
 	</div>
 </section>
-{% endif %}
-{% endblock content %}
+{% endif %} {% endblock content %}

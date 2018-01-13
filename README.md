@@ -15,7 +15,7 @@ make builder
 Start up a shell:
 
 ```bash
- docker run --rm --name stuff -p 8000:8000 -v $PWD:/blog -ti thomasjpfan/pelican-blog-builder /bin/sh
+ docker run --rm --name local_blog -p 8000:8000 -v $PWD:/blog -ti thomasjpfan/pelican-blog-builder /bin/sh
 ```
 
 And run `make devserver` and to stop `make stopserver`.

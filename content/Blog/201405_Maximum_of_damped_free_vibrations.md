@@ -1,7 +1,6 @@
 Title: Maximum of free damped oscillators
 Date: 2014-05-02 09:29
 Tags: physics, math, python
-Image: 201405_Maximum_of_damped_free_vibrations/freedampedfull.png
 Summary: There are still elementary facts about free damped oscillators that catch me off guard from time to time. One of these facts is that the maximum of the damped oscillation solution is different from the envelope that is tangent to it.
 
 While reading a <a href="http://www.leancrew.com/all-this/2014/04/damped-free-vibrations/" target="_blank">blog entry</a> on free damped oscillators by Dr. Drang, I was caught off guard by the fact that the maximum of the damped oscillation solution is different from the envelope that is tangent to it. Looking back, this was obviously since the exponential is a monotonic decreasing function which would change the position of the local maximum of the cosine function. What I took for granted was the fact that the distance between the maximum is the same as the period of the cosine function.

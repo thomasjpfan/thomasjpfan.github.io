@@ -1,7 +1,6 @@
 Title: High n-Dimensional Spheres Are Only Skin Deep
 Date: 2014-08-15 09:29
 Tags: math
-Image: 20140815_High_Dimensional_Spheres/Circles.png
 Summary: For the past few months, I've been implementing machine learning algorithms and one of the small details about higher dimensional spheres caught me by surprise.
 
 For the past few months, I've been implementing machine learning algorithms and one of the small details about higher dimensional spheres caught me by surprise.

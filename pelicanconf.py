@@ -120,7 +120,7 @@ DEFAULT_CATEGORY = "Blog"
 
 TEMPLATE_PAGES = {'search.html': 'search.html'}
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 7
 
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
