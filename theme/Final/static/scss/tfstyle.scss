@@ -1714,6 +1714,17 @@ article img {
     }
 }
 
+.series-wrapper {
+    border-bottom: 1px dotted black;
+    padding-bottom: 18px;
+    a {
+        font-size: calculateRem(18px);
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
 // archives
 .archives {
     .dl-archive {
