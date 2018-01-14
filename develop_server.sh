@@ -19,7 +19,7 @@ SRV_PID=$BASEDIR/srv.pid
 PELICAN_PID=$BASEDIR/pelican.pid
 
 function usage() {
-	echo "usage: $0 (stop) (start) (restart)"
+	echo "usage: $0 (stop) (start) (restart) [port]"
 	echo "This starts pelican in debug and reload mode and then launches"
 	echo "A pelican.server to help site development. It doesn't read"
 	echo "your pelican options so you edit any paths in your Makefile"
@@ -60,13 +60,14 @@ function shut_down() {
 }
 
 function start_up() {
+	local port=$1
 	echo "Starting up Pelican and pelican.server"
 	shift
 	$PELICAN --debug --autoreload -r $INPUTDIR -o $OUTPUTDIR -s $CONFFILE $PELICANOPTS &
 	pelican_pid=$!
 	echo $pelican_pid >$PELICAN_PID
 	cd $OUTPUTDIR
-	$PY -m pelican.server &
+	$PY -m pelican.server $port &
 	srv_pid=$!
 	echo $srv_pid >$SRV_PID
 	cd $BASEDIR
@@ -75,7 +76,7 @@ function start_up() {
 		echo "Pelican didn't start. Is the pelican package installed?"
 		return 1
 	elif ! alive $srv_pid; then
-		echo "pelican.server didn't start. Is the pelican package installed?"
+		echo "The HTTP server didn't start. Is there another service using port" $port "?"
 		return 1
 	fi
 	echo 'Pelican and pelican.server processes now running in background.'
@@ -84,7 +85,10 @@ function start_up() {
 ###
 #  MAIN
 ###
-[[ $# -ne 1 ]] && usage
+[[ $# -eq 0 || $# -gt 2 ]] && usage
+port=''
+[[ $# -eq 2 ]] && port=$2
+
 if [[ $1 == "stop" ]]; then
 	shut_down
 elif [[ $1 == "restart" ]]; then

@@ -50,7 +50,7 @@ serve:
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 8180
 
 devserver:
-	$(BASEDIR)/develop_server.sh restart
+	$(BASEDIR)/develop_server.sh restart 8000
 
 stopserver:
 	kill -9 `cat pelican.pid`
@@ -64,13 +64,15 @@ ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ im:$(SSH_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete --cvs-exclude \
+	--exclude '*.DS_Store' \
+	$(OUTPUTDIR)/ im:$(SSH_TARGET_DIR)
 
 rsync_only:
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete  --cvs-exclude \
+	--exclude '*.DS_Store' \
+	$(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
-dev_upload: dev
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(DEV_TARGET_DIR) --cvs-exclude
 
 dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
