@@ -83,11 +83,6 @@ ftp_upload: publish
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
-github: rsync_upload
-	rm -rf content/notebooks/.ipynb_checkpoints
-	ghp-import content/notebooks
-	git push notebooks gh-pages:master
-
 local_dev:
 	docker run --rm -v $(BASEDIR):/blog -p 8180:8180 \
 	thomasjpfan/pelican-blog-builder make devserver
