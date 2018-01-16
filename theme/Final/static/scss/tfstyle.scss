@@ -1490,8 +1490,7 @@ main {
 }
 
 // index layout
-.article-image,
-.project-image {
+.article-image {
     max-width: 100%;
     max-height: 360px;
     width: auto;
@@ -1589,7 +1588,7 @@ main {
 // project layout
 .project-list {
     @include flexbox;
-    @include flex-flow(column nowrap);
+    @include flex-flow(row nowrap);
     @include justify-content(flex-start);
     margin-top: calculateRem(8px);
 }
@@ -1597,15 +1596,9 @@ main {
 .project-wrapper {
     @include flex(initial);
     @include flex-flow(row wrap);
-    .project-image {
-        margin-top: 0;
-        float: right;
-        width: 168px;
-        height: 168px;
-        margin-left: calculateRem(16px);
-        margin-bottom: 1rem;
-    }
-    @extend %clearfix;
+    width: 49%;
+    margin-left: .5%;
+    margin-right: .5%;
 }
 
 // default layout for other pages
@@ -1770,7 +1763,7 @@ article img {
 .projects {
     h2 {
         border-bottom: none;
-        margin-top: 0;
+        margin-top: calculateRem(16px);
     }
 }
 
