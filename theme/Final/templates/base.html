@@ -39,7 +39,7 @@
 
 	<!-- JS Libraries to Load -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
+	    crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="{{ SITEURL }}/theme/js/bigfoot.min.js" defer></script>
 
@@ -52,7 +52,8 @@
 	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed"> {% endif %} {% if CATEGORY_FEED_RSS %}
 	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed"> {% endif %} {% if TAG_FEED_ATOM %}
 	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed"> {% endif %} {% if TAG_FEED_RSS %}
-	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed"> {% endif %} {% endblock head %} {% include 'analytics.html' %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed"> {% endif %} {% endblock head %} {% include 'analytics.html' %} {% if article %} {% if article.stylesheets %} {% for stylesheet
+	in article.stylesheets %} {{ stylesheet }} {% endfor %} {% endif %} {% endif %}
 </head>
 
 <body>
@@ -140,6 +141,8 @@
 		// else
 		window.addEventListener('load', loadAll);
 	</script>
+	{% if article %} {% if article.javascripts %} {% for javascript in article.javascripts %} {{ javascript }} {% endfor %} {%
+	endif %} {% endif %}
 </body>
 
 </html>
