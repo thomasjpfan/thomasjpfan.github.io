@@ -1594,11 +1594,17 @@ main {
 }
 
 .project-wrapper {
+    word-wrap: break-word;
     @include flex(initial);
     @include flex-flow(row wrap);
-    width: 49%;
+    width: 99%;
     margin-left: .5%;
     margin-right: .5%;
+    @include media($index-tablet) {
+        width: 49%;
+        margin-left: .5%;
+        margin-right: .5%;
+    }
 }
 
 // default layout for other pages
@@ -1780,6 +1786,7 @@ article img {
     }
     span {
         color: #096;
+        line-height: 1.2;
     }
     &:hover {
         border: 1px solid #520b92;
