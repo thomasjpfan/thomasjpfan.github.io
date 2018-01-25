@@ -64,12 +64,15 @@ ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete --cvs-exclude \
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete \
+	--exclude .well-known \
+	--cvs-exclude \
 	--exclude '*.DS_Store' \
 	$(OUTPUTDIR)/ im:$(SSH_TARGET_DIR)
 
 rsync_only:
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete  --cvs-exclude \
+	--exclude .well-known \
 	--exclude '*.DS_Store' \
 	$(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 

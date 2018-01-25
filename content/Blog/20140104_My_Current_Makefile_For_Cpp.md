@@ -5,6 +5,14 @@ Summary: When I took my first programming course at Polytech, I used a Integrate
 
 When I took my first programming course at <a href="http://engineering.nyu.edu/" target="_blank">Polytech</a>, I used an integrated development environment (IDE) called <a href="http://www.visualstudio.com/" target="_blank">Visual Studio</a>. It magically complied all my files together and formed an executable. Now a days, I've moved on from using IDEs and switch to using a text editor, <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>.[^sublimetext] As the C++ code I wrote started to get more complicated and span multiple files, I needed a way to systematically complied the files together. Thus, I created a Makefile to build and organize my C++ files.
 
+<!-- > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+!!! tip
+    You should note that the title will be automatically capitalized.
+    This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, -->
+
 ## Makefile Logic
 
 ```makefile

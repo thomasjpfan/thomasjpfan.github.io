@@ -13,11 +13,11 @@ $$
 
 where $\eta$ is a damping constant, $A$ is the amplitude, $\omega$ is the angular frequency, and $\phi$ is a phase shift that depends on initial conditions. With $\eta=0.5$, $\omega=2\pi$, and $\phi=0$, this function looks like this:
 
-![Free damped oscillator](/images/201405_Maximum_of_damped_free_vibrations/freedampedfull.png)
+![Free damped oscillator](/images/20140502_Maximum_of_damped_free_vibrations/freedampedfull.png)
 
 The red function is $\pm e^{-\eta t}$, which is the envelope for $x(t)$ (the middle function). If you zoom into the peak at $t=1$, the difference between the peak of $x(t)$ and the envelope is apparent:
 
-![Free damped oscillator zoom](/images/201405_Maximum_of_damped_free_vibrations/freedampedzoom.png)
+![Free damped oscillator zoom](/images/20140502_Maximum_of_damped_free_vibrations/freedampedzoom.png)
 
 What is the actual difference between them? Well that just takes some simple calculus:
 

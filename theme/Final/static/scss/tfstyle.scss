@@ -772,11 +772,12 @@ pre {
 
 .output_text {
     margin-top: calculateRem(10px);
-    border: 1px solid;
     padding: 10px;
-    border-radius: 4px;
-    box-shadow: 2px 2px;
+    border-radius: 2px;
     color: #353535;
+    border-color: #430977;
+    border-width: 1px 1px 1px 4px;
+    border-style: solid
 }
 
 .output_stderr {
@@ -984,16 +985,6 @@ pre {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-
-/*Block Quote*/
-
-blockquote p {
-    background-color: #eee;
-    padding: 9.5px;
-    border-radius: .5em;
-    font-family: $brand-font
 }
 
 
@@ -1848,4 +1839,39 @@ tbody tr:hover {
 
 .dataframe+p {
     display: none;
+}
+
+// adomontition
+.admonition {
+    padding: 1rem;
+    border-radius: 2px;
+    margin-top: 1rem;
+    background-color: rgba(255, 219, 64, 0.19);
+    border-left: 4px solid rgba(255, 219, 64, 1);
+    p {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    .admonition-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.note {
+    background-color: rgba(255, 219, 64, 0.19);
+    border-left: 4px solid rgba(255, 219, 64, 1);
+}
+
+
+/*Block Quote*/
+
+blockquote p {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 2px;
+    font-family: $primary-font;
+    border-left: 4px solid #520b92;
+    background-color: rgba(82, 11, 146, 0.06);
 }
