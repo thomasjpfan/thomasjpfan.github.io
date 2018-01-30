@@ -1,13 +1,7 @@
-#RewriteEngine On
-#RewriteCond %{HTTP_HOST} !^www\. [NC]
-#RewriteRule ^(.*) https://www.%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
-
-#here we dont use www as non www was already redirected to www.
-#RewriteCond %{HTTPS} off
-#RewriteRule ^(.*) https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
 RewriteEngine On
 # This will enable the Rewrite capabilities
 
+RewriteCond %{REQUEST_URI} !^/.well-known/.*
 RewriteCond %{HTTPS} !=on
 # This checks to make sure the connection is not already HTTPS
 
