@@ -15,40 +15,35 @@
     font-family: 'Open Sans';
     font-weight: 400;
     font-style: normal;
-    src: url('../fonts/Open-Sans-regular/Open-Sans-regular.eot');
-    src: url('../fonts/Open-Sans-regular/Open-Sans-regular.eot?#iefix') format('embedded-opentype'), local('Open Sans'), local('Open-Sans-regular'), url('../fonts/Open-Sans-regular/Open-Sans-regular.woff2') format('woff2'), url('../fonts/Open-Sans-regular/Open-Sans-regular.woff') format('woff'), url('../fonts/Open-Sans-regular/Open-Sans-regular.ttf') format('truetype'), url('../fonts/Open-Sans-regular/Open-Sans-regular.svg#OpenSans') format('svg');
+    src: url('../fonts/Open-Sans-regular/Open-Sans-regular.woff2') format('woff2'), url('../fonts/Open-Sans-regular/Open-Sans-regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Open Sans';
     font-weight: 700;
     font-style: normal;
-    src: url('../fonts/Open-Sans-700/Open-Sans-700.eot');
-    src: url('../fonts/Open-Sans-700/Open-Sans-700.eot?#iefix') format('embedded-opentype'), local('Open Sans Bold'), local('Open-Sans-700'), url('../fonts/Open-Sans-700/Open-Sans-700.woff2') format('woff2'), url('../fonts/Open-Sans-700/Open-Sans-700.woff') format('woff'), url('../fonts/Open-Sans-700/Open-Sans-700.ttf') format('truetype'), url('../fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans') format('svg');
+    src: url('../fonts/Open-Sans-700/Open-Sans-700.woff2') format('woff2'), url('../fonts/Open-Sans-700/Open-Sans-700.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Droid Sans Mono';
     font-weight: 400;
     font-style: normal;
-    src: url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.eot');
-    src: url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.eot?#iefix') format('embedded-opentype'), local('Droid Sans Mono'), local('Droid-Sans-Mono-regular'), url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.woff2') format('woff2'), url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.woff') format('woff'), url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.ttf') format('truetype'), url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.svg#DroidSansMono') format('svg');
+    src: url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.woff2') format('woff2'), url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Roboto';
     font-weight: 500;
     font-style: normal;
-    src: url('../fonts/Roboto-500/Roboto-500.eot');
-    src: url('../fonts/Roboto-500/Roboto-500.eot?#iefix') format('embedded-opentype'), local('Roboto Medium'), local('Roboto-500'), url('../fonts/Roboto-500/Roboto-500.woff2') format('woff2'), url('../fonts/Roboto-500/Roboto-500.woff') format('woff'), url('../fonts/Roboto-500/Roboto-500.ttf') format('truetype'), url('../fonts/Roboto-500/Roboto-500.svg#Roboto') format('svg');
+    src: url('../fonts/Roboto-500/Roboto-500.woff2') format('woff2'), url('../fonts/Roboto-500/Roboto-500.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Ubuntu';
     font-weight: 400;
     font-style: normal;
-    src: url('../fonts/Ubuntu-regular/Ubuntu-regular.eot');
-    src: url('../fonts/Ubuntu-regular/Ubuntu-regular.eot?#iefix') format('embedded-opentype'), local('Ubuntu'), local('Ubuntu-regular'), url('../fonts/Ubuntu-regular/Ubuntu-regular.woff2') format('woff2'), url('../fonts/Ubuntu-regular/Ubuntu-regular.woff') format('woff'), url('../fonts/Ubuntu-regular/Ubuntu-regular.ttf') format('truetype'), url('../fonts/Ubuntu-regular/Ubuntu-regular.svg#Ubuntu') format('svg');
+    src: url('../fonts/Ubuntu-regular/Ubuntu-regular.woff2') format('woff2'), url('../fonts/Ubuntu-regular/Ubuntu-regular.woff') format('woff');
 }
 
 // Presets
@@ -344,7 +339,6 @@ pre {
     color: #75715e;
 }
 
-
 /* Comment */
 
 .highlight .err {
@@ -352,13 +346,11 @@ pre {
     background-color: #1e0010;
 }
 
-
 /* Error */
 
 .highlight .k {
     color: #66d9ef;
 }
-
 
 /* Keyword */
 
@@ -366,13 +358,11 @@ pre {
     color: #ae81ff;
 }
 
-
 /* Literal */
 
 .highlight .n {
     color: #f8f8f2;
 }
-
 
 /* Name */
 
@@ -380,13 +370,11 @@ pre {
     color: #f92672;
 }
 
-
 /* Operator */
 
 .highlight .p {
     color: #f8f8f2;
 }
-
 
 /* Punctuation */
 
@@ -394,13 +382,11 @@ pre {
     color: #75715e;
 }
 
-
 /* Comment.Multiline */
 
 .highlight .cp {
     color: #75715e;
 }
-
 
 /* Comment.Preproc */
 
@@ -408,20 +394,17 @@ pre {
     color: #75715e;
 }
 
-
 /* Comment.Single */
 
 .highlight .cs {
     color: #75715e;
 }
 
-
 /* Comment.Special */
 
 .highlight .ge {
     font-style: italic;
 }
-
 
 /* Generic.Emph */
 
@@ -430,13 +413,11 @@ pre {
     color: #66d9ef;
 }
 
-
 /* Keyword.Constant */
 
 .highlight .kd {
     color: #66d9ef;
 }
-
 
 /* Keyword.Declaration */
 
@@ -444,13 +425,11 @@ pre {
     color: #f92672;
 }
 
-
 /* Keyword.Namespace */
 
 .highlight .kp {
     color: #66d9ef;
 }
-
 
 /* Keyword.Pseudo */
 
@@ -458,13 +437,11 @@ pre {
     color: #66d9ef;
 }
 
-
 /* Keyword.Reserved */
 
 .highlight .kt {
     color: #66d9ef;
 }
-
 
 /* Keyword.Type */
 
@@ -472,13 +449,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.Date */
 
 .highlight .m {
     color: #ae81ff;
 }
-
 
 /* Literal.Number */
 
@@ -486,13 +461,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.String */
 
 .highlight .na {
     color: #a6e22e;
 }
-
 
 /* Name.Attribute */
 
@@ -500,13 +473,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Builtin */
 
 .highlight .nc {
     color: #a6e22e;
 }
-
 
 /* Name.Class */
 
@@ -514,13 +485,11 @@ pre {
     color: #66d9ef;
 }
 
-
 /* Name.Constant */
 
 .highlight .nd {
     color: #a6e22e;
 }
-
 
 /* Name.Decorator */
 
@@ -528,13 +497,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Entity */
 
 .highlight .ne {
     color: #a6e22e;
 }
-
 
 /* Name.Exception */
 
@@ -542,13 +509,11 @@ pre {
     color: #a6e22e;
 }
 
-
 /* Name.Function */
 
 .highlight .nl {
     color: #f8f8f2;
 }
-
 
 /* Name.Label */
 
@@ -556,13 +521,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Namespace */
 
 .highlight .nx {
     color: #a6e22e;
 }
-
 
 /* Name.Other */
 
@@ -570,13 +533,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Property */
 
 .highlight .nt {
     color: #f92672;
 }
-
 
 /* Name.Tag */
 
@@ -584,13 +545,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Variable */
 
 .highlight .ow {
     color: #f92672;
 }
-
 
 /* Operator.Word */
 
@@ -598,13 +557,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Text.Whitespace */
 
 .highlight .mf {
     color: #ae81ff;
 }
-
 
 /* Literal.Number.Float */
 
@@ -612,13 +569,11 @@ pre {
     color: #ae81ff;
 }
 
-
 /* Literal.Number.Hex */
 
 .highlight .mi {
     color: #ae81ff;
 }
-
 
 /* Literal.Number.Integer */
 
@@ -626,13 +581,11 @@ pre {
     color: #ae81ff;
 }
 
-
 /* Literal.Number.Oct */
 
 .highlight .sb {
     color: #e6db74;
 }
-
 
 /* Literal.String.Backtick */
 
@@ -640,13 +593,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.String.Char */
 
 .highlight .sd {
     color: #e6db74;
 }
-
 
 /* Literal.String.Doc */
 
@@ -654,13 +605,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.String.Double */
 
 .highlight .se {
     color: #ae81ff;
 }
-
 
 /* Literal.String.Escape */
 
@@ -668,13 +617,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.String.Heredoc */
 
 .highlight .si {
     color: #e6db74;
 }
-
 
 /* Literal.String.Interpol */
 
@@ -682,13 +629,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.String.Other */
 
 .highlight .sr {
     color: #e6db74;
 }
-
 
 /* Literal.String.Regex */
 
@@ -696,13 +641,11 @@ pre {
     color: #e6db74;
 }
 
-
 /* Literal.String.Single */
 
 .highlight .ss {
     color: #e6db74;
 }
-
 
 /* Literal.String.Symbol */
 
@@ -710,13 +653,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Builtin.Pseudo */
 
 .highlight .vc {
     color: #f8f8f2;
 }
-
 
 /* Name.Variable.Class */
 
@@ -724,13 +665,11 @@ pre {
     color: #f8f8f2;
 }
 
-
 /* Name.Variable.Global */
 
 .highlight .vi {
     color: #f8f8f2;
 }
-
 
 /* Name.Variable.Instance */
 
@@ -738,9 +677,7 @@ pre {
     color: #ae81ff;
 }
 
-
 /* Literal.Number.Integer.Long */
-
 
 /*.highlight .gh { ;}  Generic Heading & Diff Header */
 
@@ -748,20 +685,17 @@ pre {
     color: #75715e;
 }
 
-
 /* Generic.Subheading & Diff Unified/Comment? */
 
 .highlight .gd {
     color: #f92672;
 }
 
-
 /* Generic.Deleted & Diff Deleted */
 
 .highlight .gi {
     color: #a6e22e;
 }
-
 
 /* Generic.Inserted & Diff Inserted */
 
@@ -986,7 +920,6 @@ pre {
     width: 100%;
     height: 100%;
 }
-
 
 /*bigfoot*/
 
@@ -1863,7 +1796,6 @@ tbody tr:hover {
     background-color: rgba(255, 219, 64, 0.19);
     border-left: 4px solid rgba(255, 219, 64, 1);
 }
-
 
 /*Block Quote*/
 
