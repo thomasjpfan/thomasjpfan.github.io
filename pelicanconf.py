@@ -23,6 +23,8 @@ SUMMARY_MAX_LENGTH = 30
 THEME = "theme/Final"
 NOTEBOOK_DIR = 'notebooks'
 
+ASSET_SOURCE_PATHS = ["scss"]
+
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
            'liquid_tags.youtube', 'liquid_tags.notebook',
@@ -61,7 +63,7 @@ MARKDOWN = {
 
 ASSET_BUNDLES = (
     ('scss-main',
-        ['scss/tfstyle.scss'],
+        ['tfstyle.scss'],
      {'filters': 'compass,cssmin', 'output': 'css/style.min.css'}),
 )
 
