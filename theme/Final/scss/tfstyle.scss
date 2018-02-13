@@ -1512,7 +1512,7 @@ main {
 // project layout
 .project-list {
     @include flexbox;
-    @include flex-flow(row nowrap);
+    @include flex-flow(row wrap);
     @include justify-content(flex-start);
     margin-top: calculateRem(8px);
 }
