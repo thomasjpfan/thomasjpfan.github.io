@@ -14,6 +14,8 @@ FTP_TARGET_DIR=/
 
 S3_BUCKET=my_s3_bucket
 
+BUILDER_TAG?=1.0.0
+
 
 help:
 	@echo 'Makefile for a pelican Web site                                        '
@@ -91,11 +93,12 @@ local_dev:
 	thomasjpfan/pelican-blog-builder make devserver
 
 builder:
-	cd builder && \
-	docker image build -t thomasjpfan/pelican-blog-builder .
+	docker image build \
+		-t thomasjpfan/pelican-blog-builder:$(BUILDER_TAG) \
+		-f builder/Dockerfile builder
 
 push_builder:
-	docker image push thomasjpfan/pelican-blog-builder
+	docker image push thomasjpfan/pelican-blog-builder:$(BUILDER_TAG)
 
 build_site:
 	docker run -v $(PWD):/blog --name output thomasjpfan/pelican-blog-builder make publish
