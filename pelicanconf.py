@@ -131,14 +131,17 @@ PAGINATION_PATTERNS = (
 )
 
 STATIC_PATHS = ['images', 'extra/favicon_v4.ico',
-                'extra/htaccess', 'extra/favicon_v4.png',
+                # 'extra/htaccess',
+                'extra/nginx.conf.template',
+                'extra/favicon_v4.png',
                 'extra/favicon_v4_ios.png']
 
 EXTRA_PATH_METADATA = {
     'extra/favicon_v4.ico': {'path': 'favicon_v4.ico'},
-    'extra/htaccess': {'path': '.htaccess'},
+    # 'extra/htaccess': {'path': '.htaccess'},
     'extra/favicon_v4.png': {'path': 'favicon_v4.png'},
-    'extra/favicon_v4_ios.png': {'path': 'favicon_v4_ios.png'}
+    'extra/favicon_v4_ios.png': {'path': 'favicon_v4_ios.png'},
+    'extra/nginx.conf.template': {'path': 'nginx.conf.template'}
 }
 
 # Uncomment following line if you want document-relative URLs when developing
