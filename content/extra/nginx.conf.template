@@ -1,12 +1,6 @@
 server {
-    listen 80;
-    server_name ${NGINX_HOST};
-    return 301 https://www.${NGINX_HOST}$request_uri;
-}
-
-server {
     listen       80;
-    server_name  www.${NGINX_HOST};
+    server_name  localhost;
 
     #charset koi8-r;
     #access_log  /var/log/nginx/host.access.log  main;
