@@ -19,7 +19,7 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-MENUITEMS = (('Rss', SITEURL + "/" + FEED_ALL_ATOM),)
+MENUITEMS = (('Rss', FEED_ALL_ATOM),)
 
 # Following items are often useful when publishing
 PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
