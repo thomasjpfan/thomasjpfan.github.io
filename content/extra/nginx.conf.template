@@ -1,7 +1,7 @@
 server {
     listen 80;
     server_name ${NGINX_HOST};
-    return 301 https://www.${NGINX_HOST}$request_uri;
+    return 301 http://www.${NGINX_HOST}$request_uri;
 }
 
 server {
