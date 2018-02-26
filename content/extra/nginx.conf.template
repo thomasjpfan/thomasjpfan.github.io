@@ -27,6 +27,7 @@ server {
     application/vnd.geo+json
     application/vnd.ms-fontobject
     application/x-font-ttf
+    application/x-javascript
     application/x-web-app-manifest+json
     application/xhtml+xml
     application/xml
@@ -36,13 +37,14 @@ server {
     image/x-icon
     text/cache-manifest
     text/css
+    text/html
     text/plain
     text/vcard
     text/vnd.rim.location.xloc
     text/vtt
     text/x-component
-    text/x-cross-domain-policy;
-    # text/html is always compressed by gzip module
+    text/x-cross-domain-policy
+    text/xml;
 
     error_page  404              /404.html;
 
