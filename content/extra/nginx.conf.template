@@ -5,6 +5,11 @@ server {
     #charset koi8-r;
     #access_log  /var/log/nginx/host.access.log  main;
 
+    location ~* \.(?:ico|css|js|gif|jpe?g|png|woff2)$ {
+        expires 7d;
+        add_header Vary Accept-Encoding;
+    }
+
     location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
