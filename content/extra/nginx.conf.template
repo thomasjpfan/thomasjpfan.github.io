@@ -12,6 +12,9 @@ server {
             expires 30d;
             add_header Vary Accept-Encoding;
         }
+        location ~* \.(?:woff2|woff)$ {
+            add_header Access-Control-Allow-Origin *;
+        }
     }
 
     gzip on;
