@@ -8,11 +8,13 @@ server {
     location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
-        location ~* \.(?:ico|css|js|gif|jpe?g|png|woff2|woff)$ {
+        location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
             expires 30d;
             add_header Vary Accept-Encoding;
         }
         location ~* \.(?:woff2|woff)$ {
+            expires 30d;
+            add_header Vary Accept-Encoding;
             add_header "Access-Control-Allow-Origin"  *;
         }
     }
