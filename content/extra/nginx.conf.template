@@ -8,7 +8,7 @@ server {
     location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
-        location ~* \.(?:ico|css|js|gif|jpe?g|png|woff2)$ {
+        location ~* \.(?:ico|css|js|gif|jpe?g|png|woff2|woff)$ {
             expires 30d;
             add_header Vary Accept-Encoding;
         }
