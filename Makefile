@@ -14,7 +14,7 @@ FTP_TARGET_DIR=/
 
 S3_BUCKET=my_s3_bucket
 
-BUILDER_TAG?=1.0.1
+BUILDER_TAG?=1.0.2
 
 
 help:
