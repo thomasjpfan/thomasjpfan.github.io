@@ -64,7 +64,7 @@ MARKDOWN = {
 ASSET_BUNDLES = (
     ('scss-main',
         ['tfstyle.scss'],
-     {'filters': 'compass,cssmin', 'output': 'css/style.min.css'}),
+     {'filters': 'libsass,cssmin', 'output': 'css/style.min.css'}),
 )
 
 # MATH_JAX = {'responsive': True, 'linebreak_automatic': True,

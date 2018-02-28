@@ -14,7 +14,7 @@ FTP_TARGET_DIR=/
 
 S3_BUCKET=my_s3_bucket
 
-BUILDER_TAG?=1.0.0
+BUILDER_TAG?=1.0.1
 
 
 help:
@@ -101,7 +101,7 @@ push_builder:
 	docker image push thomasjpfan/pelican-blog-builder:$(BUILDER_TAG)
 
 build_site:
-	docker run -v $(PWD):/blog --name output thomasjpfan/pelican-blog-builder make publish
+	docker run -v $(PWD):/blog --rm --name output thomasjpfan/pelican-blog-builder:$(BUILDER_TAG) make publish
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github rsync_only \
 builder push_builder build_site
