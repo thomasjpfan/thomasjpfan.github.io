@@ -4,9 +4,79 @@
 <meta property="og:title" content="{{ article.title }}">
 <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
 <meta name="twitter:title" content="{{ article.title }}">
-<meta name="twitter:description" content="{{ article.summary }}"> {% endblock %} {% block drafts %} {% if article.status == "draft" %}
+<meta name="twitter:description" content="{{ article.summary }}"> {% endblock %}
+
+
+{% block drafts %}
+{% if article.status == "draft" %}
 <!-- Reject Robots -->
-<meta name="robots" content="noindex, nofollow"> {% endif %} {% endblock %} {% block content %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+{% endblock %}
+
+{% block bigfoot %}
+<script type="text/javascript" src="{{ SITEURL }}/theme/js/bigfoot.min.js" defer></script>
+{% endblock %}
+
+{% block bigfootDeferred %}
+$.bigfoot();
+{% endblock %}
+
+{% block katex %}
+{% if "true" in (article.math | lower) %}
+<noscript id="katex_deferred">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+</noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js" defer></script>
+{% endif %}
+{% endblock %}
+
+{% block katexDeferred %}
+{% if "true" in (article.math | lower) %}
+var loadKatexDeferred = function () {
+	var addStylesNode = document.getElementById("katex_deferred");
+	var replacement = document.createElement("div");
+	replacement.innerHTML = addStylesNode.textContent;
+	document.body.appendChild(replacement);
+	addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var renderMath = function () {
+	renderMathInElement(document.body, {
+		delimiters: [{
+				left: "$$",
+				right: "$$",
+				display: true
+			},
+			{
+				left: "\\[",
+				right: "\\]",
+				display: true
+			},
+			{
+				left: "$",
+				right: "$",
+				display: false
+			},
+			{
+				left: "\\(",
+				right: "\\)",
+				display: false
+			}
+		]
+	});
+}
+{% endif %}
+{% endblock %}
+
+{% block katexDeferredLoadAll %}
+{% if "true" in (article.math | lower) %}
+loadKatexDeferred();
+renderMath();
+{% endif %}
+{% endblock %}
+
+{% block content %}
 <article class="content">
 	<div class="article content-wrapper">
 		<h1 class='article-title'>
