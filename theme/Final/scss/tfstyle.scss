@@ -10,37 +10,6 @@
 @import "mixins/font-awesome-scss/stacked";
 @import "mixins/font-awesome-scss/icons";
 @include meyer-reset;
-// Fonts
-// @font-face {
-//     font-family: 'Open Sans';
-//     font-weight: 400;
-//     font-style: normal;
-//     src: url('../fonts/Open-Sans-regular/Open-Sans-regular.woff2') format('woff2'), url('../fonts/Open-Sans-regular/Open-Sans-regular.woff') format('woff');
-// }
-// @font-face {
-//     font-family: 'Open Sans';
-//     font-weight: 700;
-//     font-style: normal;
-//     src: url('../fonts/Open-Sans-700/Open-Sans-700.woff2') format('woff2'), url('../fonts/Open-Sans-700/Open-Sans-700.woff') format('woff');
-// }
-// @font-face {
-//     font-family: 'Droid Sans Mono';
-//     font-weight: 400;
-//     font-style: normal;
-//     src: url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.woff2') format('woff2'), url('../fonts/Droid-Sans-Mono-regular/Droid-Sans-Mono-regular.woff') format('woff');
-// }
-// @font-face {
-//     font-family: 'Roboto';
-//     font-weight: 500;
-//     font-style: normal;
-//     src: url('../fonts/Roboto-500/Roboto-500.woff2') format('woff2'), url('../fonts/Roboto-500/Roboto-500.woff') format('woff');
-// }
-// @font-face {
-//     font-family: 'Ubuntu';
-//     font-weight: 400;
-//     font-style: normal;
-//     src: url('../fonts/Ubuntu-regular/Ubuntu-regular.woff2') format('woff2'), url('../fonts/Ubuntu-regular/Ubuntu-regular.woff') format('woff');
-// }
 // Presets
 // Border box
 *,
@@ -74,14 +43,14 @@ $primary-font: "Open Sans",
 Helvetica,
 Arial,
 sans-serif;
-$header-font: Roboto,
+$header-font: Ubuntu,
 Helvetica,
 Arial,
 sans-serif;
 $brand-font: Ubuntu,
 Arial,
 sans-serif;
-$code-font: "Droid Sans Mono",
+$code-font: "Droid Mono",
 Menlo,
 "Lucida Console",
 monospace;
@@ -267,12 +236,11 @@ pre {
 .most-recent {
     border: 2px solid black;
     font-weight: 500;
-    letter-spacing: calculateRem(0.1px);
     font-family: $header-font;
     background: #ffe268;
     color: black;
-    padding: .35rem;
-    font-size: 1rem;
+    padding: .25rem;
+    font-size: 0.9rem;
     @include border-radius(8px);
 }
 
