@@ -26,13 +26,13 @@
 	<meta name="description" content="{{ OG_DESCRIPTION }}"> {% endblock info %}
 
 	<!-- CSS Styles -->
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet"> -->
 
 	<link rel="shortcut icon" href="{{ SITEURL }}/favicon_v4.ico"> {% assets "scss-main" %}
 	<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}"> {% endassets %} {% block katex %} {% endblock %}
 	<!-- JS Libraries to Load -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
+	    crossorigin="anonymous"></script>
 
 	{% block bigfoot %} {% endblock %}
 
@@ -62,8 +62,9 @@
 	</script>
 	{% endblock script %}
 	<script>
-		{% block katexDeferred %}
-		{% endblock %}
+		{ % block katexDeferred %
+		} { % endblock %
+		}
 
 		var renderJqueryDeps = function ($) {
 			$(document).ready(function (e) {
@@ -88,14 +89,15 @@
 						header[0].textContent = "Show Collapsible Code In This Post";
 					}
 				});
-			});
-			{% block bigfootDeferred %}
-			{% endblock %}
+			}); { % block bigfootDeferred %
+			} { % endblock %
+			}
 		};
 
 		var loadAll = function () {
-			{% block katexDeferredLoadAll %}
-			{% endblock %}
+			{ % block katexDeferredLoadAll %
+			} { % endblock %
+			}
 			renderJqueryDeps(jQuery);
 		};
 
