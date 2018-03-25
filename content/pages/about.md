@@ -11,7 +11,7 @@ My name is Thomas Fan. My interests include machine learning, programming, physi
 
 **GitHub**: <a href="https://github.com/thomasjpfan" target="_blank">github.com/thomasjpfan</a>
 
-**Email**: <script language="JavaScript">
+**Email**: <script>
 var username = "thomasjpfan";
 var hostname = "gmail.com";
 var linktext = username + "@" + hostname ;
