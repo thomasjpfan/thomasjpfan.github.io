@@ -62,7 +62,9 @@
 	</script>
 	{% endblock script %}
 	<script>
-		{% block katexDeferred %} {% endblock %}
+		{ % block katexDeferred %
+		} { % endblock %
+		}
 
 		var renderJqueryDeps = function ($) {
 			$(document).ready(function (e) {
@@ -87,11 +89,15 @@
 						header[0].textContent = "Show Collapsible Code In This Post";
 					}
 				});
-			}); {% block bigfootDeferred %} {% endblock %}
+			}); { % block bigfootDeferred %
+			} { % endblock %
+			}
 		};
 
 		var loadAll = function () {
-			{% block katexDeferredLoadAll %} {% endblock %}
+			{ % block katexDeferredLoadAll %
+			} { % endblock %
+			}
 			renderJqueryDeps(jQuery);
 		};
 
@@ -100,7 +106,8 @@
 		// else
 		window.addEventListener('load', loadAll);
 	</script>
-	{% if article %} {% if article.javascripts %} {% for javascript in article.javascripts %} {{ javascript }} {% endfor %} {% endif %} {% endif %}
+	{% if article %} {% if article.javascripts %} {% for javascript in article.javascripts %} {{ javascript }} {% endfor %} {%
+	endif %} {% endif %}
 </body>
 
 </html>
