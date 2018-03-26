@@ -10,7 +10,7 @@ Back in Real Analysis, every student goes through solving for the volume of a n-
 $$
 V_n(r) = \dfrac{\pi^{n/2}}{\Gamma\left(\dfrac{n}{2}+1\right)} r^d
 $$
-where $r$ is the radius, $n$ is the dimension, and $\Gamma$ is the <a href="http://en.wikipedia.org/wiki/Gamma_function" target="_blank">Gamma Function</a>. Even without knowing the above equation, it is natural to assume that $V_n(r)$ is proportional to $r^n$ or $V_n(r)=Ar^n$, where $A$ is a constant.
+where $r$ is the radius, $n$ is the dimension, and $\Gamma$ is the <a href="http://en.wikipedia.org/wiki/Gamma_function" target="_blank" rel="noopener">Gamma Function</a>. Even without knowing the above equation, it is natural to assume that $V_n(r)$ is proportional to $r^n$ or $V_n(r)=Ar^n$, where $A$ is a constant.
 
 To make this example more concrete, lets say we want to find the fraction of the volume of a sphere of radius, $R$, that lies between $r=0.95R$ and $r=R$. In other words, we want to find the fractional volume of the blue region:[^CS]
 

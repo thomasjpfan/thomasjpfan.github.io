@@ -7,9 +7,9 @@ My name is Thomas Fan. My interests include machine learning, programming, physi
 
 ## Contact
 
-**Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank">@thomasjpfan</a>
+**Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
 
-**GitHub**: <a href="https://github.com/thomasjpfan" target="_blank">github.com/thomasjpfan</a>
+**GitHub**: <a href="https://github.com/thomasjpfan" target="_blank" rel="noopener">github.com/thomasjpfan</a>
 
 **Email**: <script>
 var username = "thomasjpfan";
