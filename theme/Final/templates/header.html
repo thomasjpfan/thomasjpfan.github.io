@@ -15,19 +15,20 @@
                     <div class="nav-link">
                         <a href="https://github.com/thomasjpfan" target="_blank" rel="noopener"><i class="fa fa-github"></i> github</a>
                     </div>
+                    <div class="nav-link">
+                        <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener"><i class="fa fa-twitter"></i> twitter</a>
+                    </div>
                 {% if DISPLAY_PAGES_ON_MENU %} {% for page in pages %}
                 {% if page.title == 'Projects' %}
                     <div class="nav-link">
                         <a href="/{{ page.url }}">
-                            <i class="fa fa-flask"></i> projects
-                        </a>
+                            <i class="fa fa-flask"></i> projects</a>
                     </div>
                 {% endif %}
                 {% if page.title == 'About' %}
                     <div class="nav-link">
                         <a href="/{{ page.url }}">
-                            <i class="fa fa-user"></i> about
-                        </a>
+                            <i class="fa fa-user"></i> about</a>
                     </div>
                 {% endif %} {% endfor %} {% endif %}
                     <div class="nav-link">
