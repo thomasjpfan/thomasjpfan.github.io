@@ -1,6 +1,8 @@
 // Variables
 // --------------------------
 $fa-font-path: "../fonts" !default;
+$fa-font-path-woff2: $fa-font-path + "/fontawesome-webfont20180726.woff2";
+$fa-font-path-woff: $fa-font-path + "/fontawesome-webfont20180726.woff";
 $fa-font-size-base: 14px !default;
 $fa-line-height-base: 1 !default;
 //$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts" !default; // for referencing Bootstrap CDN font files directly
