@@ -1,16 +1,14 @@
 // Variables
 // --------------------------
-
-$fa-font-path:        "../fonts" !default;
-$fa-font-size-base:   14px !default;
+$fa-font-path: "../fonts" !default;
+$fa-font-size-base: 14px !default;
 $fa-line-height-base: 1 !default;
 //$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts" !default; // for referencing Bootstrap CDN font files directly
-$fa-css-prefix:       fa !default;
-$fa-version:          "4.6.3" !default;
-$fa-border-color:     #eee !default;
-$fa-inverse:          #fff !default;
-$fa-li-width:         (30em / 14) !default;
-
+$fa-css-prefix: fa !default;
+$fa-version: "4.6.3" !default;
+$fa-border-color: #eee !default;
+$fa-inverse: #fff !default;
+$fa-li-width: (30em / 14) !default;
 // Font awesome
 // $fa-var-twitter: "\f099";
 // $fa-var-envelope: "\f0e0";
@@ -22,15 +20,19 @@ $fa-li-width:         (30em / 14) !default;
 // $fa-var-archive: "\f187";
 // $fa-var-rss: "\f09e";
 // $fa-var-th-list: "\f00b";
-
 // Custom
-$fa-var-twitter: "\f099";
 $fa-var-envelope: "\e800";
-$fa-var-facebook: "\f09a";
-$fa-var-circle: "\f111";
-$fa-var-flask: "\f09e";
 $fa-var-user: "\e801";
 $fa-var-tags: "\e802";
-$fa-var-archive: "\e803";
+$fa-var-twitter: "\f099";
+$fa-var-facebook: "\f09a";
+$fa-var-github: "\f09b";
 $fa-var-rss: "\f09e";
-$fa-var-th-list: "\e804";
+$fa-var-flask: "\f0c3";
+$fa-var-linkedin: "\f0e1";
+$fa-var-circle: "\f111";
+$fa-var-youtube: "\f16a";
+$fa-var-instagram: "\f16d";
+$fa-var-archive: "\f187";
+$fa-var-twitch: "\f1e8";
+$fa-var-th-list: "\e803";

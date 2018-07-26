@@ -1,12 +1,62 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-.#{$fa-css-prefix}-facebook:before { content: $fa-var-facebook; }
-.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }
-.#{$fa-css-prefix}-envelope:before { content: $fa-var-envelope; }
-.#{$fa-css-prefix}-circle:before { content: $fa-var-circle; }
-.#{$fa-css-prefix}-user:before { content: $fa-var-user; }
-.#{$fa-css-prefix}-flask:before { content: $fa-var-flask; }
-.#{$fa-css-prefix}-tags:before { content: $fa-var-tags; }
-.#{$fa-css-prefix}-archive:before { content: $fa-var-archive; }
-.#{$fa-css-prefix}-rss:before { content: $fa-var-rss; }
-.#{$fa-css-prefix}-th-list:before { content: $fa-var-th-list; }
+
+.#{$fa-css-prefix}-envelope:before {
+    content: $fa-var-envelope;
+}
+
+.#{$fa-css-prefix}-user:before {
+    content: $fa-var-user;
+}
+
+.#{$fa-css-prefix}-tags:before {
+    content: $fa-var-tags;
+}
+
+.#{$fa-css-prefix}-twitter:before {
+    content: $fa-var-twitter;
+}
+
+.#{$fa-css-prefix}-facebook:before {
+    content: $fa-var-facebook;
+}
+
+.#{$fa-css-prefix}-github:before {
+    content: $fa-var-github;
+}
+
+.#{$fa-css-prefix}-rss:before {
+    content: $fa-var-rss;
+}
+
+.#{$fa-css-prefix}-flask:before {
+    content: $fa-var-flask;
+}
+
+.#{$fa-css-prefix}-linkedin:before {
+    content: $fa-var-linkedin;
+}
+
+.#{$fa-css-prefix}-circle:before {
+    content: $fa-var-circle;
+}
+
+.#{$fa-css-prefix}-youtube:before {
+    content: $fa-var-youtube;
+}
+
+.#{$fa-css-prefix}-instagram:before {
+    content: $fa-var-instagram;
+}
+
+.#{$fa-css-prefix}-archive:before {
+    content: $fa-var-archive;
+}
+
+.#{$fa-css-prefix}-twitch:before {
+    content: $fa-var-twitch;
+}
+
+.#{$fa-css-prefix}-th-list:before {
+    content: $fa-var-th-list;
+}

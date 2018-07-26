@@ -331,9 +331,6 @@ def notebook(preprocessor, tag, markup):
     body = preprocessor.configs.htmlStash.store(body, safe=True)
     return body
 
-notebook.header_saved = False
-
-
 #----------------------------------------------------------------------
 # This import allows notebook to be a Pelican plugin
 from liquid_tags import register
