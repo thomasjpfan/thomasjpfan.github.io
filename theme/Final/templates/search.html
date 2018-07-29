@@ -3,6 +3,14 @@
 {% block title %}
 Search · {{ super() }}
 {% endblock title %}
+{% block tipueDeferred %}
+$('#tipue_search_input').tipuesearch({
+    'mode' : 'json',
+    'show': 10,
+    'newWindow': false,
+    'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+});
+{% endblock %}
 {% block content %}
 <section class="content" id="content">
     <div class="search content-wrapper">
