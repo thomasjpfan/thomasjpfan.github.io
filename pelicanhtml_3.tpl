@@ -34,16 +34,18 @@
 
 {% block input %}
 {% if "# <!-- collapse=True -->" in cell.source %}
-<div class="collapseheader inner_cell"><span style="font-weight: bold;">Click To Show Code</span>
-<div class="input_area" style="display:none">
+<div class="inner_cell"><details><summary>Show Code</summary>
+<div class="input_area">
 {{ cell.source.replace("# <!-- collapse=True -->\n", "") | highlight_code(metadata=cell.metadata) }}
 </div>
+</details>
 </div>
 {% elif "# <!-- collapse=False -->" in cell.source %}
-<div class="collapseheader inner_cell"><span style="font-weight: bold;">Click To Hide Code</span>
+<div class="inner_cell"><details><summary>Show Code</summary>
 <div class="input_area">
 {{ cell.source.replace("# <!-- collapse=False -->\n", "") | highlight_code(metadata=cell.metadata) }}
 </div>
+</details>
 </div>
 {% elif "# <!-- collapse=None -->" in cell.source %}
 {% else %}

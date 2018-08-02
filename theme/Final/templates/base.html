@@ -62,29 +62,6 @@
 		{% block katexDeferred %} {% endblock %}
 
 		var renderJqueryDeps = function ($) {
-			$(document).ready(function (e) {
-				e("div.collapseheader > span").click(function () {
-					var header = e(this);
-					var codearea = e(this).siblings(".input_area");
-					codearea.slideToggle(200, function () {
-						header.text(function () {
-							return codearea.is(":visible") ? "Click To Hide Code" : "Click To Show Code";
-						});
-					});
-				});
-				e("div.show-all-code > span").click(function () {
-					var header = e(this);
-					var codeareas = e("div.collapseheader > span").siblings(".input_area");
-					var showcode = (header[0].textContent === "Show Collapsible Code In This Post");
-					if (showcode) {
-						codeareas.show();
-						header[0].textContent = "Hide Collapsible Code In This Post";
-					} else {
-						codeareas.hide();
-						header[0].textContent = "Show Collapsible Code In This Post";
-					}
-				});
-			});
 			{% block tipueDeferred %}{% endblock %}
 			{% block bigfootDeferred %} {% endblock %}
 		};
