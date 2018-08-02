@@ -97,7 +97,24 @@
 		// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
 		// if (raf) raf(function() { window.setTimeout(loadAll, 0); });
 		// else
-		window.addEventListener('load', loadAll);
+		// window.addEventListener('load', loadAll);
+		(function () {
+			var onReady = function onReady(fn) {
+			  if (document.addEventListener) {
+				document.addEventListener("DOMContentLoaded", fn);
+			  } else {
+				document.attachEvent("onreadystatechange", function () {
+				  if (document.readyState === "interactive") {
+					fn();
+				  }
+				});
+			  }
+			};
+
+			onReady(function () {
+				loadAll();
+			});
+		  })();
 	</script>
 	{% if article %} {% if article.javascripts %} {% for javascript in article.javascripts %} {{ javascript }} {% endfor %} {% endif %} {% endif %}
 </body>
