@@ -1802,7 +1802,7 @@ blockquote p {
     border-radius: 2px;
     font-family: $primary-font;
     border-left: 4px solid #520b92;
-    background-color: rgba(246, 237, 255, 1);
+    background-color: #f7f4ff;
 }
 
 // Summary detail
@@ -1819,5 +1819,5 @@ summary:after {
 summary {
     padding: 8px;
     font-weight: 500;
-    background-color: rgba(246, 237, 255, 1);
+    background-color: #f7f4ff;
 }
