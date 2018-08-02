@@ -57,6 +57,7 @@ MARKDOWN = {
                                            'linenums': False},
         'markdown.extensions.extra': {},
         'markdown.extensions.admonition': {},
+        'pymdownx.details': {},
     },
     'output_format': 'html5',
 }
