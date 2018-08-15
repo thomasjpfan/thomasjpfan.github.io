@@ -64,7 +64,7 @@ MARKDOWN = {
 
 ASSET_BUNDLES = (
     ('scss-main',
-        ['tfstyle.scss'],
+        ['tfstyle.scss', 'highlight.scss', 'bigfoot.scss'],
      {'filters': 'libsass,cssmin', 'output': 'css/style%(version)s.css'}),
 )
 
