@@ -4,7 +4,6 @@ beautifulsoup4==4.6.0
 bleach==2.1.3
 blinker==1.4
 bs4==0.0.1
-certifi==2018.4.16
 csscompressor==0.9.5
 cssmin==0.2.0
 decorator==4.3.0
