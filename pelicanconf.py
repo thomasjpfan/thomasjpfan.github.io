@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import collections
 
 
-AUTHOR = u'Thomas Fan'
+AUTHOR = u'Thomas J Fan'
 SITENAME = u'thomasjpfan.com'
 SITEURL = ''
 

@@ -1,6 +1,6 @@
 Title: About
 
-My name is Thomas Fan. My interests include machine learning, programming, physics, and math. The main goals of this site is to share my thoughts on:
+Hello! My name is Thomas J Fan. My interests include machine learning, programming, physics, and math. The main goals of this site is to share my thoughts on:
 
 - Interesting data sources through the lens of statistics and machine learning.
 - Programming methodologies or paradigms.
