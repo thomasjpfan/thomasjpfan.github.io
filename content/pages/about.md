@@ -11,6 +11,8 @@ Hello! My name is Thomas J Fan. My interests include machine learning, programmi
 
 **GitHub**: <a href="https://github.com/thomasjpfan" target="_blank" rel="noopener">github.com/thomasjpfan</a>
 
+**Linkedin**: <a href="https://www.linkedin.com/in/thomasjpfan/" target="_blank" rel="noopener">linkedin.com/in/thomasjpfan</a>
+
 **Email**: <script>
 var username = "thomasjpfan";
 var hostname = "gmail.com";
