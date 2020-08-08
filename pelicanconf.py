@@ -1,10 +1,8 @@
 #!/usr/local/bin python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 import collections
 
-
-AUTHOR = u'Thomas J Fan'
+AUTHOR = u'Thomas J. Fan'
 SITENAME = u'thomasjpfan.com'
 SITEURL = ''
 
@@ -17,7 +15,7 @@ DATE_FORMATS = {
 }
 
 OG_DESCRIPTION = ("This is my personal blog, where I share my "
-                  "insights and what I have been learning.")
+                  "discoveries and insights.")
 SUMMARY_MAX_LENGTH = 30
 
 THEME = "theme/Final"
@@ -26,10 +24,11 @@ NOTEBOOK_DIR = 'notebooks'
 ASSET_SOURCE_PATHS = ["scss"]
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
-           'liquid_tags.youtube', 'liquid_tags.notebook',
-           'minification', 'better_codeblock_line_numbering', 'assets',
-           'render_katex', 'series', 'pelican_javascript']
+PLUGINS = [
+    'sitemap', 'tipue_search', 'feed_summary', 'liquid_tags.youtube',
+    'liquid_tags.notebook', 'minification', 'better_codeblock_line_numbering',
+    'assets', 'render_katex', 'series', 'pelican_javascript'
+]
 FEED_USE_SUMMARY = True
 # MD_EXTENSIONS = [
 #     'codehilite(css_class=highlight, linenums=False)',
@@ -53,8 +52,10 @@ FEED_USE_SUMMARY = True
 
 MARKDOWN = {
     'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight',
-                                           'linenums': False},
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight',
+            'linenums': False
+        },
         'markdown.extensions.extra': {},
         'markdown.extensions.admonition': {},
         'pymdownx.details': {},
@@ -62,11 +63,11 @@ MARKDOWN = {
     'output_format': 'html5',
 }
 
-ASSET_BUNDLES = (
-    ('scss-main',
-        ['tfstyle.scss', 'highlight.scss', 'bigfoot.scss'],
-     {'filters': 'libsass,cssmin', 'output': 'css/style%(version)s.css'}),
-)
+ASSET_BUNDLES = (('scss-main',
+                  ['tfstyle.scss', 'highlight.scss', 'bigfoot.scss'], {
+                      'filters': 'libsass,cssmin',
+                      'output': 'css/style%(version)s.css'
+                  }), )
 
 # MATH_JAX = {'responsive': True, 'linebreak_automatic': True,
 #             'message_style': None, 'show_menu': False}
@@ -91,9 +92,9 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-MARKUP = ('md',)
+MARKUP = ('md', )
 
-MENUITEMS = (('Rss', FEED_ALL_ATOM),)
+MENUITEMS = (('Rss', FEED_ALL_ATOM), )
 
 # CATEGORY_URL = 'category/{slug}/'
 # CATEGORY_SAVE_AS = 'category/{slug}/index.html'
@@ -131,19 +132,30 @@ PAGINATION_PATTERNS = (
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
 
-STATIC_PATHS = ['images', 'extra/favicon_v4.ico',
-                # 'extra/htaccess',
-                # 'extra/nginx.conf.template',
-                'extra/favicon_v4.png',
-                'extra/favicon_v4_ios.png',
-                'extra/_headers']
+STATIC_PATHS = [
+    'images',
+    'extra/favicon_v4.ico',
+    # 'extra/htaccess',
+    # 'extra/nginx.conf.template',
+    'extra/favicon_v4.png',
+    'extra/favicon_v4_ios.png',
+    'extra/_headers'
+]
 
 EXTRA_PATH_METADATA = {
-    'extra/favicon_v4.ico': {'path': 'favicon_v4.ico'},
+    'extra/favicon_v4.ico': {
+        'path': 'favicon_v4.ico'
+    },
     # 'extra/htaccess': {'path': '.htaccess'},
-    'extra/favicon_v4.png': {'path': 'favicon_v4.png'},
-    'extra/favicon_v4_ios.png': {'path': 'favicon_v4_ios.png'},
-    'extra/_headers': {'path': '_headers'},
+    'extra/favicon_v4.png': {
+        'path': 'favicon_v4.png'
+    },
+    'extra/favicon_v4_ios.png': {
+        'path': 'favicon_v4_ios.png'
+    },
+    'extra/_headers': {
+        'path': '_headers'
+    },
     # 'extra/nginx.conf.template': {'path': 'nginx.conf.template'}
 }
 
@@ -165,7 +177,8 @@ def unique(a):
 
 
 def intersect(a, b):
-    if isinstance(a, collections.Hashable) and isinstance(b, collections.Hashable):
+    if isinstance(a, collections.Hashable) and isinstance(
+            b, collections.Hashable):
         c = set(a) & set(b)
     else:
         c = unique(filter(lambda x: x in b, a))

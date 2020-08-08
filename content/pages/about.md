@@ -1,11 +1,6 @@
 Title: About
 
-Hello! My name is Thomas J. Fan. My interests include machine learning, programming, physics, and math. The main goals of this site is to share my thoughts on:
-
-- Interesting data sources through the lens of statistics and machine learning.
-- Programming methodologies or paradigms.
-
-## Contact
+As a maintainer for scikit-learn and skorch, I believe that developing open source software is one of the best ways to maximize one's impact.
 
 **Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
 
