@@ -2,32 +2,42 @@
 # -*- coding: utf-8 -*- #
 import collections
 
-AUTHOR = u'Thomas J. Fan'
-SITENAME = u'thomasjpfan.com'
-SITEURL = ''
+AUTHOR = u"Thomas J. Fan"
+SITENAME = u"thomasjpfan.com"
+SITEURL = ""
 
-TIMEZONE = u'EST'
+TIMEZONE = u"EST"
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = u"en"
 
 DATE_FORMATS = {
-    'en': ' %b %d, %Y',
+    "en": " %b %d, %Y",
 }
 
-OG_DESCRIPTION = ("This is my personal blog, where I share my "
-                  "discoveries and insights.")
+OG_DESCRIPTION = (
+    "This is my personal blog, where I share my " "discoveries and insights."
+)
 SUMMARY_MAX_LENGTH = 30
 
 THEME = "theme/Final"
-NOTEBOOK_DIR = 'notebooks'
+NOTEBOOK_DIR = "notebooks"
+PATH = "content"
 
 ASSET_SOURCE_PATHS = ["scss"]
 
-PLUGIN_PATHS = ['plugins']
+PLUGIN_PATHS = ["plugins"]
 PLUGINS = [
-    'sitemap', 'tipue_search', 'feed_summary', 'liquid_tags.youtube',
-    'liquid_tags.notebook', 'minification', 'better_codeblock_line_numbering',
-    'assets', 'render_katex', 'series', 'pelican_javascript'
+    "sitemap",
+    "tipue_search",
+    "feed_summary",
+    "liquid_tags.youtube",
+    "liquid_tags.notebook",
+    "minification",
+    "better_codeblock_line_numbering",
+    "assets",
+    "render_katex",
+    "series",
+    "pelican_javascript",
 ]
 FEED_USE_SUMMARY = True
 # MD_EXTENSIONS = [
@@ -51,40 +61,38 @@ FEED_USE_SUMMARY = True
 # }
 
 MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {
-            'css_class': 'highlight',
-            'linenums': False
+    "extension_configs": {
+        "markdown.extensions.codehilite": {
+            "css_class": "highlight",
+            "linenums": False,
         },
-        'markdown.extensions.extra': {},
-        'markdown.extensions.admonition': {},
-        'pymdownx.details': {},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.admonition": {},
+        "pymdownx.details": {},
     },
-    'output_format': 'html5',
+    "output_format": "html5",
 }
 
-ASSET_BUNDLES = (('scss-main',
-                  ['tfstyle.scss', 'highlight.scss', 'bigfoot.scss'], {
-                      'filters': 'libsass,cssmin',
-                      'output': 'css/style%(version)s.css'
-                  }), )
+ASSET_BUNDLES = (
+    (
+        "scss-main",
+        ["tfstyle.scss", "highlight.scss"],
+        {"filters": "libsass,cssmin", "output": "css/style%(version)s.css"},
+    ),
+)
 
 # MATH_JAX = {'responsive': True, 'linebreak_automatic': True,
 #             'message_style': None, 'show_menu': False}
 
 SITEMAP = {
-    'format': 'xml',
-    'priorities': {
-        'articles': 0.9,
-        'indexes': 0.4,
-        'pages': 0.6
+    "format": "xml",
+    "priorities": {"articles": 0.9, "indexes": 0.4, "pages": 0.6},
+    "changefreqs": {
+        "articles": "weekly",
+        "indexes": "monthly",
+        "pages": "monthly",
     },
-    'changefreqs': {
-        'articles': 'weekly',
-        'indexes': 'monthly',
-        'pages': 'monthly'
-    },
-    'exclude': ['topic/']
+    "exclude": ["topic/"],
 }
 
 # Feed generation is usually not desired when developing
@@ -92,70 +100,62 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-MARKUP = ('md', )
+MARKUP = ("md",)
 
-MENUITEMS = (('Rss', FEED_ALL_ATOM), )
+MENUITEMS = (("Rss", FEED_ALL_ATOM),)
 
 # CATEGORY_URL = 'category/{slug}/'
 # CATEGORY_SAVE_AS = 'category/{slug}/index.html'
-CATEGORY_URL = ''
-CATEGORY_SAVE_AS = ''
-AUTHOR_URL = ''
-AUTHOR_SAVE_AS = ''
+CATEGORY_URL = ""
+CATEGORY_SAVE_AS = ""
+AUTHOR_URL = ""
+AUTHOR_SAVE_AS = ""
 
-ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
-ARTICLE_LANG_URL = '{date:%Y}/{date:%m}/{slug}-{lang}/'
-PAGE_URL = 'pages/{slug}/'
-PAGE_LANG_URL = 'pages/{slug}-{lang}/'
-TAG_URL = 'topic/{slug}/'
-TAGS_URL = 'topics/'
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
-ARTICLE_LANG_SAVE_AS = '{date:%Y}/{date:%m}/{slug}-{lang}/index.html'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
-PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}/index.html'
-TAG_SAVE_AS = 'topic/{slug}/index.html'
-TAGS_SAVE_AS = 'topics/index.html'
+ARTICLE_URL = "{date:%Y}/{date:%m}/{slug}/"
+ARTICLE_LANG_URL = "{date:%Y}/{date:%m}/{slug}-{lang}/"
+PAGE_URL = "pages/{slug}/"
+PAGE_LANG_URL = "pages/{slug}-{lang}/"
+TAG_URL = "topic/{slug}/"
+TAGS_URL = "topics/"
+ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{slug}/index.html"
+ARTICLE_LANG_SAVE_AS = "{date:%Y}/{date:%m}/{slug}-{lang}/index.html"
+PAGE_SAVE_AS = "pages/{slug}/index.html"
+PAGE_LANG_SAVE_AS = "pages/{slug}-{lang}/index.html"
+TAG_SAVE_AS = "topic/{slug}/index.html"
+TAGS_SAVE_AS = "topics/index.html"
 
 # YEAR_ARCHIVES_URL = 'archives/{date:%Y}/'
 # YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
-ARCHIVES_URL = 'archives/'
-ARCHIVES_SAVE_AS = 'archives/index.html'
+ARCHIVES_URL = "archives/"
+ARCHIVES_SAVE_AS = "archives/index.html"
 
 DEFAULT_CATEGORY = "Blog"
 
-TEMPLATE_PAGES = {'search.html': 'search.html'}
+TEMPLATE_PAGES = {"search.html": "search.html"}
 
 DEFAULT_PAGINATION = 7
 
 PAGINATION_PATTERNS = (
-    (1, '{base_name}/', '{base_name}/index.html'),
-    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+    (1, "{base_name}/", "{base_name}/index.html"),
+    (2, "{base_name}/page/{number}/", "{base_name}/page/{number}/index.html"),
 )
 
 STATIC_PATHS = [
-    'images',
-    'extra/favicon_v4.ico',
+    "images",
+    "extra/favicon_v4.ico",
     # 'extra/htaccess',
     # 'extra/nginx.conf.template',
-    'extra/favicon_v4.png',
-    'extra/favicon_v4_ios.png',
-    'extra/_headers'
+    "extra/favicon_v4.png",
+    "extra/favicon_v4_ios.png",
+    "extra/_headers",
 ]
 
 EXTRA_PATH_METADATA = {
-    'extra/favicon_v4.ico': {
-        'path': 'favicon_v4.ico'
-    },
+    "extra/favicon_v4.ico": {"path": "favicon_v4.ico"},
     # 'extra/htaccess': {'path': '.htaccess'},
-    'extra/favicon_v4.png': {
-        'path': 'favicon_v4.png'
-    },
-    'extra/favicon_v4_ios.png': {
-        'path': 'favicon_v4_ios.png'
-    },
-    'extra/_headers': {
-        'path': '_headers'
-    },
+    "extra/favicon_v4.png": {"path": "favicon_v4.png"},
+    "extra/favicon_v4_ios.png": {"path": "favicon_v4_ios.png"},
+    "extra/_headers": {"path": "_headers"},
     # 'extra/nginx.conf.template': {'path': 'nginx.conf.template'}
 }
 
@@ -178,11 +178,12 @@ def unique(a):
 
 def intersect(a, b):
     if isinstance(a, collections.Hashable) and isinstance(
-            b, collections.Hashable):
+        b, collections.Hashable
+    ):
         c = set(a) & set(b)
     else:
         c = unique(filter(lambda x: x in b, a))
     return c
 
 
-JINJA_FILTERS = {'intersect': intersect}
+JINJA_FILTERS = {"intersect": intersect}

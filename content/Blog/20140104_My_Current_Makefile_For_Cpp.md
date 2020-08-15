@@ -3,7 +3,7 @@ Date: 2014-01-04 14:51
 Tags: cpp, programming
 Summary: When I took my first programming course at Polytech, I used a Integrated development environment (IDE) called Visual Studio. It magically complied all my files together and formed an executable. Now a days, I've moved on from using IDEs and switch to using a text editor, Sublime Text. As the C++ code I wrote started to get more complicated and span multiple files, I needed a way to systematically complied the files together. Thus, I created a Makefile to build and organize my C++ files...
 
-When I took my first programming course at <a href="http://engineering.nyu.edu/" target="_blank" rel="noopener">Polytech</a>, I used an integrated development environment (IDE) called <a href="http://www.visualstudio.com/" target="_blank" rel="noopener">Visual Studio</a>. It magically complied all my files together and formed an executable. Now a days, I've moved on from using IDEs and switch to using a text editor, <a href="http://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a>.[^sublimetext] As the C++ code I wrote started to get more complicated and span multiple files, I needed a way to systematically complied the files together. Thus, I created a Makefile to build and organize my C++ files.
+When I took my first programming course at <a href="http://engineering.nyu.edu/" target="_blank" rel="noopener">Polytech</a>, I used an integrated development environment (IDE) called <a href="http://www.visualstudio.com/" target="_blank" rel="noopener">Visual Studio</a>. It magically complied all my files together and formed an executable. Now a days, I've moved on from using IDEs and switch to using a text editor, <a href="http://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a>. As the C++ code I wrote started to get more complicated and span multiple files, I needed a way to systematically complied the files together. Thus, I created a Makefile to build and organize my C++ files.
 
 <!-- > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
@@ -20,7 +20,7 @@ CXX = g++
 CXXFLAGS=-g -O2 -Wall -Wconversion
 ```
 
-The first two lines of my Makefile defines the complier and its flags. I especially like the `-Wconversion` flag, since I prefer code that have explicit type conversions. This flag issues a warning when a type conversion is implicit.[^diff]
+The first two lines of my Makefile defines the complier and its flags. I especially like the `-Wconversion` flag, since I prefer code that have explicit type conversions. This flag issues a warning when a type conversion is implicit.
 
 ```makefile
 SOURCES=$(wildcard src/**/*.cpp src/*.cpp)
@@ -55,7 +55,7 @@ exec: build $(OBJECTS)
     @./$(EXECUT)
 ```
 
-This code is called by running `make exec` in the same directory as the Makefile.[^makefile] The components `build` and `$(OBJECTS)` on the same line of `exec` must run or compile before the body can be executed. The body of `exec` compiles the executable and then runs it. On the last line, `@` is used to issue a command on the shell.
+This code is called by running `make exec` in the same directory as the Makefile. The components `build` and `$(OBJECTS)` on the same line of `exec` must run or compile before the body can be executed. The body of `exec` compiles the executable and then runs it. On the last line, `@` is used to issue a command on the shell.
 
 ```makefile
 build:
@@ -63,7 +63,7 @@ build:
     @mkdir -p bin
 ```
 
-The first component of `exec`, `build`, simply makes two directories, build and bin. The second component, `$(OBJECTS)`, is syntactic sugar to reference the variable, `OBJECTS`. The make utility knows to take these files and compile them when it is a component to an action. In this case, it is a component to `exec`. If `OBJECTS` were not redefined to be in the new folder, bin, the make utility would compile the `.cpp` files into the same location as the source files, doubling the number of files in the src folder. [^pycache] Since the `OBJECTS` were given a new home in bin, the following is needed:
+The first component of `exec`, `build`, simply makes two directories, build and bin. The second component, `$(OBJECTS)`, is syntactic sugar to reference the variable, `OBJECTS`. The make utility knows to take these files and compile them when it is a component to an action. In this case, it is a component to `exec`. If `OBJECTS` were not redefined to be in the new folder, bin, the make utility would compile the `.cpp` files into the same location as the source files, doubling the number of files in the src folder. Since the `OBJECTS` were given a new home in bin, the following is needed:
 
 ```makefile
 bin/%.o: src/%.cpp
@@ -130,11 +130,3 @@ build:
 clean:
     rm -rf build bin $(OBJECTS)
 ```
-
-[^sublimetext]: I recently switched over to Sublime Text 3 and it is AMAZING.
-
-[^diff]: The word, implicit, always reminds me of calculus.
-
-[^makefile]: This is because the make utility looks in the current directory for the makefile, otherwise you can use the flag -f to give the Makefile.
-
-[^pycache]: Python 2 use to do this with its .pyc files, but in Python 3, it puts the complied files into a pycache directory. Very awesome.

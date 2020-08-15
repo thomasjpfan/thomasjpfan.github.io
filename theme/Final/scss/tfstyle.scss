@@ -162,9 +162,6 @@ ul {
 
 code {
     font-family: $code-font;
-    white-space: nowrap;
-    background: #eee;
-    padding: 0.2em 0.3em;
     font-size: 0.9rem;
     @include border-radius(0.2em);
 }
@@ -953,11 +950,6 @@ article img {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-    @include box-shadow(2px 2px 3px rgba(0,
-    0,
-    0,
-    0.1));
-    @include border-radius(2px);
     @include media($tablet) {
         height: 100%;
         width: auto;

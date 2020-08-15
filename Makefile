@@ -1,6 +1,6 @@
-PY?=python
+PY?=python3
 PELICAN?=pelican
-PELICANOPTS=-v
+PELICANOPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -8,105 +8,64 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-FTP_HOST=localhost
-FTP_USER=anonymous
-FTP_TARGET_DIR=/
 
-S3_BUCKET=my_s3_bucket
+DEBUG ?= 0
+ifeq ($(DEBUG), 1)
+	PELICANOPTS += -D
+endif
 
-BUILDER_TAG?=1.0.2
-
+RELATIVE ?= 0
+ifeq ($(RELATIVE), 1)
+	PELICANOPTS += --relative-urls
+endif
 
 help:
-	@echo 'Makefile for a pelican Web site                                        '
-	@echo '                                                                       '
-	@echo 'Usage:                                                                 '
-	@echo '   make html                        (re)generate the web site          '
-	@echo '   make clean                       remove the generated files         '
-	@echo '   make regenerate                  regenerate files upon modification '
-	@echo '   make publish                     generate using production settings '
-	@echo '   make serve                       serve site at http://localhost:8000'
-	@echo '   make devserver                   start/restart develop_server.sh    '
-	@echo '   make stopserver                  stop local server                  '
-	@echo '   ssh_upload                       upload the web site via SSH        '
-	@echo '   rsync_upload                     upload the web site via rsync+ssh  '
-	@echo '   dropbox_upload                   upload the web site via Dropbox    '
-	@echo '   ftp_upload                       upload the web site via FTP        '
-	@echo '   s3_upload                        upload the web site via S3         '
-	@echo '   github                           upload the web site via gh-pages   '
-	@echo '                                                                       '
+	@echo 'Makefile for a pelican Web site                                           '
+	@echo '                                                                          '
+	@echo 'Usage:                                                                    '
+	@echo '   make html                           (re)generate the web site          '
+	@echo '   make clean                          remove the generated files         '
+	@echo '   make regenerate                     regenerate files upon modification '
+	@echo '   make publish                        generate using production settings '
+	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
+	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
+	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
+	@echo '   make ssh_upload                     upload the web site via SSH        '
+	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
+	@echo '                                                                          '
+	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
+	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
+	@echo '                                                                          '
 
 html:
-	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
-	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
+	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
-	"$(PELICAN)" -r "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
 ifdef PORT
-	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -p $(PORT)
+	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
 else
-	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 endif
+
+serve-global:
+ifdef SERVER
+	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b $(SERVER)
+else
+	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b 0.0.0.0
+endif
+
 
 devserver:
-ifdef PORT
-	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -p $(PORT)
-else
-	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
-endif
-
-stopserver:
-	kill -9 `cat pelican.pid`
-	kill -9 `cat srv.pid`
-	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
+	invoke livereload
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
-rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete \
-	--exclude .well-known \
-	--cvs-exclude \
-	--exclude '*.DS_Store' \
-	$(OUTPUTDIR)/ im:$(SSH_TARGET_DIR)
-
-rsync_only:
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete  --cvs-exclude \
-	--exclude .well-known \
-	--exclude '*.DS_Store' \
-	$(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
-
-
-dropbox_upload: publish
-	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
-
-ftp_upload: publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
-
-s3_upload: publish
-	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
-
-local_dev:
-	docker run --rm -v $(BASEDIR):/blog -p 8180:8180 \
-	thomasjpfan/pelican-blog-builder make devserver
-
-builder:
-	docker image build \
-		-t thomasjpfan/pelican-blog-builder:$(BUILDER_TAG) \
-		-f builder/Dockerfile builder
-
-push_builder:
-	docker image push thomasjpfan/pelican-blog-builder:$(BUILDER_TAG)
-
-build_site:
-	docker run -v $(PWD):/blog --rm --name output thomasjpfan/pelican-blog-builder:$(BUILDER_TAG) make publish
-
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github rsync_only \
-builder push_builder build_site
+.PHONY: html help clean regenerate serve serve-global devserver publish

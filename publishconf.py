@@ -7,25 +7,21 @@ from __future__ import unicode_literals
 
 import os
 import sys
+
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://www.thomasjpfan.com'
+# If your site is available via HTTPS, make sure SITEURL begins with https://
+SITEURL = "https://thomasjpfan.com"
 RELATIVE_URLS = False
-SHORTSITEURL = "thomasjpfan.com"
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
 
-MENUITEMS = (('Rss', FEED_ALL_ATOM),)
-
 # Following items are often useful when publishing
-PLUGINS = ['sitemap', 'tipue_search', 'feed_summary',
-           'liquid_tags.youtube', 'liquid_tags.notebook',
-           'minification', 'better_codeblock_line_numbering', 'assets',
-           'render_katex', 'optimize_images']
 
-# DISQUS_SITENAME = "thomasjpfan"
-GOOGLE_ANALYTICS = "UA-46065142-1"
+# DISQUS_SITENAME = ""
+# GOOGLE_ANALYTICS = ""
+

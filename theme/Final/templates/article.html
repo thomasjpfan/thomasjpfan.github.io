@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block title %}{{ article.title }}{% endblock %} {% block info %}
-<meta property="og:description" content="{{ article.summary }}">
+<meta name="description" property="og:description" content="{{ article.summary }}">
 <meta name="description" content="{{ article.summary }}">
-<meta property="og:title" content="{{ article.title }}">
-<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta name="og:title" property="og:title" content="{{ article.title }}">
+<meta name="og:url" property="og:url" content="{{ SITEURL }}/{{ article.url }}">
 <meta name="twitter:title" content="{{ article.title }}">
 <meta name="twitter:description" content="{{ article.summary }}"> {% endblock %}
 
@@ -12,14 +12,6 @@
 <!-- Reject Robots -->
 <meta name="robots" content="noindex, nofollow">
 {% endif %}
-{% endblock %}
-
-{% block bigfoot %}
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/bigfoot.min.js" defer></script>
-{% endblock %}
-
-{% block bigfootDeferred %}
-$.bigfoot();
 {% endblock %}
 
 {% block katex %}
