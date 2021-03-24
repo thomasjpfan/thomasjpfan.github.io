@@ -1,7 +1,5 @@
 Title: About
 
-As a maintainer for scikit-learn and skorch, I believe that developing open source software is one of the best ways to maximize one's impact.
-
 **Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
 
 **GitHub**: <a href="https://github.com/thomasjpfan" target="_blank" rel="noopener">github.com/thomasjpfan</a>
