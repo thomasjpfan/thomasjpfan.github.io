@@ -1,5 +1,5 @@
 name: Build blog
-on: [push, pull_request]
+on: push
 
 jobs:
   build:
@@ -13,3 +13,11 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build website
         run: make publish
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
