@@ -13,10 +13,13 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build website
         run: make publish
-      - name: Deploy to netlify
-        uses: netlify/actions/cli@feeabbe5daa2a48493ce68cbac6ead466e917f7b
+      - uses: actions/setup-node@v2
         with:
-          args: deploy --dir=output --prod
+          node-version: "14"
+      - name: Install netlify-cli
+        runs: yarn global add netlify-cli
+      - name: Deploy to netlify
+        runs: netlify deploy --dir=output --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
