@@ -13,11 +13,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build website
         run: make publish
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@feeabbe5daa2a48493ce68cbac6ead466e917f7b
         with:
-          target_branch: gh-pages
-          build_dir: output
+          args: deploy --dir=output --prod
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
