@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: "14"
       - name: Install netlify-cli
-        runs: yarn global add netlify-cli
+        run: yarn global add netlify-cli
       - name: Deploy to netlify
-        runs: netlify deploy --dir=output --prod
+        run: netlify deploy --dir=output --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
