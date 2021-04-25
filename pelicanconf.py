@@ -14,9 +14,7 @@ DATE_FORMATS = {
     "en": " %b %d, %Y",
 }
 
-OG_DESCRIPTION = (
-    "This is my personal blog, where I share my " "discoveries and insights."
-)
+OG_DESCRIPTION = "Thomas J. Fan's personal blog where I share my thoughts and insights."
 SUMMARY_MAX_LENGTH = 30
 
 THEME = "theme/Final"
@@ -175,9 +173,7 @@ def unique(a):
 
 
 def intersect(a, b):
-    if isinstance(a, collections.Hashable) and isinstance(
-        b, collections.Hashable
-    ):
+    if isinstance(a, collections.Hashable) and isinstance(b, collections.Hashable):
         c = set(a) & set(b)
     else:
         c = unique(filter(lambda x: x in b, a))
