@@ -2,6 +2,8 @@ Title: Talks
 
 ## 2020
 
+- **Streamlit for Data Science** @ [Data Umbrella Meetup](https://www.meetup.com/data-umbrella/events/274110563/) - ([Repo](https://github.com/thomasjpfan/data-umbrella-2020-streamlit-ml), [Video](https://www.youtube.com/watch?v=5TCdoWemSXI))
+
 ### Lightning Talks
 
 - **Small Dive into Pandas' BlockManager** @ [Scipy 2020](https://www.scipy2020.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2020-lightning-talk-pandas-blockmanager), [Slides](https://github.com/thomasjpfan/scipy-2020-lightning-talk-pandas-blockmanager))
