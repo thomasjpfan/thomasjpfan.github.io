@@ -4,119 +4,119 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://www.thomasjpfan.com/</loc>
-<lastmod>2021-05-08T21:35:21-00:00</lastmod>
+<loc>https://thomasjpfan.github.io/</loc>
+<lastmod>2021-05-08T21:58:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/categories.html</loc>
-<lastmod>2021-05-08T21:35:21-00:00</lastmod>
+<loc>https://thomasjpfan.github.io/categories.html</loc>
+<lastmod>2021-05-08T21:58:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/search.html</loc>
-<lastmod>2021-05-08T21:35:21-00:00</lastmod>
+<loc>https://thomasjpfan.github.io/search.html</loc>
+<lastmod>2021-05-08T21:58:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/pages/about/</loc>
-<lastmod>2021-05-08T21:35:21-00:00</lastmod>
+<loc>https://thomasjpfan.github.io/pages/about/</loc>
+<lastmod>2021-05-08T21:58:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/pages/projects/</loc>
-<lastmod>2021-05-08T21:35:21-00:00</lastmod>
+<loc>https://thomasjpfan.github.io/pages/projects/</loc>
+<lastmod>2021-05-08T21:58:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/pages/talks/</loc>
-<lastmod>2021-05-08T21:35:21-00:00</lastmod>
+<loc>https://thomasjpfan.github.io/pages/talks/</loc>
+<lastmod>2021-05-08T21:58:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2018/09/survival-regression-analysis-on-customer-churn/</loc>
+<loc>https://thomasjpfan.github.io/2018/09/survival-regression-analysis-on-customer-churn/</loc>
 <lastmod>2018-09-12T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2018/07/nuclei-image-segmentation-tutorial/</loc>
+<loc>https://thomasjpfan.github.io/2018/07/nuclei-image-segmentation-tutorial/</loc>
 <lastmod>2018-07-31T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2017/08/rodents-of-nyc/</loc>
+<loc>https://thomasjpfan.github.io/2017/08/rodents-of-nyc/</loc>
 <lastmod>2017-08-28T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2017/08/hassle-free-unets/</loc>
+<loc>https://thomasjpfan.github.io/2017/08/hassle-free-unets/</loc>
 <lastmod>2017-08-05T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2015/09/bayesian-coin-flips/</loc>
+<loc>https://thomasjpfan.github.io/2015/09/bayesian-coin-flips/</loc>
 <lastmod>2015-09-12T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2015/08/statistical-power-of-coin-flips/</loc>
+<loc>https://thomasjpfan.github.io/2015/08/statistical-power-of-coin-flips/</loc>
 <lastmod>2015-08-29T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2015/08/pca-before-regression/</loc>
+<loc>https://thomasjpfan.github.io/2015/08/pca-before-regression/</loc>
 <lastmod>2015-08-15T19:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2014/08/high-n-dimensional-spheres-are-only-skin-deep/</loc>
+<loc>https://thomasjpfan.github.io/2014/08/high-n-dimensional-spheres-are-only-skin-deep/</loc>
 <lastmod>2014-08-15T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2014/07/hold-on-tight/</loc>
+<loc>https://thomasjpfan.github.io/2014/07/hold-on-tight/</loc>
 <lastmod>2014-07-04T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2014/05/maximum-of-free-damped-oscillators/</loc>
+<loc>https://thomasjpfan.github.io/2014/05/maximum-of-free-damped-oscillators/</loc>
 <lastmod>2014-05-02T09:29:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://www.thomasjpfan.com/2014/01/my-current-cpp-makefile/</loc>
+<loc>https://thomasjpfan.github.io/2014/01/my-current-cpp-makefile/</loc>
 <lastmod>2014-01-04T14:51:00-05:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
