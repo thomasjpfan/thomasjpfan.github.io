@@ -3,7 +3,7 @@ Title: Talks
 ### 2020
 
 - Streamlit for Data Science @ [Data Umbrella Meetup](https://www.meetup.com/data-umbrella/events/274110563/) - ([Repo](https://github.com/thomasjpfan/data-umbrella-2020-streamlit-ml), [Video](https://www.youtube.com/watch?v=5TCdoWemSXI))
-- Small Dive into Pandas' BlockManager @ [Scipy 2020](https://www.scipy2020.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2020-lightning-talk-pandas-blockmanager), [Slides](https://github.com/thomasjpfan/scipy-2020-lightning-talk-pandas-blockmanager))
+- Small Dive into Pandas' BlockManager @ [Scipy 2020](https://www.scipy2020.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2020-lightning-talk-pandas-blockmanager), [Slides](https://thomasjpfan.github.io/scipy-2020-lightning-talk-pandas-blockmanager/#1))
 - How Calibrated Are you? xD @ [NYC Python Meetup](https://www.meetup.com/nycpython/) - ([Repo](https://github.com/thomasjpfan/nyc-python-2020-lightning-how-calibrated-are-you), [Slides](https://github.com/thomasjpfan/lightning-talks/blob/master/2020_01_23_how_calibrated_are_you/notebook.ipynb))
 
 ### 2019
