@@ -3,7 +3,7 @@
 import collections
 
 AUTHOR = u"Thomas J. Fan"
-SITENAME = u"thomasjpfan.com"
+SITENAME = u"thomasjpfan.github.io"
 SITEURL = ""
 
 TIMEZONE = u"EST"
