@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><title>Hold on Tight!</title><meta charset="utf-8"><meta name="author" content="Thomas J. Fan"><meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1"><link rel="apple-touch-icon" href="https://www.thomasjpfan.com/favicon_v4.png"><meta property="og:image" content="https://www.thomasjpfan.com/favicon_v4.png"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@thomasjpfan"><meta name="twitter:creator" content="@thomasjpfan"><meta name="twitter:image" content="https://www.thomasjpfan.com/favicon_v4.png"><meta name="description" property="og:description" content="<p>There are quite a few places where one can go indoor rock climbing in NYC. To keep the climber safe, the climber wears a harness that is attached to to a rope. The rope is then wrapped around a pipe at least one time and then at least 160 degrees more depending on where your buddy is holding on to the other end. The amount of force needed to hold a climber up is surprisingly low because of how friction helps prevents the rope from slipping off the pipe.</p>"><meta name="description" content="<p>There are quite a few places where one can go indoor rock climbing in NYC. To keep the climber safe, the climber wears a harness that is attached to to a rope. The rope is then wrapped around a pipe at least one time and then at least 160 degrees more depending on where your buddy is holding on to the other end. The amount of force needed to hold a climber up is surprisingly low because of how friction helps prevents the rope from slipping off the pipe.</p>"><meta name="og:title" property="og:title" content="Hold on Tight!"><meta name="og:url" property="og:url" content="https://www.thomasjpfan.com/2014/07/hold-on-tight/"><meta name="twitter:title" content="Hold on Tight!"><meta name="twitter:description" content="<p>There are quite a few places where one can go indoor rock climbing in NYC. To keep the climber safe, the climber wears a harness that is attached to to a rope. The rope is then wrapped around a pipe at least one time and then at least 160 degrees more depending on where your buddy is holding on to the other end. The amount of force needed to hold a climber up is surprisingly low because of how friction helps prevents the rope from slipping off the pipe.</p>"><link rel="shortcut icon" href="https://www.thomasjpfan.com/favicon_v5.ico"><link rel="stylesheet" href="https://www.thomasjpfan.com/theme/css/style0c1abd42.css"><noscript id="katex_deferred"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js" defer></script><meta name="generator" content="Pelican"><link href="https://www.thomasjpfan.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="thomasjpfan.com Full Atom Feed"><link href="https://www.thomasjpfan.com/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="thomasjpfan.com Categories Atom Feed"></head><body><header><div class="header-wrapper"><div class="header-inner-wrapper"><div class="header-brand"><a href="/">tf<span>.</span></a></div><nav><div class="nav-search"><form action="https://www.thomasjpfan.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"><label for="tipue_search_input" class="visuallyhidden">Search</label><input type="text" class="nav-search--input search-query" placeholder="Search" name="q" id="tipue_search_input"></form></div><div class="nav-links"><div class="nav-link"><a href="https://github.com/thomasjpfan" target="_blank" rel="noopener"><i class="fa fa-github"></i> github</a></div><div class="nav-link"><a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener"><i class="fa fa-twitter"></i> twitter</a></div><div class="nav-link"><a href="/pages/about/"><i class="fa fa-user"></i> about</a></div><div class="nav-link"><a href="/pages/talks/"><i class="fa fa-flask"></i> talks</a></div></div></nav></div></div></header> <main><article class="content"><div class="article content-wrapper"><h1 class="article-title"><a href rel="bookmark" title="Permalink to Hold on Tight!"> Hold on Tight! </a></h1><div class="article-header"><a class="article-header-link" title="2014-07-04T09:29:00-05:00" href="/2014/07/hold-on-tight/">July 04, 2014</a><div class="article-header-tags-wrapper"><a class="tag article-header-tag" href="/topic/physics/">physics</a></div></div> <div class="entry-content"><p>There are quite a few places where one can go indoor rock climbing in NYC. To keep the climber safe, the climber wears a harness that is attached to to a rope. The rope is then wrapped around a pipe at least one time and then at least 160 degrees more depending on where your buddy is holding on to the other end. The amount of force needed to hold a climber up is surprisingly low because of how friction helps prevents the rope from slipping off the pipe.</p><p>Roughly, the rope that wraps around the pipe looks something like this:</p><p><img alt="Rope friction" src="/images/20140704_Hold_On_Tight_Rope/RopeFriction.png"></p><p>The force that is used to hold the climber up is called a belaying force. To calculate the relationship between the force of the climber and the belaying force, we go back to undergraduate physics and draw a free body diagram of a small piece of the rope:</p><p><img alt="Free body of rope" src="/images/20140704_Hold_On_Tight_Rope/ropefreebody.png"></p><p>where <span class="math">\(T\)</span> is tension at one end, <span class="math">\(T+dT\)</span> is the tension at the other end, <span class="math">\(N\)</span> is the normal force, and <span class="math">\(f\)</span> is the friction force that is resisting slipping. In equilibrium, we sum the forces in the vertical:</p><div class="math">$$ \sum F_y = dN - T\sin\left(\dfrac{d\theta}{2}\right) - (T+dT)\sin\left(\dfrac{d\theta}{2}\right) = 0 $$</div><p>and horizontal directions:</p><div class="math">$$ \sum F_x = T\cos\left(\dfrac{d\theta}{2}\right) - (T+dT)\cos\left(\dfrac{d\theta}{2}\right) + df = 0 $$</div><p>Since <span class="math">\(d\theta\)</span> is small, the trigonometric functions can be simplified as follows:</p><div class="math">$$ \sin\left(\dfrac{d\theta}{2}\right) = \dfrac{d\theta}{2} \textrm{ and } \cos\left(\dfrac{d\theta}{2}\right) = 1 $$</div><p>With these simplifications the vertical equation becomes:</p><div class="math">$$ \dfrac{dN}{d\theta} = T $$</div><p>Recalling that <span class="math">\(f=\mu N\)</span> where <span class="math">\(\mu\)</span> is the static coefficient of friction, the horizontal equation becomes:</p><div class="math">$$ \dfrac{dT}{d\theta} = \dfrac{df}{d\theta} = \mu\dfrac{dN}{d\theta} $$</div><p>Putting the above two equations together, we get a simple differential equation:</p><div class="math">$$ \dfrac{dT}{d\theta} = \mu T $$</div><p>with the solution:</p><div class="math">$$ T = T_0e^{\mu\theta} $$</div><p>where <span class="math">\(T_0\)</span> is the tension of belaying force and <span class="math">\(T\)</span> is force from the climber. If you want to calculate the force required to hold a climber up, we just solve for <span class="math">\(T_0\)</span>:</p><div class="math">$$ T_0 = Te^{-\mu\theta} $$</div><p>If the rope is wrapped around once and an addition 160 degrees, then theta is 160+360=520 degrees or 9.08 radians. Letting the coefficient of friction between a nylon rope and a steel pipe be 0.20 and weight of the climber be 120.0 lbs, then the force needed to hold the climber up is:</p><div class="math">$$ T_0 = (120.0)e^{-(0.20)(9.08)} = 19.5\textrm{ lbs} $$</div><p>In other words, we only need to provide 16.3% of the weight of the climber to hold him/her up. Hoping your buddy uses two hands, thats only 10 lbs of force per hand. Kind of crazy huh?</p><h2>Side Note</h2><p>When ships dock, sailors use rope wrapped around a post to keep the ship from floating away. The rope is wrapped around the post several times like so:</p><p><img alt="Posts" src="/images/20140704_Hold_On_Tight_Rope/posts.jpg"></p><p>In this picture, the rope wrapped around the post about five times. Assuming coefficient of friction is <span class="math">\(0.20\)</span>, the knot tied to the dock only needs 0.2% of tugging force from to ship to keep it docked.</p><script type="text/javascript">if (!document.getElementById('katexscript_pelican_auto_render_#%@#$@#')) {{
+
+}}
+
+</script></div><div class="article-subtitle"><section class="subtitle"><div class="share-items-wrapper"><h3>Share this post</h3><div class="share-items"><div class="share-item"><a href="https://twitter.com/intent/tweet?original_referer=https://www.thomasjpfan.com/2014/07/hold-on-tight/&text=Hold on Tight!&url=https://www.thomasjpfan.com/2014/07/hold-on-tight/&via=thomasjpfan" title="Tweet this !" target="_blank" rel="noopener"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></div><div class="share-item"><a href="http://www.facebook.com/share.php?u=https://www.thomasjpfan.com/2014/07/hold-on-tight/" title="Share this on Facebook" target="_blank" rel="noopener"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></div><div class="share-item"><a href="mailto:?subject=Hold on Tight!&body=https://www.thomasjpfan.com/2014/07/hold-on-tight/" title="Email this" class="email" target="_blank" rel="noopener"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></a></div></div></div><section class="similar-posts"><h3>Similar Posts</h3><dl class="dl-tags"><dt>05/02/14</dt><dd><a href="/2014/05/maximum-of-free-damped-oscillators/">Maximum of free damped oscillators</a></dd></dl></section></section></div></div></article></main><footer><div class="footer-wrapper"><div class="footer-inner-wrapper"><div class="footer-profile"><div class="footer-brand"><a href="/"><span>thomasjpfan.com</span></a></div><div class="footer-about"><p>Thomas J. Fan's personal blog where I share my thoughts and insights.</p></div></div><div class="footer-contact"><span>Contact</span><div class="footer-contact-message"><p>Have any feedback or questions? Just send me a tweet or an email!</p></div><div class="footer-social-items"><ul><li class="footer-social-item"><a href="https://twitter.com/thomasjpfan" title="Tweet me" target="_blank" rel="noopener"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li class="footer-social-item"><script>
+              var username = "thomasjpfan";
+              var hostname = "gmail.com";
+              var linktext = username + "@" + hostname ;
+              document.write("<a href=\"" + "mailto:" + username + "@" + hostname + "\" title=\"Email me\"target=\"_blank\"><span class=\"fa-stack fa-lg\"><i class=\"fa fa-circle fa-stack-2x\"></i><i class=\"fa fa-envelope fa-stack-1x fa-inverse\"></i></span></a>");
+              </script></li></ul></div></div><div class="footer-site-detail"><span>Site</span><ul class="footer-links"><li class="footer-link"><a href="/"><i class="fa fa-th-list"></i> front page</a></li><li class="footer-link"><a href="/archives/"><i class="fa fa-archive"></i> archives</a></li><li class="footer-link"><a href="/topics"><i class="fa fa-tags"></i> topics</a></li><li class="footer-link"><a href="None"><i class="fa fa-rss"></i> rss</a></li></ul></div></div></div></footer> <script>
+		function validateForm(query) {
+			return (query.length > 0);
+		}
+	</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://www.thomasjpfan.com/theme/js/tipuesearch.min.js"></script><script>
+var loadKatexDeferred = function () {
+	var addStylesNode = document.getElementById("katex_deferred");
+	var replacement = document.createElement("div");
+	replacement.innerHTML = addStylesNode.textContent;
+	document.body.appendChild(replacement);
+	addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var renderMath = function () {
+	renderMathInElement(document.body, {
+		delimiters: [{
+				left: "$$",
+				right: "$$",
+				display: true
+			},
+			{
+				left: "\\[",
+				right: "\\]",
+				display: true
+			},
+			{
+				left: "$",
+				right: "$",
+				display: false
+			},
+			{
+				left: "\\(",
+				right: "\\)",
+				display: false
+			}
+		]
+	});
+}
+
+		var renderJqueryDeps = function ($) {
+		};
+
+		var loadAll = function () {
+loadKatexDeferred();
+renderMath();
+			renderJqueryDeps(jQuery);
+		};
+
+		// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+		// if (raf) raf(function() { window.setTimeout(loadAll, 0); });
+		// else
+		// window.addEventListener('load', loadAll);
+		(function () {
+			var onReady = function onReady(fn) {
+			  if (document.addEventListener) {
+				document.addEventListener("DOMContentLoaded", fn);
+			  } else {
+				document.attachEvent("onreadystatechange", function () {
+				  if (document.readyState === "interactive") {
+					fn();
+				  }
+				});
+			  }
+			};
+
+			onReady(function () {
+				loadAll();
+			});
+		  })();
+	</script></body></html>
