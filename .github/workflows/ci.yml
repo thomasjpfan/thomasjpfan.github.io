@@ -2,7 +2,7 @@ name: Build blog
 on:
   push:
     branches:
-      - main
+      - gh-testing
 
 jobs:
   build:
