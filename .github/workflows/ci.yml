@@ -2,7 +2,7 @@ name: Build blog
 on:
   push:
     branches:
-      - gh-testing
+      - master
 
 jobs:
   build:
@@ -16,16 +16,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build website
         run: make publish
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - name: Install netlify-cli
-        run: yarn global add netlify-cli
-      - name: Deploy to netlify
-        run: netlify deploy --dir=output --prod
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
