@@ -140,7 +140,7 @@ PAGINATION_PATTERNS = (
 
 STATIC_PATHS = [
     "images",
-    "extra/favicon_v4.ico",
+    "extra/favicon_v5.ico",
     # 'extra/htaccess',
     # 'extra/nginx.conf.template',
     "extra/favicon_v4.png",
