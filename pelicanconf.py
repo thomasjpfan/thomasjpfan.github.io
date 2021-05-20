@@ -141,6 +141,7 @@ PAGINATION_PATTERNS = (
 STATIC_PATHS = [
     "images",
     "extra/favicon_v5.ico",
+    "extra/meta-header.png",
     # 'extra/htaccess',
     # 'extra/nginx.conf.template',
     "extra/favicon_v4.png",
@@ -148,7 +149,8 @@ STATIC_PATHS = [
 ]
 
 EXTRA_PATH_METADATA = {
-    "extra/favicon_v4.ico": {"path": "favicon_v4.ico"},
+    "extra/favicon_v5.ico": {"path": "favicon_v5.ico"},
+    "extra/meta-header.png": {"path": "meta-header.png"},
     # 'extra/htaccess': {'path': '.htaccess'},
     "extra/favicon_v4.png": {"path": "favicon_v4.png"},
     "extra/_headers": {"path": "_headers"},
