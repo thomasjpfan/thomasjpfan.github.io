@@ -220,7 +220,7 @@ pre {
 .pagination ul>.disabled>a,
 .pagination ul>.disabled>a:hover,
 .pagination ul>.disabled>a:focus {
-    color: #999999;
+    color: #757575;
     background-color: transparent;
     cursor: default;
 }
@@ -962,7 +962,7 @@ article img {
 }
 
 .article-header-link {
-    color: $date-color;
+    color: #767676;
     margin-right: calculateRem(12px);
 }
 
