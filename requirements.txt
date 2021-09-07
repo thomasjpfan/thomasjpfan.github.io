@@ -46,7 +46,7 @@ pelican-minification==0.1.1
 pep562==1.0
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==8.2.0
+Pillow==8.3.2
 prometheus-client==0.8.0
 prompt-toolkit==3.0.6
 ptyprocess==0.6.0
