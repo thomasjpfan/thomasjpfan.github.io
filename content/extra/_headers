@@ -6,3 +6,4 @@
 
 /*
   Access-Control-Allow-Origin: https://www.thomasjpfan.com
+  Access-Control-Allow-Methods: GET
