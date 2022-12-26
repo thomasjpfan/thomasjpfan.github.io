@@ -1175,3 +1175,7 @@ summary {
     font-weight: 500;
     background-color: #f7f4ff;
 }
+
+.disabled-link {
+  pointer-events: none;
+}
