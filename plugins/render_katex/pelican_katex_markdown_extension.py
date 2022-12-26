@@ -3,7 +3,7 @@ Pelican Math Markdown Extension
 """
 
 import markdown
-from markdown.util import etree
+import xml.etree.ElementTree as etree
 from markdown.util import AtomicString
 
 
@@ -19,7 +19,7 @@ class PelicanKatexPattern(markdown.inlinepatterns.Pattern):
         self.tag = tag
 
     def handleMatch(self, m):
-        node = markdown.util.etree.Element(self.tag)
+        node = etree.Element(self.tag)
         node.set('class', self.math_tag_class)
 
         prefix = '\\(' if m.group('prefix') == '$' else m.group('prefix')
@@ -46,7 +46,7 @@ class PelicanKatexCorrectDisplayMath(markdown.treeprocessors.Treeprocessor):
         current_idx = 0
 
         for idx in div_math:
-            el = markdown.util.etree.Element('p')
+            el = etree.Element('p')
             el.text = text
             el.extend(children[current_idx:idx])
 
@@ -60,7 +60,7 @@ class PelicanKatexCorrectDisplayMath(markdown.treeprocessors.Treeprocessor):
             insert_idx += 1
             current_idx = idx + 1
 
-        el = markdown.util.etree.Element('p')
+        el = etree.Element('p')
         el.text = text
         el.extend(children[current_idx:])
 
@@ -130,29 +130,30 @@ class PelicanKatexExtension(markdown.Extension):
 
         self.katex_needed = False
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         katex_inline_regex = r'(?P<prefix>\$)(?P<math>.+?)(?P<suffix>(?<!\s)\2)'
         katex_display_regex = r'(?P<prefix>\$\$|\\begin\{(.+?)\})(?P<math>.+?)(?P<suffix>\2|\\end\{\3\})'
 
-        md.inlinePatterns.add(
-            'katex_dispayed',
+        md.inlinePatterns.register(
             PelicanKatexPattern(
                 self, 'div', katex_display_regex),
-            '<escape')
+            'katex_dispayed',
+            186)
 
-        md.inlinePatterns.add(
-            'katex_inlined',
+        md.inlinePatterns.register(
             PelicanKatexPattern(
                 self, 'span', katex_inline_regex
             ),
-            '<escape')
+            'katex_inlined',
+            185)
 
-        md.treeprocessors.add(
-            'katex_correctdisplaymath',
+        md.treeprocessors.register(
             PelicanKatexCorrectDisplayMath(self),
-            '>inline')
+            'katex_correctdisplaymath',
+            15)
 
         if self.getConfig('auto_insert'):
-            md.treeprocessors.add(
+            md.treeprocessors.register(
+                PelicanKatexAddJavaScript(self),
                 'katex_addjavascript',
-                PelicanKatexAddJavaScript(self), '_end')
+                0)

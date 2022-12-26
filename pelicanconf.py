@@ -66,7 +66,6 @@ MARKDOWN = {
         },
         "markdown.extensions.extra": {},
         "markdown.extensions.admonition": {},
-        "pymdownx.details": {},
     },
     "output_format": "html5",
 }
@@ -164,7 +163,7 @@ EXTRA_PATH_METADATA = {
 
 
 def unique(a):
-    if isinstance(a, collections.Hashable):
+    if isinstance(a, collections.abc.Hashable):
         c = set(a)
     else:
         c = []
@@ -175,7 +174,7 @@ def unique(a):
 
 
 def intersect(a, b):
-    if isinstance(a, collections.Hashable) and isinstance(b, collections.Hashable):
+    if isinstance(a, collections.abc.Hashable) and isinstance(b, collections.abc.Hashable):
         c = set(a) & set(b)
     else:
         c = unique(filter(lambda x: x in b, a))

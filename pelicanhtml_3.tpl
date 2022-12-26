@@ -1,4 +1,4 @@
-{%- extends 'basic.tpl' -%}
+{%- extends 'basic/index.html.j2' -%}
 
 {% block stream_stdout -%}
 <div class="output_subarea output_stream output_stdout output_text">

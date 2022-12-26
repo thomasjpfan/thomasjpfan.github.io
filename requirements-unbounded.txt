@@ -1,0 +1,8 @@
+pelican
+pelican-minification
+nbconvert
+webassets
+markdown
+IPython
+libsass
+cssmin

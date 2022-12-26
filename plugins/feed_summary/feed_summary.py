@@ -8,7 +8,7 @@ This plugin allows summaries to be used in feeds instead of the full length arti
 
 from __future__ import unicode_literals
 
-from jinja2 import Markup
+from markupsafe import Markup
 
 import six
 if not six.PY3:
