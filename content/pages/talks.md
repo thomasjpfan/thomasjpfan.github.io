@@ -1,5 +1,10 @@
 Title: Talks
 
+### 2021
+
+- Parallelism in Numerical Python Libraries @ [PyData NYC 2022](https://pydata.org/nyc2022/) - ([Repo](https://github.com/thomasjpfan/pydata-nyc-2022-parallelism), [Slides](https://thomasjpfan.github.io/pydata-nyc-2022-parallelism))
+- Counting on Poisson Regression with Scikit-learn @ [SciPy 2022](https://www.scipy2019.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2022-poisson), [Slides](https://thomasjpfan.github.io/scipy-2022-poisson/), [Video](https://www.youtube.com/watch?v=X5XE_2_A7gQ))
+
 ### 2020
 
 - Streamlit for Data Science @ [Data Umbrella Meetup](https://www.meetup.com/data-umbrella/events/274110563/) - ([Repo](https://github.com/thomasjpfan/data-umbrella-2020-streamlit-ml), [Video](https://www.youtube.com/watch?v=5TCdoWemSXI))
