@@ -2,12 +2,16 @@ name: Build blog
 on:
   push:
     branches:
-      - master
+      - cloudflare_migrate
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish to Cloudflare Pages
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
@@ -16,13 +20,13 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build website
         run: make publish
-      # - name: Deploy to GitHub Pages 🚀
-      #   uses: JamesIves/github-pages-deploy-action@4.1.1
-      #   with:
-      #     branch: gh-pages
-      #     folder: output
-      - name: Deploy to netlify
-        run: netlify deploy --dir=output --prod
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      # Run a build step here if your project requires
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: blog
+          directory: output
