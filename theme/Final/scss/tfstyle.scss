@@ -683,6 +683,27 @@ nav {
 }
 
 // footer layout
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 330px;
+    overflow: hidden;
+
+    @include media($tablet) {
+        height: 200px;
+    }
+}
+
+body {
+    margin-bottom: 330px;
+
+    @include media($tablet) {
+        margin-bottom: 200px;
+    }
+}
+
 .footer-inner-wrapper {
     @include flexbox;
     @include flex-flow(row wrap);
@@ -787,9 +808,13 @@ main {
     background: #fdfdfd;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 .content {
     min-width: $min-width;
-    min-height: 700px;
 
     h1 {
         font-size: 2.5rem;
