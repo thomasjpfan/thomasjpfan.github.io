@@ -10,6 +10,7 @@
 @import "mixins/font-awesome-scss/stacked";
 @import "mixins/font-awesome-scss/icons";
 @include meyer-reset;
+
 // Presets
 // Border box
 *,
@@ -55,32 +56,33 @@ $tag-color: #ffeea6;
 $tag-hover-color: #ffdb40;
 $tag-border: #e8e8e8;
 $primary-font: -apple-system,
-BlinkMacSystemFont,
-'Segoe UI',
-Roboto,
-Oxygen,
-Ubuntu,
-Cantarell,
-'Open Sans',
-'Helvetica Neue',
-sans-serif;
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
 $header-font: Ubuntu,
-Helvetica,
-Arial,
-sans-serif;
+    Helvetica,
+    Arial,
+    sans-serif;
 $brand-font: Ubuntu,
-Arial,
-sans-serif;
+    Arial,
+    sans-serif;
 $code-font: Menlo,
-"Lucida Console",
-Monaco,
-monospace;
+    "Lucida Console",
+    Monaco,
+    monospace;
 // layout-splits
 $phone: '>=480px';
 $index-tablet: '>=660px';
 $tablet: '>=768px';
 $desktop: '>=900px';
 $content-break: '>=880px';
+
 // Defaults
 html,
 body {
@@ -102,6 +104,7 @@ input {
     @include appearance(none);
     color: $nav-link-color;
     @include border-radius(0.2em);
+
     &:focus {
         outline: 0;
     }
@@ -122,9 +125,11 @@ h6 {
     font-weight: 500;
     font-family: $header-font;
     line-height: 120%;
+
     a {
         color: $header-color;
         @include transition(color .2s ease-in-out);
+
         &:hover {
             color: $primary-color;
         }
@@ -172,6 +177,7 @@ header,
 footer {
     color: $nav-link-color;
     background: $primary-color;
+
     a {
         color: $nav-link-color;
     }
@@ -251,6 +257,7 @@ pre {
     font-size: calculateRem(14px);
     @include border-radius(6px);
     @include transition(background .2s ease-in-out);
+
     &:hover {
         background: $tag-hover-color;
     }
@@ -279,14 +286,18 @@ pre {
     .share-items-wrapper {
         text-align: right;
     }
+
     .share-items {
         margin-top: calculateRem(10px);
     }
+
     .share-item {
         display: inline-block;
+
         a {
             color: black;
             @include transition(color 0.2s ease-in-out);
+
             &:hover {
                 color: $link-hover-color;
             }
@@ -298,8 +309,10 @@ pre {
     h3 {
         border-bottom: 1px #d0d0d0 dotted;
     }
+
     .dl-tags {
         margin-top: calculateRem(10px);
+
         dt {
             width: 100px;
         }
@@ -342,12 +355,14 @@ pre {
 .collapseheader,
 .show-all-code {
     background-color: #e9e9e9;
+
     &>span {
         display: block;
         cursor: pointer;
         font-weight: 700;
         padding: calculateRem(8px) calculateRem(6px);
     }
+
     &>.input_area>.highlight {
         margin-top: 0;
     }
@@ -584,6 +599,7 @@ main {
 .header-inner-wrapper {
     width: 92%;
     margin: 0 auto;
+
     @include media($phone) {
         width: 96%;
     }
@@ -612,9 +628,11 @@ header {
     @include flex(1 15%);
     font-size: calculateRem(70px);
     font-family: $brand-font;
+
     a {
         color: $second-color;
     }
+
     span {
         color: white;
     }
@@ -641,6 +659,7 @@ nav {
     float: right;
     width: 11.11em;
     text-align: right;
+
     @include media('>=500px') {
         width: 19em;
     }
@@ -649,11 +668,14 @@ nav {
 .nav-link {
     @include flex(1 50%);
     margin-top: calculateRem(14px);
+
     @include media('>=500px') {
         @include flex(1 auto);
     }
+
     a {
         @include transition(color .2s ease-in-out);
+
         &:hover {
             color: $link-hover-color;
         }
@@ -669,6 +691,7 @@ nav {
 
 .footer-profile {
     @include flex(1 100%);
+
     @include media($tablet) {
         @include flex(1 50%);
     }
@@ -680,6 +703,7 @@ nav {
 
 .footer-contact {
     @include flex(1 70%);
+
     @include media($tablet) {
         @include flex(1 30%);
     }
@@ -687,6 +711,7 @@ nav {
 
 .footer-site-detail {
     @include flex(1 30%);
+
     @include media($tablet) {
         @include flex(1 20%);
     }
@@ -694,6 +719,7 @@ nav {
 
 .footer-links {
     padding-top: calculateRem(24px);
+
     a {
         font-size: calculateRem(16px);
     }
@@ -701,6 +727,8 @@ nav {
 
 .footer-contact-message {
     padding-top: calculateRem(24px);
+    padding-bottom: calculateRem(8px);
+
     p {
         font-size: calculateRem(16px);
     }
@@ -722,6 +750,7 @@ nav {
 .footer-link {
     a {
         @include transition(color .2s ease-in-out);
+
         &:hover {
             color: $link-hover-color;
         }
@@ -742,9 +771,11 @@ nav {
 .footer-social-item {
     display: inline;
     margin-right: calculateRem(2px);
+
     a {
         color: black;
         @include transition(color 0.2s ease-in-out);
+
         &:hover {
             color: $link-hover-color;
         }
@@ -759,6 +790,7 @@ main {
 .content {
     min-width: $min-width;
     min-height: 650px;
+
     h1 {
         font-size: 2.5rem;
     }
@@ -767,6 +799,7 @@ main {
 .content-wrapper {
     width: 96%;
     margin: 0 auto;
+
     @include media($content-break) {
         width: 834px;
     }
@@ -791,6 +824,7 @@ main {
 
 .index {
     padding-top: calculateRem(12px);
+
     p {
         font-size: calculateRem(16px);
         margin-bottom: calculateRem(10px);
@@ -828,22 +862,28 @@ main {
     @include flex(initial);
     @include flexbox;
     @include flex-flow(column nowrap);
+
     h2 {
         font-size: 2.2em;
     }
+
     @include media($index-tablet) {
         @include flex-flow(row nowrap);
+
         .articles-main-panel {
             width: 50%;
         }
+
         .articles-summary-wrapper {
             width: 47%;
             margin-left: 2%;
             margin-right: 2%;
         }
+
         .articles-summary {
             margin-top: 0;
         }
+
         width: 99%;
         margin-left: 0.5%;
         margin-right: 0.5%;
@@ -854,13 +894,16 @@ main {
     @include flex(initial);
     @include flexbox;
     @include flex-flow(row wrap);
+
     h2 {
         font-size: calculateRem(26px);
     }
+
     .articles-summary-header {
         margin-right: 3%;
         width: 97%;
     }
+
     @include media($index-tablet) {
         width: 49%;
         margin-left: 0.5%;
@@ -883,6 +926,7 @@ main {
     width: 99%;
     margin-left: .5%;
     margin-right: .5%;
+
     @include media($index-tablet) {
         width: 49%;
         margin-left: .5%;
@@ -899,42 +943,53 @@ main {
 .archives {
     margin-top: calculateRem(16px);
     margin-bottom: calculateRem(16px);
+
     p,
     h2,
     h3 {
         margin-top: calculateRem(16px);
     }
+
     h1 {
         border-bottom: 1px #d0d0d0 dotted;
     }
+
     h2 {
         border-bottom: 1px #d0d0d0 dotted;
         padding-bottom: calculateRem(4px);
     }
+
     ul {
         list-style-type: disc;
         margin-left: 1.50em;
     }
+
     ol {
         list-style-type: decimal;
         margin-left: 1.50em;
     }
+
     li {
         margin-top: calculateRem(12px);
         line-height: 1.3;
     }
+
     img {
         margin-top: calculateRem(14px);
     }
+
     .input {
         margin-top: calculateRem(14px);
     }
+
     .highlight {
         margin-top: calculateRem(10px);
     }
+
     .subtitle {
         margin-top: calculateRem(16px);
     }
+
     p a:hover,
     li a:hover,
     dd a:hover {
@@ -952,6 +1007,7 @@ article img {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+
     @include media($tablet) {
         height: 100%;
         width: auto;
@@ -981,9 +1037,11 @@ article img {
         text-align: center;
         font-size: 3rem;
     }
+
     .entry-content {
         margin-top: 2rem;
     }
+
     .article-header {
         text-align: center;
     }
@@ -992,9 +1050,11 @@ article img {
 .series-wrapper {
     border-bottom: 1px dotted black;
     padding-bottom: 18px;
+
     a {
         font-size: calculateRem(18px);
     }
+
     a:hover {
         text-decoration: underline;
     }
@@ -1012,9 +1072,11 @@ article img {
     .tag {
         font-size: calculateRem(28px);
     }
+
     .dl-tags {
         margin-top: calculateRem(10px);
     }
+
     h1 {
         border-bottom: none;
     }
@@ -1025,6 +1087,7 @@ article img {
     @include flexbox;
     @include flex-flow(row wrap);
     margin-top: calculateRem(14px);
+
     a {
         color: black;
     }
@@ -1054,15 +1117,18 @@ article img {
         margin-bottom: calculateRem(8px);
         margin-top: 0;
     }
+
     p {
         margin-top: calculateRem(10px);
         color: black;
         font-size: 1rem;
     }
+
     span {
         color: #096;
         line-height: 1.2;
     }
+
     &:hover {
         border: 1px solid rgba(82, 11, 146, 0.7);
     }
@@ -1132,10 +1198,12 @@ tbody tr:hover {
     margin-top: 1rem;
     background-color: rgba(255, 219, 64, 0.19);
     border-left: 4px solid rgba(255, 219, 64, 1);
+
     p {
         font-size: 1rem;
         margin-top: 0;
     }
+
     .admonition-title {
         font-size: 1rem;
         font-weight: 700;
@@ -1161,14 +1229,11 @@ blockquote p {
 
 // Summary detail
 
-details[open]>summary:after {
-}
+details[open]>summary:after {}
 
-details>summary:before {
-}
+details>summary:before {}
 
-summary:after {
-}
+summary:after {}
 
 summary {
     padding: 8px;
@@ -1177,5 +1242,5 @@ summary {
 }
 
 .disabled-link {
-  pointer-events: none;
+    pointer-events: none;
 }
