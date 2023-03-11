@@ -1,10 +1,10 @@
 Title: About
 
-**Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
-
 **GitHub**: <a href="https://github.com/thomasjpfan" target="_blank" rel="noopener">github.com/thomasjpfan</a>
 
 **Linkedin**: <a href="https://www.linkedin.com/in/thomasjpfan/" target="_blank" rel="noopener">linkedin.com/in/thomasjpfan</a>
+
+**Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
 
 **Email**: <script>
 var username = "thomasjpfan";
