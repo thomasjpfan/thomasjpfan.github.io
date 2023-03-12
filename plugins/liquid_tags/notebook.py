@@ -104,93 +104,6 @@ except ImportError:
 
 from copy import deepcopy
 
-# ----------------------------------------------------------------------
-# Some code that will be added to the header:
-#  Some of the following javascript/css include is adapted from
-#  IPython/nbconvert/templates/fullhtml.tpl, while some are custom tags
-#  specifically designed to make the results look good within the
-#  pelican-octopress theme.
-JS_INCLUDE = r"""
-<style type="text/css">
-/* Overrides of notebook CSS for static HTML export */
-div.entry-content {
-  overflow: visible;
-  padding: 8px;
-}
-.input_area {
-  padding: 0.2em;
-}
-
-a.heading-anchor {
- white-space: normal;
-}
-
-.rendered_html
-code {
- font-size: .8em;
-}
-
-pre.ipynb {
-  color: black;
-  background: #f7f7f7;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 0;
-  padding: 0;
-  margin: 0px;
-  font-size: 13px;
-}
-
-/* remove the prompt div from text cells */
-div.text_cell .prompt {
-    display: none;
-}
-
-/* remove horizontal padding from text cells, */
-/* so it aligns with outer body text */
-div.text_cell_render {
-    padding: 0.5em 0em;
-}
-
-img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
-
-div.collapseheader {
-    width=100%;
-    background-color:#d3d3d3;
-    padding: 2px;
-    cursor: pointer;
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-</style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
-"""
-
-CSS_WRAPPER = """
-<style type="text/css">
-{0}
-</style>
-"""
-
 
 # ----------------------------------------------------------------------
 # Create a custom preprocessor
@@ -316,19 +229,6 @@ def notebook(preprocessor, tag, markup):
                 nb_json = IPython.nbformat.reads(nb_text, as_version=4)
 
     (body, resources) = exporter.from_notebook_node(nb_json)
-
-    # if we haven't already saved the header, save it here.
-    # if not notebook.header_saved:
-    #     print ("\n ** Writing styles to _nb_header.html: "
-    #            "this should be included in the theme. **\n")
-
-    #     header = '\n'.join(CSS_WRAPPER.format(css_line)
-    #                        for css_line in resources['inlining']['css'])
-    #     header += JS_INCLUDE
-
-    #     with open('_nb_header.html', 'w') as f:
-    #         f.write(header)
-    #     notebook.header_saved = True
 
     # this will stash special characters so that they won't be transformed
     # by subsequent processes.
