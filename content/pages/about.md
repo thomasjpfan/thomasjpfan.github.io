@@ -6,13 +6,7 @@ Title: About
 
 **Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
 
-**Email**: <script>
-var username = "thomasjpfan";
-var hostname = "gmail.com";
-var linktext = username + "@" + hostname ;
-document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-</script>
-
+**Email**: <a href="mailto:thomasjpfan@gmail.com">thomasjpfan@gmail.com</a>
 
 ## Technical Details About This Site
 
