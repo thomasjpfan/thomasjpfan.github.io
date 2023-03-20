@@ -21,14 +21,6 @@
     @include border-box;
 }
 
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../fonts/Ubuntu/ubuntu-medium-webfont.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-medium-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
 $primary-color: #520B92;
 $second-color: #ACD500;
 $third-color: #FFE268;
@@ -48,13 +40,8 @@ $tag-color: #ffeea6;
 $tag-hover-color: #ffdb40;
 $tag-border: #e8e8e8;
 $primary-font: Verdana, sans-serif;
-$header-font: Ubuntu,
-    Helvetica,
-    Arial,
-    sans-serif;
-$brand-font: Ubuntu,
-    Arial,
-    sans-serif;
+$header-font: Arial, sans-serif;
+$brand-font: Arial, sans-serif;
 $code-font: Menlo,
     "Lucida Console",
     Monaco,
@@ -105,7 +92,7 @@ h4,
 h5,
 h6 {
     color: $header-color;
-    font-weight: 500;
+    font-weight: bold;
     font-family: $header-font;
     line-height: 120%;
 
@@ -252,7 +239,7 @@ pre {
 
 .most-recent {
     border: 2px solid black;
-    font-weight: 500;
+    font-weight: bold;
     font-family: $header-font;
     background: #ffe268;
     color: black;
@@ -459,7 +446,7 @@ pre {
 .tipue_search_content_title a {
     color: $primary-color;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
     transition: color .2s ease-in-out;
 }
 
@@ -1241,7 +1228,7 @@ summary:after {}
 
 summary {
     padding: 8px;
-    font-weight: 500;
+    font-weight: bold;
     background-color: #f7f4ff;
 }
 
