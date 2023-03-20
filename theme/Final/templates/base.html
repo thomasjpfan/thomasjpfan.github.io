@@ -79,13 +79,9 @@
 	<script>
 		{% block katexDeferred %} {% endblock %}
 
-		var renderJqueryDeps = function ($) {
-			{% block tipueDeferred %}{% endblock %}
-		};
-
 		var loadAll = function () {
 			{% block katexDeferredLoadAll %} {% endblock %}
-			renderJqueryDeps(jQuery);
+			{% block tipueDeferred %}{% endblock %}
 		};
 
 		// var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
