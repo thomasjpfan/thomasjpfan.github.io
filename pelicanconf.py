@@ -15,7 +15,7 @@ DATE_FORMATS = {
 }
 
 OG_DESCRIPTION = "Thomas J. Fan's personal blog where I share my thoughts and insights."
-SUMMARY_MAX_LENGTH = 20
+SUMMARY_MAX_LENGTH = 26
 
 THEME = "theme/Final"
 NOTEBOOK_DIR = "notebooks"

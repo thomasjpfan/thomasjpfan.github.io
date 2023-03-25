@@ -1,7 +1,6 @@
 Title: My Current Cpp Makefile
 Date: 2014-01-04 14:51
 Tags: cpp, programming
-Summary: When I took my first programming course at Polytech, I used a Integrated development environment (IDE) called Visual Studio. It magically complied all my files together and formed an executable. Now a days, I've moved on from using IDEs and switch to using a text editor, Sublime Text. As the C++ code I wrote started to get more complicated and span multiple files, I needed a way to systematically complied the files together. Thus, I created a Makefile to build and organize my C++ files...
 
 When I took my first programming course at <a href="http://engineering.nyu.edu/" target="_blank" rel="noopener">Polytech</a>, I used an integrated development environment (IDE) called <a href="http://www.visualstudio.com/" target="_blank" rel="noopener">Visual Studio</a>. It magically complied all my files together and formed an executable. Now a days, I've moved on from using IDEs and switch to using a text editor, <a href="http://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a>. As the C++ code I wrote started to get more complicated and span multiple files, I needed a way to systematically complied the files together. Thus, I created a Makefile to build and organize my C++ files.
 

@@ -1,7 +1,6 @@
 Title: Hassle Free UNets
 Date: 2017-08-05 09:29
 Tags: deep learning
-Summary: Constructing a UNet requires you to keep track of every signal size that flow through the UNet. This can lead to size mismatches when constructing the neutral network. To remedy this issue, I created a small PyTorch UNet module that calculates the sizes for you. You can even customize the building blocks used to construct the UNet.
 
 Constructing a `UNet` requires you to keep track of every signal size that flow through the UNet. This can lead to size mismatches when constructing the
 neutral network. To remedy this issue, I created a small PyTorch UNet module

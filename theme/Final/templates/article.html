@@ -1,10 +1,12 @@
-{% extends "base.html" %} {% block title %}{{ article.title }}{% endblock %} {% block info %}
-<meta name="description" property="og:description" content="{{ article.summary }}">
-<meta name="description" content="{{ article.summary }}">
+{% extends "base.html" %} {% block title %}{{ article.title }}{% endblock %}
+{% block info %}
+<meta name="description" property="og:description" content="{{ article.summary | striptags}}">
+<meta name="description" content="{{ article.summary | striptags }}">
+<meta name="twitter:description" content="{{ article.summary | striptags }}">
 <meta name="og:title" property="og:title" content="{{ article.title }}">
 <meta name="og:url" property="og:url" content="{{ SITEURL }}/{{ article.url }}">
 <meta name="twitter:title" content="{{ article.title }}">
-<meta name="twitter:description" content="{{ article.summary }}"> {% endblock %}
+{% endblock %}
 
 
 {% block drafts %}
@@ -27,36 +29,36 @@
 {% block katexDeferred %}
 {% if "true" in (article.math | lower) %}
 var loadKatexDeferred = function () {
-	var addStylesNode = document.getElementById("katex_deferred");
-	var replacement = document.createElement("div");
-	replacement.innerHTML = addStylesNode.textContent;
-	document.body.appendChild(replacement);
-	addStylesNode.parentElement.removeChild(addStylesNode);
+var addStylesNode = document.getElementById("katex_deferred");
+var replacement = document.createElement("div");
+replacement.innerHTML = addStylesNode.textContent;
+document.body.appendChild(replacement);
+addStylesNode.parentElement.removeChild(addStylesNode);
 };
 var renderMath = function () {
-	renderMathInElement(document.body, {
-		delimiters: [{
-				left: "$$",
-				right: "$$",
-				display: true
-			},
-			{
-				left: "\\[",
-				right: "\\]",
-				display: true
-			},
-			{
-				left: "$",
-				right: "$",
-				display: false
-			},
-			{
-				left: "\\(",
-				right: "\\)",
-				display: false
-			}
-		]
-	});
+renderMathInElement(document.body, {
+delimiters: [{
+left: "$$",
+right: "$$",
+display: true
+},
+{
+left: "\\[",
+right: "\\]",
+display: true
+},
+{
+left: "$",
+right: "$",
+display: false
+},
+{
+left: "\\(",
+right: "\\)",
+display: false
+}
+]
+});
 }
 {% endif %}
 {% endblock %}
@@ -79,7 +81,8 @@ renderMath();
 		{% include "article_header.html" %} {% if article.series %}
 		<div class="series-wrapper">
 			<p>This post is part {{ article.series.index }} of the
-				<strong>{{ article.series.name }}</strong> series:</p>
+				<strong>{{ article.series.name }}</strong> series:
+			</p>
 			<ol class="parts">
 				{% for part_article in article.series.all %}
 				<li {% if part_article==article %}class="active" {% endif %}>

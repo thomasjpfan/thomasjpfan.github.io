@@ -2,7 +2,6 @@ Title: Hold on Tight!
 Date: 2014-07-04 09:29
 Tags: physics
 Math: True
-Summary: There are quite a few places where one can go indoor rock climbing in NYC. To keep the climber safe, the climber wears a harness that is attached to to a rope. The rope is then wrapped around a pipe at least one time and then at least 160 degrees more depending on where your buddy is holding on to the other end. The amount of force needed to hold a climber up is surprisingly low because of how friction helps prevents the rope from slipping off the pipe.
 
 There are quite a few places where one can go indoor rock climbing in NYC. To keep the climber safe, the climber wears a harness that is attached to to a rope. The rope is then wrapped around a pipe at least one time and then at least 160 degrees more depending on where your buddy is holding on to the other end. The amount of force needed to hold a climber up is surprisingly low because of how friction helps prevents the rope from slipping off the pipe.
 

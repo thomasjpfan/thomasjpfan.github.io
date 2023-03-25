@@ -25,10 +25,10 @@
 				</div>
 				<div class="articles-summary-wrapper">
 					<div class="articles-summary">
-						{{ article.summary | truncate(280, False, end='...')}}
-						<div>
-							<a href="/{{ article.url }}">Read more</a>
-						</div>
+						<p>{{ article.summary | striptags }}</p>
+					</div>
+					<div class="articles-read-more">
+						<a href="/{{ article.url }}">Read more</a>
 					</div>
 				</div>
 			</div>
@@ -40,10 +40,10 @@
 					</h2>{% include "article_header.html" %}
 				</div>
 				<div class="articles-summary">
-					{{ article.summary | truncate(140, False, end='...')}}
-					<div>
-						<a href="/{{ article.url }}">Read more</a>
-					</div>
+					<p>{{ article.summary | striptags }}</p>
+				</div>
+				<div class="articles-read-more">
+					<a href="/{{ article.url }}">Read more</a>
 				</div>
 			</div>
 			{% endif %} {% endfor %}
