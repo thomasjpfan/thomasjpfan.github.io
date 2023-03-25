@@ -4,9 +4,11 @@
 <section class="content index">
 	<div class="content-wrapper index-wrapper">
 		<div class="articles">
-			{% block index_header %} {% for article in (articles_page.object_list if articles_page else articles) %} {% if loop.index0
+			{% block index_header %} {% for article in (articles_page.object_list if articles_page else articles) %} {%
+			if loop.index0
 			is equalto 0 %}
-			<div class="articles-feature articles-wrapper {% if not articles_page.has_previous() %}articles-main-wrapper{% endif %}">
+			<div
+				class="articles-feature articles-wrapper {% if not articles_page.has_previous() %}articles-main-wrapper{% endif %}">
 				<div class="articles-main-panel">
 					{% if not articles_page.has_previous() %}
 					<div class="most-recent-wrapper">
@@ -18,12 +20,15 @@
 					<div class="articles-summary-header">
 						<h2>
 							<a href="/{{ article.url }}">{{ article.title }}</a>
-						</h2>{% include "article_header.html" %}</div>
+						</h2>{% include "article_header.html" %}
+					</div>
 				</div>
 				<div class="articles-summary-wrapper">
 					<div class="articles-summary">
-						{{ article.summary }}
-						<a href="/{{ article.url }}">Read more...</a>
+						{{ article.summary | truncate(280, False, end='...')}}
+						<div>
+							<a href="/{{ article.url }}">Read more</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -32,11 +37,12 @@
 				<div class="articles-summary-header">
 					<h2>
 						<a href="/{{ article.url }}">{{ article.title }}</a>
-					</h2>{% include "article_header.html" %}</div>
+					</h2>{% include "article_header.html" %}
+				</div>
 				<div class="articles-summary">
-					{{ article.summary | truncate(256, False, end='...')}}
+					{{ article.summary | truncate(140, False, end='...')}}
 					<div>
-						<a href="/{{ article.url }}">Read more...</a>
+						<a href="/{{ article.url }}">Read more</a>
 					</div>
 				</div>
 			</div>

@@ -2,20 +2,20 @@
 # -*- coding: utf-8 -*- #
 import collections
 
-AUTHOR = u"Thomas J. Fan"
-SITENAME = u"thomasjpfan.com"
+AUTHOR = "Thomas J. Fan"
+SITENAME = "thomasjpfan.com"
 SITEURL = ""
 
-TIMEZONE = u"EST"
+TIMEZONE = "EST"
 
-DEFAULT_LANG = u"en"
+DEFAULT_LANG = "en"
 
 DATE_FORMATS = {
     "en": " %b %d, %Y",
 }
 
 OG_DESCRIPTION = "Thomas J. Fan's personal blog where I share my thoughts and insights."
-SUMMARY_MAX_LENGTH = 30
+SUMMARY_MAX_LENGTH = 20
 
 THEME = "theme/Final"
 NOTEBOOK_DIR = "notebooks"
@@ -174,7 +174,9 @@ def unique(a):
 
 
 def intersect(a, b):
-    if isinstance(a, collections.abc.Hashable) and isinstance(b, collections.abc.Hashable):
+    if isinstance(a, collections.abc.Hashable) and isinstance(
+        b, collections.abc.Hashable
+    ):
         c = set(a) & set(b)
     else:
         c = unique(filter(lambda x: x in b, a))
