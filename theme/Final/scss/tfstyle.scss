@@ -62,6 +62,14 @@ body {
     background: $body-background-color;
 }
 
+body {
+    @include flexbox;
+    @include flex-direction(column);
+
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
 a {
     color: $link-color;
     text-decoration: none;
@@ -155,6 +163,10 @@ footer {
     a {
         color: $nav-link-color;
     }
+}
+
+footer {
+    margin-top: auto;
 }
 
 pre {
@@ -652,28 +664,6 @@ nav {
         &:hover {
             color: $link-hover-color;
         }
-    }
-}
-
-// footer layout
-footer {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    height: 350px;
-    overflow: hidden;
-
-    @include media($tablet) {
-        height: 220px;
-    }
-}
-
-body {
-    margin-bottom: 350px;
-
-    @include media($tablet) {
-        margin-bottom: 220px;
     }
 }
 
