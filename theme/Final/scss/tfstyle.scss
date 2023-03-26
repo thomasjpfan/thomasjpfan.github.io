@@ -591,6 +591,7 @@ header {
 .header-inner-wrapper {
     @include flexbox;
     @include justify-content(space-between);
+    @include align-items(center);
 }
 
 .header-brand {
@@ -620,7 +621,8 @@ nav {
 
 .nav-search {
     text-align: right;
-    padding-top: calculateRem(8px);
+    padding-top: calculateRem(12px);
+    padding-bottom: calculateRem(4px);
 }
 
 .nav-links {
@@ -637,7 +639,8 @@ nav {
 
 .nav-link {
     @include flex(1 50%);
-    margin-top: calculateRem(14px);
+    margin-top: calculateRem(8px);
+    margin-bottom: calculateRem(12px);
 
     @include media('>=500px') {
         @include flex(1 auto);
@@ -658,19 +661,19 @@ footer {
     width: 100%;
     left: 0;
     bottom: 0;
-    height: 330px;
+    height: 350px;
     overflow: hidden;
 
     @include media($tablet) {
-        height: 200px;
+        height: 220px;
     }
 }
 
 body {
-    margin-bottom: 330px;
+    margin-bottom: 350px;
 
     @include media($tablet) {
-        margin-bottom: 200px;
+        margin-bottom: 220px;
     }
 }
 
