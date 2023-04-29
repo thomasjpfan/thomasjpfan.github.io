@@ -755,7 +755,7 @@ nav {
         @include transition(color 0.2s ease-in-out);
 
         &:hover {
-            color: $link-hover-color;
+            color: #82a100;
         }
     }
 }
