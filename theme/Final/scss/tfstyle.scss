@@ -51,7 +51,6 @@ $phone: '>=480px';
 $index-tablet: '>=660px';
 $tablet: '>=768px';
 $desktop: '>=900px';
-$content-break: '>=880px';
 
 // Defaults
 html,
@@ -782,10 +781,7 @@ html {
 .content-wrapper {
     width: 96%;
     margin: 0 auto;
-
-    @include media($content-break) {
-        width: 834px;
-    }
+    max-width: 800px;
 }
 
 // index layout
@@ -815,6 +811,7 @@ html {
 
 .index-wrapper {
     width: 98%;
+    margin: 0 auto;
 }
 
 .pagination {
