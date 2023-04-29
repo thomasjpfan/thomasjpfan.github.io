@@ -25,10 +25,8 @@
 				</div>
 				<div class="articles-summary-wrapper">
 					<div class="articles-summary">
-						<p>{{ article.summary | striptags }}</p>
-					</div>
-					<div class="articles-read-more">
-						<a href="/{{ article.url }}">Read more</a>
+						<p>{{ article.summary | striptags }} <br><a class="articles-read-more"
+								href="/{{ article.url }}">Read more</a></p>
 					</div>
 				</div>
 			</div>
@@ -40,10 +38,8 @@
 					</h2>{% include "article_header.html" %}
 				</div>
 				<div class="articles-summary">
-					<p>{{ article.summary | striptags }}</p>
-				</div>
-				<div class="articles-read-more">
-					<a href="/{{ article.url }}">Read more</a>
+					<p>{{ article.summary | striptags }} <br><a class="articles-read-more"
+							href="/{{ article.url }}">Read more</a></p>
 				</div>
 			</div>
 			{% endif %} {% endfor %}

@@ -810,7 +810,6 @@ html {
 
     p {
         font-size: calculateRem(16px);
-        margin-bottom: calculateRem(10px);
     }
 }
 
@@ -823,7 +822,11 @@ html {
     margin-bottom: calculateRem(16px);
 }
 
-.articles-read-more a:hover {
+.articles-read-more {
+    line-height: calculateRem(32px);
+}
+
+.articles-read-more:hover {
     text-decoration: underline;
 }
 
