@@ -1,5 +1,5 @@
 <div class="article-header">
-  <a class="article-header-link" title="{{ article.date.isoformat() }}" href="/{{ article.url }}">{{ article.date.strftime("%B %d, %Y") }}</a>
+  <a class="article-header-link" href="/{{ article.url }}">{{ article.date.strftime("%B %d, %Y") }}</a>
   <div class="article-header-tags-wrapper">
     {% for tag in article.tags|sort %}
     <a class="tag article-header-tag" href="/{{ tag.url }}">{{ tag }}</a>

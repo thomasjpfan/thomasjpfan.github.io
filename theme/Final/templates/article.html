@@ -6,6 +6,7 @@
 <meta name="og:title" property="og:title" content="{{ article.title }}">
 <meta name="og:url" property="og:url" content="{{ SITEURL }}/{{ article.url }}">
 <meta name="twitter:title" content="{{ article.title }}">
+<meta name="publish_date" property="og:publish_date" content="{{ article.date.isoformat() }}">
 {% endblock %}
 
 
