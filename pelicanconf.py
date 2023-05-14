@@ -31,7 +31,6 @@ PLUGINS = [
     "liquid_tags.youtube",
     "liquid_tags.notebook",
     "minification",
-    "better_codeblock_line_numbering",
     "assets",
     "render_katex",
     "series",
