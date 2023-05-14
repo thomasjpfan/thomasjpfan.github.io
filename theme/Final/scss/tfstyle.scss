@@ -640,11 +640,11 @@ nav {
     @include flexbox;
     @include flex-flow(row wrap);
     float: right;
-    width: 11.11em;
+    width: 12em;
     text-align: right;
 
     @include media('>=500px') {
-        width: 19em;
+        width: 21em;
     }
 }
 
