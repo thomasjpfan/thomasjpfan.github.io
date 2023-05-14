@@ -9,7 +9,12 @@
       <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
     </span>
     </a></div>
-  	<div class="share-item"><a href="http://www.facebook.com/share.php?u={{ SITEURL }}/{{ article.url }}" title="Share this on Facebook"target="_blank" rel="noopener">
+    <div class="share-item"><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ SITEURL }}/{{ article.url }}" title="Share this on Linkedin" target="_blank" rel="noopener">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span></a></div>
+  	<div class="share-item"><a href="http://www.facebook.com/share.php?u={{ SITEURL }}/{{ article.url }}" title="Share this on Facebook" target="_blank" rel="noopener">
     <span class="fa-stack fa-lg">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -20,6 +25,7 @@
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
     </span></a></div>
+  	</div>
   	</div>
 	</div>
       {% for other_article in articles|sort(attribute='date', reverse=True) if other_article != article and other_article.tags | intersect(article.tags) | length > 0 %}
