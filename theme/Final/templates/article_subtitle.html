@@ -38,7 +38,7 @@
             <dt>{{ other_article.date|strftime('%m/%d/%y') }}</dt>
             <dd><a href='/{{ other_article.url }}'>{{ other_article.title }}</a></dd>
           {% endif %}
-        {% if loop.last %}
+        {% if loop.last or loop.index > 5 %}
           </dl>
           </section>
         {% endif %}
