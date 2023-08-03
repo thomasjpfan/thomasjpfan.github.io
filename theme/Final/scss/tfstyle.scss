@@ -926,10 +926,13 @@ html {
     margin-top: calculateRem(16px);
     margin-bottom: calculateRem(16px);
 
-    p,
+    p {
+        margin-top: calculateRem(16px);
+    }
+
     h2,
     h3 {
-        margin-top: calculateRem(16px);
+        margin-top: calculateRem(24px);
     }
 
     h1 {
