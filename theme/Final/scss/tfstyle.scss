@@ -25,17 +25,13 @@ $primary-color: #520B92;
 $second-color: #ACD500;
 $third-color: #FFE268;
 $third-light-color: #FFEEA6;
-$link-color: #9435db;
 $max-width: 1080px;
 $min-width: 320px;
 $link-hover-color: #ACD500;
-$header-color: black;
+$light-link-color: #ce8cff;
 $footer-color: black;
 $nav-link-color: white;
-$font-color: black;
-$body-background-color: #fdfdfd;
 $date-color: #949494;
-$card-background: white;
 $tag-color: #ffeea6;
 $tag-hover-color: #ffdb40;
 $tag-border: #e8e8e8;
@@ -52,13 +48,33 @@ $index-tablet: '>=660px';
 $tablet: '>=768px';
 $desktop: '>=900px';
 
+:root {
+    --font-color: black;
+    --body-background-color: #fdfdfd;
+    --code-background-color: #f8f8f8;
+    --code-color: black;
+    --link-color: #9435db;
+    --card-background: white;
+
+    @media (prefers-color-scheme: dark) {
+        --font-color: white;
+        --body-background-color: #212121;
+        --code-background-color: #0d1117;
+        --code-color: #c9d1d9;
+        --link-color: #ce8cff;
+        --card-background: black;
+    }
+}
+
+
+
 // Defaults
 html,
 body {
     font-family: $primary-font;
-    color: $font-color;
+    color: var(--font-color);
     min-width: 300px;
-    background: $body-background-color;
+    background-color: var(--body-background-color);
 }
 
 body {
@@ -70,7 +86,7 @@ body {
 }
 
 a {
-    color: $link-color;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -98,17 +114,21 @@ h3,
 h4,
 h5,
 h6 {
-    color: $header-color;
+    color: var(--font-color);
     font-weight: bold;
     font-family: $header-font;
     line-height: 120%;
 
     a {
-        color: $header-color;
+        color: var(--font-color);
         @include transition(color .2s ease-in-out);
 
         &:hover {
             color: $primary-color;
+
+            @media (prefers-color-scheme: dark) {
+                color: #ce8cff;
+            }
         }
     }
 }
@@ -146,7 +166,13 @@ ul {
 p code {
     padding: .1em .2em;
     color: rgb(0, 126, 0);
+    margin: 0 0.1em;
     background-color: #f1f1f1;
+
+    @media (prefers-color-scheme: dark) {
+        color: #90ff90;
+        background-color: #545454;
+    }
 }
 
 code {
@@ -157,7 +183,7 @@ code {
 header,
 footer {
     color: $nav-link-color;
-    background: $primary-color;
+    background-color: $primary-color;
 
     a {
         color: $nav-link-color;
@@ -194,15 +220,15 @@ pre {
     padding: calculateRem(4px) calculateRem(12px);
     line-height: calculateRem(20px);
     text-decoration: none;
-    background-color: #ffffff;
     border: 1px solid #dddddd;
-    font-family: $header-font, Helvetica, Arial, sans-serif
+    font-family: $header-font, Helvetica, Arial, sans-serif;
+    background-color: var(--body-background-color);
 }
 
 .pagination ul>li>a:hover,
 .pagination ul>li>a:focus,
 .pagination ul>.active>a {
-    background-color: #f5f5f5;
+    background-color: var(--body-background-color);
 }
 
 .pagination ul>.active>a {
@@ -309,7 +335,6 @@ pre {
 .highlight pre {
     font-family: $code-font;
     display: block;
-    background-color: #f7f7f7;
     @include border-radius(0.2em);
     padding: calculateRem(12px);
     -webkit-overflow-scrolling: touch;
@@ -326,11 +351,15 @@ pre {
     margin-top: calculateRem(10px);
     padding: 10px;
     border-radius: 2px;
-    color: #353535;
+    color: var(--code-color);
     border-color: rgba(67, 9, 119, 0.73);
     border-width: 1px 1px 1px 4px;
     border-style: solid;
-    background: rgb(247, 247, 247);
+    background-color: var(--code-background-color);
+
+    @media (prefers-color-scheme: dark) {
+        border-color: #ce8cff;
+    }
 }
 
 .output_stderr {
@@ -419,12 +448,12 @@ pre {
 
 #tipue_search_warning_head {
     font: 20px $brand-font, sans-serif;
-    color: #333;
+    color: var(--font-color);
 }
 
 #tipue_search_warning {
     font: 20px $brand-font, sans-serif;
-    color: #333;
+    color: var(--font-color);
     margin: 7px 0;
 }
 
@@ -435,17 +464,21 @@ pre {
 }
 
 #tipue_search_warning a:hover {
-    color: #333;
+    color: var(--font-color);
 }
 
 #tipue_search_results_count {
     font: 20px $brand-font, sans-serif;
-    color: #333;
+    color: var(--font-color);
 }
 
 .tipue_search_content_bold {
     font-weight: 700;
     color: #520b92;
+
+    @media (prefers-color-scheme: dark) {
+        color: $light-link-color;
+    }
 }
 
 .tipue_search_content_title {
@@ -459,16 +492,20 @@ pre {
     text-decoration: none;
     font-weight: bold;
     transition: color .2s ease-in-out;
+
+    @media (prefers-color-scheme: dark) {
+        color: $light-link-color;
+    }
 }
 
 .tipue_search_content_title a:hover {
-    color: black;
+    color: var(--font-color);
 }
 
 .tipue_search_content_text {
     font: 14px $primary-font, sans-serif;
     line-height: 20px;
-    color: #333;
+    color: var(--font-color);
     padding: 13px 0;
     word-break: break-all;
     word-break: break-word;
@@ -762,7 +799,7 @@ nav {
 
 // content layout
 main {
-    background: #fdfdfd;
+    background: var(--body-background-color);
 }
 
 html {
@@ -796,9 +833,13 @@ html {
 .project-wrapper {
     border: 1px solid #e8e8e8;
     @include border-radius(8px);
-    background: $card-background;
+    background: var(--card-background);
     padding: calculateRem(16px);
     margin-bottom: calculateRem(10px);
+
+    @media (prefers-color-scheme: dark) {
+        border-color: #8c8c8c;
+    }
 }
 
 .index {
@@ -1007,6 +1048,10 @@ article img {
 .article-header-link {
     color: #767676;
     margin-right: calculateRem(12px);
+
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
 }
 
 .article-header-tag {
