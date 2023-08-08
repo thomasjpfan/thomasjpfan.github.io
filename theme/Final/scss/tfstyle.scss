@@ -32,9 +32,6 @@ $light-link-color: #ce8cff;
 $footer-color: black;
 $nav-link-color: white;
 $date-color: #949494;
-$tag-color: #ffeea6;
-$tag-hover-color: #ffdb40;
-$tag-border: #e8e8e8;
 $primary-font: Verdana, sans-serif;
 $header-font: Arial, sans-serif;
 $brand-font: Arial, sans-serif;
@@ -55,6 +52,9 @@ $desktop: '>=900px';
     --code-color: black;
     --link-color: #9435db;
     --card-background: white;
+    --tag-border-color: #e8e8e8;
+    --tag-color: #ffeea6;
+    --tag-hover-color: #ffdb40;
 
     @media (prefers-color-scheme: dark) {
         --font-color: white;
@@ -62,7 +62,10 @@ $desktop: '>=900px';
         --code-background-color: #0d1117;
         --code-color: #c9d1d9;
         --link-color: #ce8cff;
-        --card-background: black;
+        --card-background: rgb(18, 18, 18);
+        --tag-border-color: rgb(18, 18, 18);
+        --tag-color: #ffe268;
+        --tag-hover-color: #ffeea6;
     }
 }
 
@@ -170,8 +173,8 @@ p code {
     background-color: #f1f1f1;
 
     @media (prefers-color-scheme: dark) {
-        color: #90ff90;
-        background-color: #545454;
+        color: #7ffc7f;
+        background-color: #373737;
     }
 }
 
@@ -262,15 +265,15 @@ pre {
 .tag {
     display: inline-block;
     color: black;
-    background: $tag-color;
-    border: 2px solid $tag-border;
+    background: var(--tag-color);
+    border: 2px solid var(--tag-border-color);
     padding: .34rem;
     font-size: calculateRem(14px);
     @include border-radius(6px);
     @include transition(background .2s ease-in-out);
 
     &:hover {
-        background: $tag-hover-color;
+        background: var(--tag-hover-color);
     }
 }
 
@@ -1188,27 +1191,40 @@ table {
     border: none;
     border-collapse: collapse;
     border-spacing: 0;
-    color: #353535;
+    color: var(--font-color);
     table-layout: fixed;
 }
 
 thead {
     background: #e1e1e1;
-    color: #353535;
+    color: var(--font-color);
     border-bottom: 1px solid #555555;
     vertical-align: bottom;
+
+    @media (prefers-color-scheme: dark) {
+        background: var(--body-background-color);
+        border-color: var(--font-color);
+    }
 }
 
 tbody tr:nth-child(even) {
     background: #ededed;
+
+    @media (prefers-color-scheme: dark) {
+        background: #212121;
+    }
 }
 
 tbody tr {
     background: #fbfbfb;
+
+    @media (prefers-color-scheme: dark) {
+        background: var(--body-background-color);
+    }
 }
 
 tbody tr:hover {
-    background: rgba(82, 11, 146, 0.08);
+    background: rgba(66, 165, 245, 0.2);
 }
 
 *+table {
