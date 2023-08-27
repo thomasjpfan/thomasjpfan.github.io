@@ -1,5 +1,9 @@
 Title: Talks
 
+### 2023
+
+- Can There Be Too Much Parallelism? @ [SciPy 2023](https://www.scipy2023.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2023-too-parallel), [Slides](https://thomasjpfan.github.io/scipy-2023-too-parallel/), [Video](https://www.youtube.com/watch?v=hy5yDxvLCDA&list=PL1PbeFStIOoOd01KhBeba-byU5E5dJ716&index=28))
+
 ### 2022
 
 - Parallelism in Numerical Python Libraries @ [PyData NYC 2022](https://pydata.org/nyc2022/) - ([Repo](https://github.com/thomasjpfan/pydata-nyc-2022-parallelism), [Slides](https://thomasjpfan.github.io/pydata-nyc-2022-parallelism), [Video](https://www.youtube.com/watch?v=3h6cAzpWNVU))
