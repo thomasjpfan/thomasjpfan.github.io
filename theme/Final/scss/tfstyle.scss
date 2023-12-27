@@ -974,6 +974,7 @@ html {
 
     h1 {
         border-bottom: 1px #d0d0d0 dotted;
+        padding-bottom: calculateRem(8px);
     }
 
     h2 {
