@@ -57,8 +57,8 @@ $desktop: '>=900px';
         --link-color: #d49aff;
         --card-background: #1e1a20;
         --tag-border-color: rgb(18, 18, 18);
-        --tag-color: #ffe67d;
-        --tag-hover-color: #fff2bb;
+        --tag-color: #f9e79c;
+        --tag-hover-color: #ffdd4b;
     }
 }
 
@@ -274,7 +274,7 @@ pre {
     border: 2px solid black;
     font-weight: bold;
     font-family: $header-font;
-    background: #ffe67d;
+    background: #ffdd4b;
     color: black;
     padding: .35rem;
     @include border-radius(8px);
