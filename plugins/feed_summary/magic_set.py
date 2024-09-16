@@ -54,7 +54,8 @@ Works on both instances and classes.
 """
     def decorator(func):
         is_class = isinstance(obj, six.class_types)
-        args, varargs, varkw, defaults = inspect.getargspec(func)
+        spec = inspect.getfullargspec(func)
+        args, varargs, varkw, defaults = spec.args, spec.varargs, spec.varkw, spec.defaults
         if not args or args[0] not in ('self', 'cls', 'klass'):
             # Static function/method
             if is_class:

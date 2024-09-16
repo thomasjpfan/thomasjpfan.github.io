@@ -37,10 +37,6 @@
 						<a href="/{{ article.url }}">{{ article.title }}</a>
 					</h2>{% include "article_header.html" %}
 				</div>
-				<div class="articles-summary">
-					<p>{{ article.summary | striptags }} <br><a class="articles-read-more"
-							href="/{{ article.url }}">Read on</a></p>
-				</div>
 			</div>
 			{% endif %} {% endfor %}
 		</div>

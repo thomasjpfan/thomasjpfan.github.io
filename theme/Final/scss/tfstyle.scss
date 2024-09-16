@@ -57,8 +57,8 @@ $desktop: '>=900px';
         --link-color: #d49aff;
         --card-background: #1e1a20;
         --tag-border-color: rgb(18, 18, 18);
-        --tag-color: #ffe268;
-        --tag-hover-color: #ffeea6;
+        --tag-color: #ffe67d;
+        --tag-hover-color: #fff2bb;
     }
 }
 
@@ -274,7 +274,7 @@ pre {
     border: 2px solid black;
     font-weight: bold;
     font-family: $header-font;
-    background: #ffe268;
+    background: #ffe67d;
     color: black;
     padding: .35rem;
     @include border-radius(8px);
@@ -913,14 +913,10 @@ html {
     @include flex(initial);
     @include flexbox;
     @include flex-flow(row wrap);
+    @include flex-grow(1);
 
     h2 {
         font-size: calculateRem(26px);
-    }
-
-    .articles-summary-header {
-        margin-right: 3%;
-        width: 97%;
     }
 
     @include media($index-tablet) {
