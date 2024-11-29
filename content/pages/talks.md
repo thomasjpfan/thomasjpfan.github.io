@@ -1,5 +1,10 @@
 Title: Talks
 
+### 2024
+
+- Pushing Cython to its Limits in Scikit-learn @ [PyData NYC 2024](https://pydata.org/nyc2024/) - ([Repo](https://github.com/thomasjpfan/pydata-nyc-meetup-2024-stumpy), [Slides](https://thomasjpfan.github.io/pydata-nyc-2024-cython-in-scikit-learn), [Video](https://www.youtube.com/watch?v=rGYB7FcFnVE))
+- Time Series EDA with STUMPY @ [PyData NYC Meetup](https://www.meetup.com/pydatanyc/) - ([Repo](https://github.com/thomasjpfan/pydata-nyc-meetup-2024-stumpy), [Slides](https://thomasjpfan.github.io/pydata-nyc-meetup-2024-stumpy/#/time-series-eda-with-stumpy), [Video](https://www.youtube.com/watch?v=kCOm0VtC8c8))
+
 ### 2023
 
 - Can There Be Too Much Parallelism? @ [SciPy 2023](https://www.scipy2023.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2023-too-parallel), [Slides](https://thomasjpfan.github.io/scipy-2023-too-parallel/), [Video](https://www.youtube.com/watch?v=hy5yDxvLCDA&list=PL1PbeFStIOoOd01KhBeba-byU5E5dJ716&index=28))
