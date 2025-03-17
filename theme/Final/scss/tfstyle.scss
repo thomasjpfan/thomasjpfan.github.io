@@ -161,7 +161,8 @@ ul {
     font-size: calculateRem(18px);
 }
 
-p code {
+p code,
+li code {
     padding: .1em .2em;
     color: rgb(0, 126, 0);
     margin: 0 0.1em;
