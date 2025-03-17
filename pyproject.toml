@@ -1,0 +1,18 @@
+[project]
+name = "thomasjpfan-github-io"
+version = "0.1.0"
+description = "thomasjpfan's website"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "pelican",
+    "pelican-minify",
+    "nbconvert",
+    "webassets",
+    "markdown",
+    "IPython",
+    "libsass",
+    "cssmin",
+    "invoke",
+    "livereload",
+]

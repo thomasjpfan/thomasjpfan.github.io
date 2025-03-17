@@ -30,7 +30,6 @@ PLUGINS = [
     "feed_summary",
     "liquid_tags.youtube",
     "liquid_tags.notebook",
-    "minification",
     "assets",
     "render_katex",
     "series",

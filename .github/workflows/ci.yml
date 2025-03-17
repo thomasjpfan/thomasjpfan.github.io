@@ -10,14 +10,22 @@ jobs:
     name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.11"
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
       - name: Build website
-        run: make publish
+        run: uv run make publish
+
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1.4.1
         with:
