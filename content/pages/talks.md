@@ -7,6 +7,7 @@ Title: Talks
 
 ### 2023
 
+- Scikit-learn on GPUs with Array API @ [PYData NYC 2023](https://pydata.org/nyc2023/) - ([Repo](https://github.com/thomasjpfan/pydata-nyc-2023-scikit-learn-array-api), [Slides](https://thomasjpfan.github.io/pydata-nyc-2023-scikit-learn-array-api/#1), [Video](https://www.youtube.com/watch?v=c_s8tr1AizA))
 - Can There Be Too Much Parallelism? @ [SciPy 2023](https://www.scipy2023.scipy.org) - ([Repo](https://github.com/thomasjpfan/scipy-2023-too-parallel), [Slides](https://thomasjpfan.github.io/scipy-2023-too-parallel/), [Video](https://www.youtube.com/watch?v=hy5yDxvLCDA&list=PL1PbeFStIOoOd01KhBeba-byU5E5dJ716&index=28))
 
 ### 2022
