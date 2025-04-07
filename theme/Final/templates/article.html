@@ -11,6 +11,14 @@
 <meta name="article-modified_time" property="article:modified_time" content="{{ article.date.isoformat() }}">
 {% endblock %}
 
+{% block metaimage %}
+{% if article.metaimage %}
+<meta property="og:image" content="{{ SITEURL }}/{{ article.metaimage }}">
+<meta name="twitter:image" content="{{ SITEURL }}/{{ article.metaimage }}"> 
+{% else %}
+{{ super() }}
+{% endif %}
+{% endblock %}
 
 {% block drafts %}
 {% if article.status == "draft" %}

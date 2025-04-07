@@ -9,15 +9,19 @@
 	<meta name="viewport" content="width=device-width,minimum-scale=1">
 	<link rel="apple-touch-icon" href="{{ SITEURL }}/favicon_v4.png"> {% block drafts %}{% endblock drafts %}
 
-	<!-- Object Graph -->
+	{% block metaimage %}
 	<meta property="og:image" content="{{ SITEURL }}/meta-header.png">
+	<meta name="twitter:image" content="{{ SITEURL }}/meta-header.png"> 
+	{% endblock %}
+
+	<!-- Object Graph -->
+
 	<meta property="og:type" content="article">
 	<meta property="og:locale" content="en_US">
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@thomasjpfan">
-	<meta name="twitter:creator" content="@thomasjpfan">
-	<meta name="twitter:image" content="{{ SITEURL }}/meta-header.png"> {% block info %}
+	<meta name="twitter:creator" content="@thomasjpfan"> {% block info %}
 	<meta name="twitter:title" content="{{ SITENAME }}">
 	<meta name="twitter:description" content="{{ OG_DESCRIPTION }}">
 	<meta property="og:title" content="{{ SITENAME }}">

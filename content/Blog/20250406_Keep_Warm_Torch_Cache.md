@@ -2,6 +2,7 @@ Title: Keep Warm with Portable torch.compile Caches
 Date: 2025-04-06 09:29
 Tags: python, torch
 Math: False
+Metaimage: images/20250406_Keep_Warm_Torch_Cache/meta.png
 
 PyTorch's `compile` function improves performance of your code by compiling and caching the computational graph for later use. `torch.compile` has a notion of a "cold compile" and a "warm compile", where "cold" is the first run and "warm" is faster by using a cache. The latest torch nightly wheel introduces a portable caching solution loadable on separate machines. In this post, we learn about this new caching solution and how it keeps your cache warm!
 
