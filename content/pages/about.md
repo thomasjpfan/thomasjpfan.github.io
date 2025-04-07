@@ -4,7 +4,7 @@ Title: About
 
 **Linkedin**: <a href="https://www.linkedin.com/in/thomasjpfan/" target="_blank" rel="noopener">linkedin.com/in/thomasjpfan</a>
 
-**Twitter**: <a href="https://twitter.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
+**x.com**: <a href="https://x.com/thomasjpfan" target="_blank" rel="noopener">@thomasjpfan</a>
 
 **Email**: <a href="mailto:thomasjpfan@gmail.com">thomasjpfan@gmail.com</a>
 
