@@ -712,7 +712,7 @@ nav {
     @include flex(1 100%);
 
     @include media($tablet) {
-        @include flex(1 40%);
+        @include flex(1 50%);
     }
 }
 
@@ -724,7 +724,7 @@ nav {
     @include flex(1 70%);
 
     @include media($tablet) {
-        @include flex(1 40%);
+        @include flex(1 30%);
     }
 }
 
