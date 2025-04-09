@@ -29,12 +29,13 @@
 	<meta property="og:description" content="{{ OG_DESCRIPTION }}">
 	<meta name="description" content="{{ OG_DESCRIPTION }}"> {% endblock info %}
 
-	<!-- CSS Styles -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet"> -->
-
 	<link rel="shortcut icon" href="{{ SITEURL }}/favicon_v5.ico">
 	{% assets "scss-main" %}
-	<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+	<!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}"> -->
+	<link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="preload" as="style" fetchpriority="high" crossorigin>
+	<noscript data-css-lazyload>
+	<link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet" crossorigin fetchpriority="high">
+	</noscript>
 	{% endassets %}
 	{% block katex %} {% endblock %}
 
