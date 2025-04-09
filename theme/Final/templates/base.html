@@ -36,14 +36,6 @@
 	{% assets "scss-main" %}
 	<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
 	{% endassets %}
-	{% assets "scss-font" %}
-	<!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}" media="print" onload="this.media='all'"> -->
-	<link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="preload" as="style" fetchpriority="low" crossorigin>
-	<noscript data-css-lazyload>
-	<link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet" crossorigin fetchpriority="low">
-	<!-- more stylesheets, same as above preloads -->
-	</noscript>
-	{% endassets %}
 	{% block katex %} {% endblock %}
 
 	<!-- Feed Information / Copied from Simple Theme -->

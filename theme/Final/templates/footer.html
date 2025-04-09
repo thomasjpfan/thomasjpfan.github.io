@@ -14,11 +14,11 @@
         <ul class="footer-links">
           <li class="footer-link">
             <a href="https://www.github.com/thomasjpfan" title="Connect with me" target="_blank" rel="noopener"><i
-                class="fa fa-github"></i> github.com/thomasjpfan</a>
+                class="tf tf-github"></i> github.com/thomasjpfan</a>
           </li>
           <li class="footer-link">
-            <a href="https://www.linkedin.com/in/thomasjpfan" title="Connect with me" target="_blank" rel="noopener"><i
-                class="fa fa-linkedin"></i> linkedin.com/in/thomasjpfan</a>
+            <a href="https://www.linkedin.com/in/thomasjpfan" title="Connect with me" target="_blank" rel="noopener">
+              <i class="tf tf-linkedin"></i> linkedin.com/in/thomasjpfan</a>
           </li>
         </ul>
       </div>
@@ -26,17 +26,17 @@
         <span>Site</span>
         <ul class="footer-links">
           <li class="footer-link">
-            <a href="/"><i class="fa fa-th-list"></i> home</a>
+            <a href="/"><i class="tf tf-list"></i> home</a>
           </li>
           <li class="footer-link">
-            <a href="/{{ARCHIVES_URL}}"><i class="fa fa-archive"></i> archives</a>
+            <a href="/{{ARCHIVES_URL}}"><i class="tf tf-archive"></i> archives</a>
           </li class="footer-link">
           <li class="footer-link">
-            <a href="/topics"><i class="fa fa-tags"></i> topics</a>
+            <a href="/topics"><i class="tf tf-tags"></i> topics</a>
           </li class="footer-link">
           {% for title, link in MENUITEMS %} {% if title == 'Rss' %}
           <li class="footer-link">
-            <a href="{{ link }}"><i class="fa fa-rss"></i>
+            <a href="{{ link }}"><i class="tf tf-rss"></i>
               {{ title|lower }}</a>
           </li>
           {% endif %} {% endfor %}

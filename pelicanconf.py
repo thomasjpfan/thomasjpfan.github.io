@@ -74,11 +74,6 @@ ASSET_BUNDLES = (
         ["tfstyle.scss", "highlight.scss"],
         {"filters": "libsass,cssmin", "output": "css/style%(version)s.css"},
     ),
-    (
-        "scss-font",
-        ["font.scss"],
-        {"filters": "libsass,cssmin", "output": "css/font%(version)s.css"},
-    ),
 )
 
 # MATH_JAX = {'responsive': True, 'linebreak_automatic': True,
