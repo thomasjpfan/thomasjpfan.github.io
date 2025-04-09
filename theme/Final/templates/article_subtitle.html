@@ -2,7 +2,8 @@
 <section class="subtitle">
   <div class="share-items-wrapper">
     <p>Find me on <a href="https://www.linkedin.com/in/thomasjpfan" title="Connect with me" target="_blank"
-        rel="noopener">Linkedin</a> 🌎</p>
+        rel="noopener">Linkedin</a> or <a href="https://www.github.com/thomasjpfan" title="Connect with me"
+        target="_blank" rel="noopener">Github</a> 🌎</p>
   </div>
   {% for other_article in articles|sort(attribute='date', reverse=True) if other_article != article and
   other_article.tags | intersect(article.tags) | length > 0 %}
