@@ -31,11 +31,7 @@
 
 	<link rel="shortcut icon" href="{{ SITEURL }}/favicon_v5.ico">
 	{% assets "scss-main" %}
-	<!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}"> -->
-	<link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="preload" as="style" fetchpriority="high" crossorigin>
-	<noscript data-css-lazyload>
-	<link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet" crossorigin fetchpriority="high">
-	</noscript>
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
 	{% endassets %}
 	{% block katex %} {% endblock %}
 
@@ -82,31 +78,6 @@
 		function validateForm(query) {
 			return (query.length > 0);
 		}
-		const decodeHTML = function(html){
-			const textarea = document.createElement('textarea');
-			textarea.innerHTML = html;
-			return textarea.value;
-		};
-		const getItemsFromContainerText = function(container, selector){
-			const parser = new DOMParser();
-			const parsedHtml = parser.parseFromString(decodeHTML(container.textContent), 'text/html');
-
-			return parsedHtml.querySelectorAll(selector);
-		};
-		function loadCss(){
-			const cssContainers = document.querySelectorAll('noscript[data-css-lazyload]');
-			if(!cssContainers){
-				return;
-			}
-			const styleSheets = document.createDocumentFragment();
-			for(const cssContainer of cssContainers){
-				const sheets = getItemsFromContainerText(cssContainer, 'link[rel="stylesheet"]');
-				styleSheets.append(...sheets);
-				cssContainer.remove();
-			}
-			document.head.append(styleSheets);
-		}
-		loadCss();
 	</script>
 	{% block extraJS %} {% endblock extraJS %}
 	<script>
