@@ -21,7 +21,8 @@ timed(model_opt, X)
 # Duration: 21.1s
 ```
 
-When running the code again, the duration goes down to 8.9s. The second run uses a cache to speed up the runtime by 2x!
+The first run takes **21.1s**, because `torch.compile` is compiling from scratch. When we run again, the cache warm
+and the duration goes down to **8.9s** which is 2x faster than a cold start!
 
 ## Portable Cache
 
