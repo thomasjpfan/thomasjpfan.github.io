@@ -157,9 +157,6 @@ p {
     font-family: $primary-font;
 }
 
-ul {
-    font-size: calculateRem(18px);
-}
 
 p code,
 li code {
@@ -1013,6 +1010,7 @@ html {
 
     .subtitle {
         margin-top: calculateRem(16px);
+        border-top: 1px #d0d0d0 dotted;
     }
 
     p a:hover,
