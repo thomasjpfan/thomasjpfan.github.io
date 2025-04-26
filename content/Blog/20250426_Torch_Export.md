@@ -2,7 +2,7 @@ Title: torch.export For Serializing Models and Faster Loading
 Date: 2025-04-26 09:29
 Tags: python, torch
 Math: False
-Metaimage: images/20250415_Torch_Export/meta.png
+Metaimage: images/20250426_Torch_Export/meta.png
 
 <!-- Metaimage code
 from torch.export import export, save, load, Dim
