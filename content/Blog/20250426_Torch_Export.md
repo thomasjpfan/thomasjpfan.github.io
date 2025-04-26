@@ -2,17 +2,6 @@ Title: torch.export For Serializing Models and Faster Loading
 Date: 2025-04-26 09:29
 Tags: python, torch
 Math: False
-Metaimage: images/20250426_Torch_Export/meta.png
-
-<!-- Metaimage code
-from torch.export import export, save, load, Dim
-
-batch_dim = Dim("batch", min=1, max=512)
-exported_program = export(model, args=(X,), dynamic_shapes=({0: batch_dim}))
-
-save(exported_program, "my_model.pt2")
-loaded_model = load("my_model.pt2")
- -->
 
 While `torch.compile` is great for *Just in time (JIT)* compilation, it adds significant startup time during prediction time. With PyTorch 2.6, `torch.export` can *Ahead of Time (AOT)* compile your PyTorch code and serialize it into a single zip file. When it works, `torch.export`'s AOT approach has faster startup times compared to `torch.compile`'s JIT. In this post, we learn about how to serialize and load a model using `torch.export`.
 
