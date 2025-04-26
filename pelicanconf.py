@@ -34,6 +34,7 @@ PLUGINS = [
     "render_katex",
     "series",
     "pelican_javascript",
+    "social_cards",
 ]
 FEED_USE_SUMMARY = True
 # MD_EXTENSIONS = [
@@ -182,3 +183,9 @@ def intersect(a, b):
 
 
 JINJA_FILTERS = {"intersect": intersect}
+
+
+SOCIAL_CARDS_TEMPLATE = "content/images/card-template.png"
+STATIC_PATHS = ["social-cards"]
+SOCIAL_CARDS_FONT_FILL = "#FFFFFF"
+SOCIAL_CARDS_FONT_FILENAME = "theme/Ubuntu-Medium.ttf"

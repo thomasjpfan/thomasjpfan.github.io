@@ -12,9 +12,9 @@
 {% endblock %}
 
 {% block metaimage %}
-{% if article.metaimage %}
-<meta property="og:image" content="{{ SITEURL }}/{{ article.metaimage }}">
-<meta name="twitter:image" content="{{ SITEURL }}/{{ article.metaimage }}"> 
+{% if article.og_image %}
+<meta property="og:image" content="{{ SITEURL }}/{{ article.og_image }}">
+<meta name="twitter:image" content="{{ SITEURL }}/{{ article.og_image }}">
 {% else %}
 {{ super() }}
 {% endif %}

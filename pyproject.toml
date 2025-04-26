@@ -15,4 +15,5 @@ dependencies = [
     "cssmin",
     "invoke",
     "livereload",
+    "pelican-social-cards>=0.6.4",
 ]
