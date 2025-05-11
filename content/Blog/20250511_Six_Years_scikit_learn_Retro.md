@@ -3,7 +3,7 @@ Date: 2025-05-11 09:29
 Tags: python, scikit-learn
 Math: False
 
-It's hard to believe that it's been over six years since I joined the scikit-learn team as a maintainer. As of today, I have [1,374 commits](https://github.com/scikit-learn/scikit-learn/graphs/contributors) and reviewed [3179 pull requests](https://github.com/scikit-learn/scikit-learn/pulls?q=is%3Apr+is%3Aopen+reviewed-by%3A%40me). Behind these numbers, I am grateful for all the thoughtful discussions I have had with the community to push scikit-learn forward. Reviewing my commits, I would like to showcase some of my favorite features that I worked on:
+It's hard to believe that it's been over six years since I joined the scikit-learn team as a maintainer. As of today, I have [1,374 commits](https://github.com/scikit-learn/scikit-learn/graphs/contributors) and reviewed [3,179 pull requests](https://github.com/scikit-learn/scikit-learn/pulls?q=is%3Apr+is%3Aopen+reviewed-by%3A%40me). Behind these numbers, I am grateful for all the thoughtful discussions I have had with the community to push scikit-learn forward. Reviewing my commits, I would like to showcase some of my favorite features that I worked on:
 
 ### 1. Everything Trees 🌲🌲🌲
 - Native categorical support in Histogram-based Gradient Boosting Trees. ([gh-26411](https://github.com/scikit-learn/scikit-learn/pull/26411), [gh-18394](https://github.com/scikit-learn/scikit-learn/pull/18394))
