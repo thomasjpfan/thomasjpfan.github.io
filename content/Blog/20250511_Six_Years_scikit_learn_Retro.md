@@ -15,7 +15,7 @@ It's hard to believe that it's been over six years since I joined the scikit-lea
 - `get_feature_names_out`: Mapping input feature names to output feature names. ([gh-18444](https://github.com/scikit-learn/scikit-learn/pull/18444))
 
 ### 3. Preprocessing 🔪
-- `TargetEncoder`: Uses the target to encode categorical data. ([gh-25334](https://github.com/scikit-learn/scikit-learn/pull/25334))
+- `TargetEncoder`: Use the target to encode categorical data. ([gh-25334](https://github.com/scikit-learn/scikit-learn/pull/25334))
 - Group infrequent categories in `OrdinalEncoder` and `OneHotEncoder`. ([gh-25677](https://github.com/scikit-learn/scikit-learn/pull/25677))
 - KNN-based missing value imputation. ([gh-12852](https://github.com/scikit-learn/scikit-learn/pull/12852))
 
