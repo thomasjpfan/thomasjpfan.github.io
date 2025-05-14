@@ -1,5 +1,5 @@
 Title: Six Years as a scikit-learn maintainer - Feature Retrospective
-Date: 2025-05-11 09:29
+Date: 2025-05-15 09:29
 Tags: python, scikit-learn
 Math: False
 
