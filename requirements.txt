@@ -82,7 +82,7 @@ mistune==3.0.2
     # via nbconvert
 nbclient==0.10.0
     # via nbconvert
-nbconvert==7.16.4
+nbconvert==7.17.0
     # via -r requirements-unbounded.txt
 nbformat==5.10.4
     # via
