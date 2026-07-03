@@ -1,4 +1,4 @@
-Title: Five Principles for using LLMs for Software Engineering
+Title: Five Principles for Using LLMs for Software Engineering
 Date: 2026-07-03 09:29
 Tags: software
 Math: False
